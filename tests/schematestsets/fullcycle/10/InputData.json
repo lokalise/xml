@@ -1,0 +1,25 @@
+{
+	"NewHierarchyLevel[1]\/Size\/Height": {
+		"values": ["12"],
+		"attributes": [{
+			"name": "unit",
+			"values": ["millimeter"]
+		}]
+	},
+	"NewHierarchyLevel[1]\/Size\/Width": {
+		"values": ["16"],
+		"attributes": [{
+			"name": "unit",
+			"values": ["meter"]
+		}]
+	},
+	"NewHierarchyLevel[2]\/TestChoice\/ChoiceTwo": {
+		"values": ["ChoiceTwoValue"]
+	},
+	"NewHierarchyLevel[3]\/One": {
+		"values": ["OneValue"]
+	},
+	"NewHierarchyLevel[3]\/Two": {
+		"values": ["TwoValue"]
+	}
+}

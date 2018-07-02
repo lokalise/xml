@@ -1,0 +1,18 @@
+{
+	"\/rootelement[1]\/hierarchyelement[2]\/secondleafelement": {
+		"values": [
+			"hierarchyelement 2 secondleafelement 1 Leaf 1"
+		]
+	},
+	"\/rootelement[1]\/hierarchyelement[1]\/secondleafelement": {
+		"values": [
+			"secondleafelement 1 Leaf 1"
+		]
+	},
+	"\/rootelement[1]\/hierarchyelement[1]\/firstleafelement": {
+		"values": [
+			"firstleafelement 1 Leaf 1",
+			"firstleafelement 1 Leaf 2"
+		]
+	}
+}

@@ -1,0 +1,60 @@
+{
+	"Pendant\/Necklace\/Length": {
+		"values": ["80"],
+		"attributes": [{
+			"name": "unit",
+			"values": ["centimeter"]
+		}]
+	},
+	"Pendant\/Necklace\/Type": {
+		"values": ["pendant-necklaces"]
+	},
+	"Pendant\/Shape\/Type": {
+		"values": ["nonstandard-shape"]
+	},
+	"Pendant\/Necklace\/ChainType": {
+		"values": ["no-chain-type"]
+	},
+	"Pendant\/Necklace\/ClaspType": {
+		"values": ["snap"]
+	},
+	"Pendant\/SubjectContent": {
+		"values": ["Birthday",
+		"Mothers Day"]
+	},
+	"Pendant\/TargetAudience": {
+		"values": ["women"]
+	},
+	"Pendant\/UsedFor": {
+		"values": ["anniversary",
+		"birthday",
+		"christening",
+		"mothers-day"]
+	},
+	"Pendant\/DominantColor": {
+		"values": ["black"]
+	},
+	"Pendant\/PrimaryImage": {
+		"values": ["c3ZzZHZzdmQ="],
+		"attributes": [{
+			"name": "mimeCode",
+			"values": ["image\/jpeg"]
+		}]
+	},
+	"Pendant\/Image": {
+		"values": ["c3ZzZHZzdmQ="],
+		"attributes": [{
+			"name": "mimeCode",
+			"values": ["image\/jpeg"]
+		}]
+	},
+	"ProductSeries": {
+		"values": ["Baby Friendly"]
+	},
+	"SeriesDescription": {
+		"values": ["Inspired by the natural colour of real gemstones, and the desire to safely share a love of jewelry with her young ones, an Australian designer (and mum) carefully created this beautiful set of toxin-free, INPAA safety approved, pendants that can be worn with love, and chewed on by teething babies"]
+	},
+	"ProductFamily": {
+		"values": ["Good Mums: ring"]
+	}
+}

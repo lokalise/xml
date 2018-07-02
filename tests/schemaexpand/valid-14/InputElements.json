@@ -1,0 +1,42 @@
+{
+    "/Store[1]/AmericanLiterature[1]/Author":
+	{
+	    "values": ["Fitzgerald"]
+	},
+    "AmericanLiterature[1]/Title[1]":
+	{
+	    "values": ["The Great Gatsby"]
+	},
+    "/Store[1]/AmericanLiterature[2]/Author[1]":
+	{
+	    "values": ["Walt Whitman"]
+	},
+    "/Store[1]/AmericanLiterature[2]/Title":
+	{
+	    "values": ["Leaves of Grass"]
+	},
+    "/Store[1]/City":
+	{
+	    "values": ["Nashville"]
+	},
+    "/Store[1]/AmericanLiterature[1]":
+	{
+	    "attributes":
+		[
+		    {
+			"name": "century",
+			"values": ["XI"]
+		    }
+		]
+	},
+    "AmericanLiterature[2]":
+	{
+	    "attributes":
+		[
+		    {
+			"name": "century",
+			"values": ["XIX"]
+		    }
+		]
+	}
+}

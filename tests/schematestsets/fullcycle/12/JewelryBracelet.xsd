@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://dublincore.org/schemas/xmls/qdc/2008/02/11/dc.xsd" xmlns:vxe="urn:visualXMLeditor:settings">
+  <xs:include schemaLocation="Measurements.xsd"/>
+  <xs:include schemaLocation="JewelryChain.xsd"/>
+  <xs:simpleType name="BraceletType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="anklets"/>
+      <xs:enumeration value="ankle-bracelets"/>
+      <xs:enumeration value="bangle-bracelets"/>
+      <xs:enumeration value="bracelet-sets"/>
+      <xs:enumeration value="charm-bracelets"/>
+      <xs:enumeration value="cuff-bracelets"/>
+      <xs:enumeration value="identification-bracelets"/>
+      <xs:enumeration value="link-bracelets"/>
+      <xs:enumeration value="chain-bracelets"/>
+      <xs:enumeration value="tennis-bracelet-jackets"/>
+      <xs:enumeration value="tennis-bracelets"/>
+      <xs:enumeration value="golf-bracelets"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:group name="JewelryBracelet">
+    <xs:sequence>
+      <xs:element name="Type" type="BraceletType" minOccurs="1" maxOccurs="1"/>
+      <xs:group ref="JewelryChain"/>
+      <xs:element name="Diameter" type="DiameterType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:group>
+</xs:schema>

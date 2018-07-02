@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<drives>
+  <drive>
+    <model>BD(036|072)[A-Z0-9]{5}</model>
+    <brand>HP</brand>
+    <modelname>10K</modelname>
+    <numbers>
+      <number>
+        <description>Serial</description>
+        <regexp>(3[A-Z0-9]{7}|U[A-Z0-9]{11})</regexp>
+      </number>
+      <number>
+        <description>Model</description>
+        <regexp>BD(036|072)[A-Z0-9]{5}</regexp>
+      </number>
+    </numbers>
+  </drive>
+</drives>

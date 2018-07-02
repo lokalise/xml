@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://dublincore.org/schemas/xmls/qdc/2008/02/11/dc.xsd" xmlns:vxe="urn:visualXMLeditor:settings">
+	<xs:element name="FirstLevel">
+	  <xs:complexType>
+		<xs:sequence>
+		  <xs:annotation>
+			<xs:appinfo>
+			  <vxe:settings>
+			    <vxe:wrapperClass>virtualelementwrapperclass</vxe:wrapperClass>
+			  </vxe:settings>
+			</xs:appinfo>
+		  </xs:annotation>
+		  <xs:element name="One" type="xs:string">
+		    <xs:annotation>
+			  <xs:documentation>
+			    <dc:title xml:lang="en">First element</dc:title>
+			  </xs:documentation>
+			  <xs:appinfo>
+			    <vxe:settings>
+				  <vxe:titleClass>titleclass</vxe:titleClass>
+				</vxe:settings>
+			  </xs:appinfo>
+			</xs:annotation>
+		  </xs:element>
+		  <xs:element name="Two" type="xs:integer"/>
+		  <xs:choice>
+			<xs:element name="ChoiceOne">
+		      <xs:annotation>
+			    <xs:documentation>
+			      <dc:title xml:lang="en">Choice one element</dc:title>
+			    </xs:documentation>
+			  </xs:annotation>
+			</xs:element>
+			<xs:element name="ChoiceTwo">
+		      <xs:annotation>
+			    <xs:documentation>
+			      <dc:title xml:lang="en">Choice two element</dc:title>
+			    </xs:documentation>
+			  </xs:annotation>
+			</xs:element>
+		  </xs:choice>
+		</xs:sequence>
+	  </xs:complexType>
+	</xs:element>
+</xs:schema>

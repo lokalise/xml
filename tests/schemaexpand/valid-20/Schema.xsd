@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:group name="BookType">
+    <xs:sequence>
+      <xs:element name="Author" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="Title" type="xs:string" minOccurs="1" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:group>
+
+  <xs:simpleType name="ReleaseValues">
+    <xs:restriction base="xs:integer">
+      <xs:enumeration value="2000"/>
+      <xs:enumeration value="2001"/>
+      <xs:enumeration value="2003"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="PublisherType">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:attribute name="releaseyear" type="ReleaseValues"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:complexType name="DeeperPublisherType">
+    <xs:sequence>
+      <xs:element name="Publisher" type="PublisherType" minOccurs="1" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:group name="PamphletType">
+    <xs:sequence>
+      <xs:element name="DeeperPublisher" type="DeeperPublisherType" minOccurs="1" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:group>
+
+  <xs:complexType name="AmericanLiteratureSecondType">
+    <xs:choice>
+      <xs:group ref="PamphletType"/>
+      <xs:group ref="BookType"/>
+    </xs:choice>
+  </xs:complexType>
+
+  <xs:complexType name="AmericanLiteratureFirstType">
+    <xs:choice>
+      <xs:element name="AmericanLiteratureSecond" type="AmericanLiteratureSecondType"/>
+    </xs:choice>
+  </xs:complexType>
+
+  <xs:complexType name="AmericanLiteratureType">
+    <xs:sequence>
+      <xs:element name="AmericanLiteratureFirst" type="AmericanLiteratureFirstType"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="DeeperAmericanLiteratureType">
+    <xs:sequence>
+      <xs:element name="DeeperAmericanLiterature" type="AmericanLiteratureType" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="UpperAmericanLiteratureType">
+    <xs:sequence>
+      <xs:element name="AmericanLiterature" type="DeeperAmericanLiteratureType" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="Store">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="UpperAmericanLiterature" type="UpperAmericanLiteratureType" minOccurs="0" maxOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

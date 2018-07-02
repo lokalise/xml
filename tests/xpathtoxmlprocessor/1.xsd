@@ -1,0 +1,715 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://dublincore.org/schemas/xmls/qdc/2008/02/11/dc.xsd" xmlns:vxe="urn:visualXMLeditor:settings">
+
+  <xs:simpleType name="notemptystring">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="brandtype">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="HP">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">HP</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Seagate">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Seagate</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Samsung">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Samsung</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Western Digital">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Western Digital</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Maxtor">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Maxtor</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Quantum">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Quantum</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Hitachi">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Hitachi</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Toshiba">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Toshiba</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Fujitsu">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Fujitsu</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="IBM">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">IBM</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="formfactortype">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="3.5">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">3.5"</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="2.5">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">2.5"</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="1.8">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">1.8"</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="numbersdescriptiontype">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Serial">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Serial</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      
+      <xs:enumeration value="Model">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Model</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      
+      <xs:enumeration value="Part number">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Part number</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      
+      <xs:enumeration value="Part number 1">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Part number 1</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      
+      <xs:enumeration value="CT">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">CT</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      
+      <xs:enumeration value="PCB">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">PCB</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      
+      <xs:enumeration value="Controller chip">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Controller chip</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      
+      <xs:enumeration value="MLC">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">MLC</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      
+      <xs:enumeration value="HDA barcode">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">HDA barcode</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      
+      <xs:enumeration value="Manufacture month">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Manufacture month</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      
+      <xs:enumeration value="Manufacture date">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Manufacture date</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      
+      <xs:enumeration value="PCB sticker">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">PCB sticker</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      
+      <xs:enumeration value="PCB board">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">PCB board</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      
+      <xs:enumeration value="Configuration">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Configuration</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      
+      <xs:enumeration value="Firmware">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Firmware</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      
+      <xs:enumeration value="Barcode">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Barcode</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      
+      <xs:enumeration value="Origin country">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Origin country</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      
+      <xs:enumeration value="WWN">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">WWN</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      
+      <xs:enumeration value="Revision">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Revision</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      
+      <xs:enumeration value="DSN">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">DSN</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      
+      <xs:enumeration value="DPN">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">DPN</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      
+      <xs:enumeration value="Drive revision">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Drive revision</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      
+      <xs:enumeration value="HPN">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">HPN</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      
+      <xs:enumeration value="IBM serial">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">IBM serial</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      
+      <xs:enumeration value="IBM FRU">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">IBM FRU</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      
+      <xs:enumeration value="TLA">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">TLA</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      
+      <xs:enumeration value="HP model">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">HP model</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      
+      
+      <xs:enumeration value="Part number 3">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Part number 3</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      
+      
+      <xs:enumeration value="Firmware revision">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Firmware revision</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      
+      
+      <xs:enumeration value="GTLA">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">GTLA</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      
+      
+      <xs:enumeration value="Code">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Code</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      
+       <xs:enumeration value="Quantum part number">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Quantum part number</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      
+      
+      <xs:enumeration value="IBM part number">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">IBM part number</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      
+      
+      <xs:enumeration value="PWB">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">PWB</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      
+      
+      <xs:enumeration value="DCM">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">DCM</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      
+      
+      <xs:enumeration value="GPN">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">GPN</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      
+      
+      <xs:enumeration value="WD part number">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">WD part number</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      
+      
+      <xs:enumeration value="Motor combo chip">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Motor combo chip</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      
+      
+      <xs:enumeration value="PWB number">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">PWB number</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      
+      
+      <xs:enumeration value="HP BPC">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">HP BPC</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      
+      
+      <xs:enumeration value="HP IPG">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">HP IPG</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      
+      
+      <xs:enumeration value="Board number">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Board number</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      
+      <xs:enumeration value="Date code">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Date code</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      
+      <xs:enumeration value="Spindle sticker">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Spindle sticker</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      
+      <xs:enumeration value="Lot number">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Lot number</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      
+      <xs:enumeration value="BPC">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">BPC</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      
+      <xs:enumeration value="Site code">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Site code</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      
+      <xs:enumeration value="HDA part number">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">HDA part number</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      
+      <xs:enumeration value="HP CPC">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">HP CPC</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      
+      <xs:enumeration value="Configuration code">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Configuration code</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      
+      <xs:enumeration value="Configuration level">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Configuration level</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      
+      <xs:enumeration value="PCBA serial number">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">PCBA serial number</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      
+      <xs:enumeration value="CPN">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">CPN</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      
+      <xs:enumeration value="ER">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">ER</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      
+      <xs:enumeration value="PCBA serial number">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">PCBA serial number</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="PCB sticker barcode">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">PCB sticker barcode</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:element name="drives">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="drive" maxOccurs="unbounded">
+          <xs:annotation>
+            <xs:appinfo>
+              <vxe:settings>
+                <vxe:instanceWrapperClass>drive</vxe:instanceWrapperClass>
+                <vxe:startFoldedInstance>true</vxe:startFoldedInstance>
+                <vxe:compoundTitle>model brand modelname</vxe:compoundTitle>
+                <vxe:titleClass>title</vxe:titleClass>
+                <vxe:compoundTitleHideTitles>true</vxe:compoundTitleHideTitles>
+                <vxe:showFoldInstanceButton>true</vxe:showFoldInstanceButton>
+              </vxe:settings>
+            </xs:appinfo>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="model" type="notemptystring">
+                <xs:annotation>
+                  <xs:documentation>
+                    <dc:title xml:lang="en">Drive model</dc:title>
+                  </xs:documentation>
+                  <xs:appinfo>
+                    <vxe:settings>
+                      <vxe:widget>
+                        <vxe:singleline/>
+                      </vxe:widget>
+                    </vxe:settings>
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="brand" type="brandtype">
+                <xs:annotation>
+                  <xs:documentation>
+                    <dc:title xml:lang="en">Brand name</dc:title>
+                  </xs:documentation>
+                  <xs:appinfo>
+                    <vxe:settings>
+                      <vxe:widget>
+                        <vxe:select>
+                          <vxe:sortOptionsByName>true</vxe:sortOptionsByName>
+                          <vxe:allowEmptyElement>true</vxe:allowEmptyElement>
+                          <vxe:emptyElementText>Please select</vxe:emptyElementText>
+                        </vxe:select>
+                      </vxe:widget>
+                    </vxe:settings>
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="modelname" type="notemptystring">
+                <xs:annotation>
+                  <xs:documentation>
+                    <dc:title xml:lang="en">Model name</dc:title>
+                  </xs:documentation>
+                  <xs:appinfo>
+                    <vxe:settings>
+                      <vxe:widget>
+                        <vxe:singleline/>
+                      </vxe:widget>
+                    </vxe:settings>
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="formfactor" type="formfactortype" minOccurs="0">
+                <xs:annotation>
+                  <xs:documentation>
+                    <dc:title xml:lang="en">Form factor</dc:title>
+                  </xs:documentation>
+                  <xs:appinfo>
+                    <vxe:settings>
+                      <vxe:showAddDeleteButtons>false</vxe:showAddDeleteButtons>
+                      <vxe:widget>
+                        <vxe:select>
+                          <vxe:sortOptionsByName>true</vxe:sortOptionsByName>
+                          <vxe:allowEmptyElement>true</vxe:allowEmptyElement>
+                          <vxe:emptyElementText>Please select</vxe:emptyElementText>
+                        </vxe:select>
+                      </vxe:widget>
+                    </vxe:settings>
+                  </xs:appinfo>
+                </xs:annotation>
+              </xs:element>
+              <xs:element name="numbers">
+                <xs:annotation>
+                  <xs:documentation>
+                    <dc:title xml:lang="en">Numbers</dc:title>
+                  </xs:documentation>
+                  <xs:appinfo>
+                    <vxe:settings>
+                      <vxe:startFolded>true</vxe:startFolded>
+                      <vxe:showFoldButton>true</vxe:showFoldButton>
+                    </vxe:settings>
+                  </xs:appinfo>
+                </xs:annotation>
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="number" maxOccurs="unbounded">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="description" type="numbersdescriptiontype">
+                            <xs:annotation>
+                              <xs:appinfo>
+                                <vxe:settings>
+                                  <vxe:widget>
+                                    <vxe:select>
+                                      <vxe:sortOptionsByName>true</vxe:sortOptionsByName>
+                                      <vxe:allowEmptyElement>true</vxe:allowEmptyElement>
+                                      <vxe:emptyElementText>Please select</vxe:emptyElementText>
+                                    </vxe:select>
+                                  </vxe:widget>
+                                </vxe:settings>
+                              </xs:appinfo>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="regexp" type="notemptystring">
+                            <xs:annotation>
+                              <xs:appinfo>
+                                <vxe:settings>
+                                  <vxe:widget>
+                                    <vxe:singleline/>
+                                  </vxe:widget>
+                                </vxe:settings>
+                              </xs:appinfo>
+                            </xs:annotation>
+                          </xs:element>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,60 @@
+{
+    "Metal":
+	{
+	    "values": []
+	},
+    "Metal/Type":
+	{
+	    "values": ["Sterling Silver"]
+	},
+    "Stamp":
+	{
+	    "values": ["925"]
+	},
+    "Shape":
+	{
+	    "values": []
+	},
+    "Size":
+	{
+	    "values": []
+	},
+    "Height":
+	{
+	    "values": ["12"],
+	    "attributes":
+		[
+		    {
+			"name": "unit",
+			"values": ["millimeter"]
+		    }
+		]
+	},
+    "Width":
+	{
+	    "values": ["16"],
+	    "attributes":
+		[
+		    {
+			"name": "unit",
+			"values": ["millimeter"]
+		    }
+		]
+	},
+    "Shape/Type":
+	{
+	    "values": ["Cross"]
+	},
+    "SubjectContent":
+	{
+	    "values": ["Animals"]
+	},
+    "TargetAudience":
+	{
+	    "values": ["Boy", "Girl", "Man", "Woman", "Unisex Child", "Unisex Adult"]
+	},
+    "UsedFor":
+	{
+	    "values": ["Anniversary", "Birthday", "Christmas", "Mothers Day", "Holiday"]
+	}
+}

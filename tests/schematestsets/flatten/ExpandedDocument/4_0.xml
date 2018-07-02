@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Store>
+	<NodeOne>
+		<SameNode>
+			<SameNodeAgain>
+				<SameNodeAgainAgain>
+					<SameName>uno</SameName>
+				</SameNodeAgainAgain>
+			</SameNodeAgain>
+		</SameNode>
+	</NodeOne>
+	<NodeTwo>
+		<SameNode>
+			<SameNodeAgain>
+				<SameNodeAgainAgain>
+					<SameName>duo</SameName>
+				</SameNodeAgainAgain>
+			</SameNodeAgain>
+		</SameNode>
+	</NodeTwo>
+</Store>

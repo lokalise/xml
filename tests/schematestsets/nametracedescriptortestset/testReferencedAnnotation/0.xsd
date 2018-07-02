@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:complexType name="BookType">
+        <xs:annotation>
+            <xs:documentation>
+                <test>Book test</test>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:sequence>
+			<xs:element name="BookElement" type="xs:string" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	</xs:complexType>
+
+	<xs:simpleType name="PaintingType">
+        <xs:annotation>
+            <xs:documentation>
+                <test>Painting test</test>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="painting"/>
+        </xs:restriction>
+	</xs:simpleType>
+
+	<xs:element name="Catalog">
+        <xs:annotation>
+            <xs:documentation>
+                <test>Catalog test</test>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+			<xs:sequence>
+				<xs:element name="Book" type="BookType"/>
+				<xs:element name="Painting" type="PaintingType"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

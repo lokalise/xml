@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<xs:schema
+xmlns:xs="http://www.w3.org/2001/XMLSchema"
+xmlns:dc="http://dublincore.org/schemas/xmls/qdc/2008/02/11/dc.xsd"
+xmlns:vxe="urn:visualXMLeditor:settings">
+	<xs:element name="Jewelry">
+		<xs:annotation>
+			<xs:documentation>
+				<dc:title>Jewelry title</dc:title>
+			</xs:documentation>
+			<xs:appinfo>
+				<vxe:settings>
+					<vxe:titleClass>titleclass</vxe:titleClass>
+				</vxe:settings>
+			</xs:appinfo>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="One" type="xs:string"/>
+				<xs:element name="Two" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="Product">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="Jewelry">
+					<xs:annotation>
+						<xs:appinfo>
+							<vxe:settings>
+								<vxe:instanceWrapperClass>instancewrapperclass</vxe:instanceWrapperClass>
+							</vxe:settings>
+						</xs:appinfo>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

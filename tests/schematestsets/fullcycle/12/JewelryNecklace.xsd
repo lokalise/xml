@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://dublincore.org/schemas/xmls/qdc/2008/02/11/dc.xsd" xmlns:vxe="urn:visualXMLeditor:settings">
+  <xs:include schemaLocation="Measurements.xsd"/>
+  <xs:include schemaLocation="JewelryChain.xsd"/>
+  <xs:simpleType name="NecklaceTypeType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="chain-necklaces"/>
+      <xs:enumeration value="choker-necklaces"/>
+      <xs:enumeration value="collar-necklaces"/>
+      <xs:enumeration value="pearl-strands"/>
+      <xs:enumeration value="hoker-pearl-strands"/>
+      <xs:enumeration value="matinee-pearl-strands"/>
+      <xs:enumeration value="pera-pearl-strands"/>
+      <xs:enumeration value="princess-pearl-strands"/>
+      <xs:enumeration value="rope-pearl-strands"/>
+      <xs:enumeration value="pendant-necklaces"/>
+      <xs:enumeration value="locket-necklaces"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:group name="JewelryNecklace">
+    <xs:sequence>
+      <xs:element name="Length" type="LengthDimension" minOccurs="1" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Length</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Type" type="NecklaceTypeType" minOccurs="1" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Necklace type</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:group ref="JewelryChain"/>
+    </xs:sequence>
+  </xs:group>
+</xs:schema>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Product>
+    <Charm>
+        <WeightContainerOne>
+            <WeightContainerDeeper>
+                <Weight>111</Weight>
+            </WeightContainerDeeper>
+            <WeightContainerDeeper>
+                <Weight>222</Weight>
+            </WeightContainerDeeper>
+        </WeightContainerOne>
+        <Size>
+            <Height unit="millimeter">12</Height>
+            <Width unit="meter">16</Width>
+        </Size>
+    </Charm>
+</Product>

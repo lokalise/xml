@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<Properties>
+    <AdditionalItemProperty>
+        <Name>NewHierarchyLevel[1]/Size/Height@unit</Name>
+        <Value>millimeter</Value>
+    </AdditionalItemProperty>
+    <AdditionalItemProperty>
+        <Name>NewHierarchyLevel[1]/Size/Height</Name>
+        <Value>12</Value>
+    </AdditionalItemProperty>
+    <AdditionalItemProperty>
+        <Name>NewHierarchyLevel[1]/Size/Width@unit</Name>
+        <Value>meter</Value>
+    </AdditionalItemProperty>
+    <AdditionalItemProperty>
+        <Name>NewHierarchyLevel[1]/Size/Width</Name>
+        <Value>16</Value>
+    </AdditionalItemProperty>
+    <AdditionalItemProperty>
+        <Name>NewHierarchyLevel[2]/TestChoice/ChoiceTwo</Name>
+        <Value>ChoiceTwoValue</Value>
+    </AdditionalItemProperty>
+    <AdditionalItemProperty>
+        <Name>NewHierarchyLevel[3]/One</Name>
+        <Value>OneValue</Value>
+    </AdditionalItemProperty>
+    <AdditionalItemProperty>
+        <Name>NewHierarchyLevel[3]/Two</Name>
+        <Value>TwoValue</Value>
+    </AdditionalItemProperty>
+</Properties>

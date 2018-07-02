@@ -1,0 +1,970 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:simpleType name="md5hashtype">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9A-F]{32}"/>
+      <xs:length value="32"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="topictype">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[0-9]{1,2}(-[0-9]{1,5}){0,1}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="phonetype">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="([0-9][\s0-9-]{4,}[0-9]|\w+)"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="timeperiodtype">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="В любое время"/>
+      <xs:enumeration value="В рабочее время"/>
+      <xs:enumeration value="Круглосуточно"/>
+      <xs:enumeration value="Без выходных"/>
+      <xs:enumeration value="В будние дни"/>
+      <xs:enumeration value="В выходные дни"/>
+      <xs:enumeration value="Утром"/>
+      <xs:enumeration value="Днем"/>
+      <xs:enumeration value="Вечером"/>
+      <xs:enumeration value="Время московское"/>
+      <xs:enumeration value="Понедельник-Пятница"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="timerangetype">
+    <xs:sequence>
+      <xs:element name="from" type="xs:time" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="to" type="xs:time" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="timetype">
+    <xs:sequence>
+      <xs:element name="period" type="timeperiodtype" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="range" type="timerangetype" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="timeunittype">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Месяц"/>
+      <xs:enumeration value="Год"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="contacttype">
+    <xs:sequence>
+      <xs:element name="professional" type="xs:boolean" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="agency" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="name" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="phone" type="phonetype" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="time" type="timetype" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="intersectiontype">
+    <xs:sequence>
+      <xs:element name="street" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="crossing" type="xs:string" minOccurs="1" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="waypointtype">
+    <xs:all>
+      <xs:element name="highway" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="milestone" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="from" type="locationtype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="distance" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="upto" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="locationcoordinatetype">
+    <xs:sequence>
+      <xs:element name="coordinatesystemcode" type="xs:normalizedString" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="longitudedegrees" type="xs:decimal" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="latitudedegrees" type="xs:decimal" minOccurs="1" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="locationtype">
+    <xs:all>
+      <xs:element name="buildingkit" type="xs:boolean" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="country" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="region" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="district" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="town" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="area" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="suburb" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="street" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="streetno" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="intersection" type="intersectiontype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="waypoint" type="waypointtype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="landmark" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="coordinate" type="locationcoordinatetype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="radius" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="locationstype">
+    <xs:sequence>
+      <xs:element name="location" type="locationtype" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="buildingsizetype">
+    <xs:sequence>
+      <xs:element name="width" type="xs:decimal" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="depth" type="xs:decimal" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="height" type="xs:decimal"  minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="gatesizetype">
+    <xs:sequence>
+      <xs:element name="width" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="height" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="paymentperiodtype">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Почасовая"/>
+      <xs:enumeration value="Посуточно"/>
+      <xs:enumeration value="Понедельно"/>
+      <xs:enumeration value="Помесячно"/>
+      <xs:enumeration value="Поквартально"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="paymentperiodstype">
+    <xs:sequence>
+      <xs:element name="paymentperiod" type="paymentperiodtype" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="leaseperiodtype">
+    <xs:all>
+      <xs:element name="quantity" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="timeunit" type="timeunittype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="from" type="xs:date" minOccurs="0" maxOccurs="1"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="pricingtype">
+    <xs:all>
+      <xs:element name="price" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="low" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="high" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="pricepersqm" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="pricepersqmlow" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="pricepersqmhigh" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="sqm" type="sqmtype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="priceperhour" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="priceperday" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="pricepermonth" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="pricepermonthlow" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="pricepermonthhigh" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="priceperquarter" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="paymentperiods" type="paymentperiodstype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="negotiable" type="xs:boolean" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="cashsettlement" type="xs:boolean" minOccurs="0" maxOccurs="1"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="incometype">
+    <xs:all>
+      <xs:element name="low" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="high" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="permonth" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="peryear" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="paymentperiod" type="paymentperiodtype" minOccurs="0" maxOccurs="1"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="sqmtype">
+    <xs:all>
+      <xs:element name="low" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="high" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="acreagetype">
+    <xs:all>
+      <xs:element name="low" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="high" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="floorstype">
+    <xs:all>
+      <xs:element name="low" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="high" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="lotstype">
+    <xs:sequence>
+      <xs:element name="sqm" type="xs:decimal" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="acreage" type="xs:integer" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="constructiontypetype">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Бетоннокирпичный"/>
+      <xs:enumeration value="Бетонный"/>
+      <xs:enumeration value="Блочный"/>
+      <xs:enumeration value="Бревенчатый"/>
+      <xs:enumeration value="Бревенчатый/брус"/>
+      <xs:enumeration value="Брус"/>
+      <xs:enumeration value="Брусовой/кирпичный"/>
+      <xs:enumeration value="Брусовой/газобетон"/>
+      <xs:enumeration value="Брусовой/пенобетон"/>
+      <xs:enumeration value="Деревянный"/>
+      <xs:enumeration value="Газобетон"/>
+      <xs:enumeration value="Газопенобетон"/>
+      <xs:enumeration value="Гипсоблок"/>
+      <xs:enumeration value="Железный"/>
+      <xs:enumeration value="Железобетонный"/>
+      <xs:enumeration value="Заливной"/>
+      <xs:enumeration value="Каркасно/засыпной"/>
+      <xs:enumeration value="Каркасный/брус"/>
+      <xs:enumeration value="Кирпичный"/>
+      <xs:enumeration value="Кирпичный/брус/монолит"/>
+      <xs:enumeration value="Кирпичный/деревянный"/>
+      <xs:enumeration value="Кирпичный/панельный"/>
+      <xs:enumeration value="Кирпичный/панельный/металлический"/>
+      <xs:enumeration value="Кирпичный/фибробетон"/>
+      <xs:enumeration value="Комбинированый"/>
+      <xs:enumeration value="Кругляк"/>
+      <xs:enumeration value="Лиственичный"/>
+      <xs:enumeration value="Монолит"/>
+      <xs:enumeration value="Монолит/пенобетон"/>
+      <xs:enumeration value="Монолитбетон"/>
+      <xs:enumeration value="Монолитбетон/брус"/>
+      <xs:enumeration value="Монолиткирпич"/>
+      <xs:enumeration value="Монолит/панельный"/>
+      <xs:enumeration value="Панельный"/>
+      <xs:enumeration value="Панельный/кирпичный"/>
+      <xs:enumeration value="Пескоблоки"/>
+      <xs:enumeration value="Пенобетон"/>
+      <xs:enumeration value="Пенобетон/кирпич"/>
+      <xs:enumeration value="Пенобетон/полистиролбетон/газобетон"/>
+      <xs:enumeration value="Пеноблок"/>
+      <xs:enumeration value="Полистиролбетон"/>
+      <xs:enumeration value="Сибит"/>
+      <xs:enumeration value="Сибит/брус"/>
+      <xs:enumeration value="Шлакоблочный"/>
+      <xs:enumeration value="Шлакозаливной"/>
+      <xs:enumeration value="Шлакозаливной/брус"/>
+      <xs:enumeration value="Шлакозасыпной"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="commercialpropertyconditiontype">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Ремонт"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="domesticpropertytype">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Койко-место"/>
+      <xs:enumeration value="Жилплощадь"/>
+      <xs:enumeration value="1/4 комнаты"/>
+      <xs:enumeration value="Комната"/>
+      <xs:enumeration value="2 комнаты"/>
+      <xs:enumeration value="3 комнаты"/>
+      <xs:enumeration value="1/2 1 комнатной квартиры"/>
+      <xs:enumeration value="1/3 1 комнатной квартиры"/>
+      <xs:enumeration value="1/2 2 комнатной квартиры"/>
+      <xs:enumeration value="1/2 3 комнатной квартиры"/>
+      <xs:enumeration value="1/3 3 комнатной квартиры"/>
+      <xs:enumeration value="2/3 3 комнатной квартиры"/>
+      <xs:enumeration value="3/4 3 комнатной квартиры"/>
+      <xs:enumeration value="2/3 4 комнатной квартиры"/>
+      <xs:enumeration value="Малосемейная"/>
+      <xs:enumeration value="Квартира"/>
+      <xs:enumeration value="1/2 квартиры"/>
+      <xs:enumeration value="1 комнатная квартира"/>
+      <xs:enumeration value="1 и 3 комнатные квартиры"/>
+      <xs:enumeration value="1-2 комнатная квартира"/>
+      <xs:enumeration value="1-3 комнатная квартира"/>
+      <xs:enumeration value="1-2-3 комнатная квартира"/>
+      <xs:enumeration value="2 комнатная квартира"/>
+      <xs:enumeration value="2-3 комнатная квартира"/>
+      <xs:enumeration value="2 и 4 комнатные квартиры"/>
+      <xs:enumeration value="3 комнатная квартира"/>
+      <xs:enumeration value="3-4 комнатная квартира"/>
+      <xs:enumeration value="3-5 комнатная квартира"/>
+      <xs:enumeration value="4 комнатная квартира"/>
+      <xs:enumeration value="4-5 комнатная квартира"/>
+      <xs:enumeration value="5 комнатная квартира"/>
+      <xs:enumeration value="6 комнатная квартира"/>
+      <xs:enumeration value="7 комнатная квартира"/>
+      <xs:enumeration value="9 комнатная квартира"/>
+      <xs:enumeration value="Участок"/>
+      <xs:enumeration value="Дача"/>
+      <xs:enumeration value="Сруб"/>
+      <xs:enumeration value="Часть дома"/>
+      <xs:enumeration value="1/4 дома"/>
+      <xs:enumeration value="1/3 дома"/>
+      <xs:enumeration value="1/2 дома"/>
+      <xs:enumeration value="Дом"/>
+      <xs:enumeration value="Два дома"/>
+      <xs:enumeration value="Коттедж"/>
+      <xs:enumeration value="Усадьба"/>
+      <xs:enumeration value="Таунхаус"/>
+      <xs:enumeration value="Пентхаус"/>
+      <xs:enumeration value="Две 1 комнатных квартиры"/>
+      <xs:enumeration value="Две 2 комнатных квартиры"/>
+      <xs:enumeration value="Две 3 комнатных квартиры"/>
+      <xs:enumeration value="Доля"/>
+      <xs:enumeration value="Юрта"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="domesticpropertytypes">
+    <xs:sequence>
+      <xs:element name="propertytype" type="domesticpropertytype" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="garagepropertytype">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Бокс"/>
+      <xs:enumeration value="Два гаража"/>
+      <xs:enumeration value="Гараж"/>
+      <xs:enumeration value="Контейнер"/>
+      <xs:enumeration value="Место под гараж"/>
+      <xs:enumeration value="Парковочное место"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="garagepropertytypes">
+    <xs:sequence>
+      <xs:element name="garagetype" type="garagepropertytype" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="garagetype">
+    <xs:all>
+      <xs:element name="garagetype" type="garagepropertytype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="garagetypes" type="garagepropertytypes" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="garagesize" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="totalsqm" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="buildingsize" type="buildingsizetype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="gatesize" type="gatesizetype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="constructiontype" type="constructiontypetype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="number" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="saunatype">
+    <xs:all>
+      <xs:element name="stories" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="constructiontype" type="constructiontypetype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="totalsqm" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="buildingsize" type="buildingsizetype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="pricing" type="pricingtype" minOccurs="0" maxOccurs="1"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:simpleType name="commercialpropertytype">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="1/2 здания"/>
+      <xs:enumeration value="Автомойка"/>
+      <xs:enumeration value="Автосервис"/>
+      <xs:enumeration value="Автостоянка"/>
+      <xs:enumeration value="АЗС"/>
+      <xs:enumeration value="Ангар"/>
+      <xs:enumeration value="Аптека"/>
+      <xs:enumeration value="База"/>
+      <xs:enumeration value="Бар"/>
+      <xs:enumeration value="Бизнес"/>
+      <xs:enumeration value="Бизнес-центр"/>
+      <xs:enumeration value="Бокс"/>
+      <xs:enumeration value="Вагончик"/>
+      <xs:enumeration value="Гостиничный комплекс"/>
+      <xs:enumeration value="Завод"/>
+      <xs:enumeration value="Зал"/>
+      <xs:enumeration value="Здание"/>
+      <xs:enumeration value="Зоомагазин"/>
+      <xs:enumeration value="Кабинет"/>
+      <xs:enumeration value="Картофелехранилище"/>
+      <xs:enumeration value="Кафе"/>
+      <xs:enumeration value="Кладовая"/>
+      <xs:enumeration value="Комната"/>
+      <xs:enumeration value="Комплекс"/>
+      <xs:enumeration value="Контейнер"/>
+      <xs:enumeration value="Ломбард"/>
+      <xs:enumeration value="Магазин"/>
+      <xs:enumeration value="Мастерская"/>
+      <xs:enumeration value="Ночной клуб"/>
+      <xs:enumeration value="Овощехранилище"/>
+      <xs:enumeration value="Офис"/>
+      <xs:enumeration value="Павильон"/>
+      <xs:enumeration value="Парикмахерская"/>
+      <xs:enumeration value="Пекарня"/>
+      <xs:enumeration value="Пилорама"/>
+      <xs:enumeration value="Площади"/>
+      <xs:enumeration value="Помещение"/>
+      <xs:enumeration value="Право аренды"/>
+      <xs:enumeration value="Причал"/>
+      <xs:enumeration value="Рекламное место"/>
+      <xs:enumeration value="Ресторан"/>
+      <xs:enumeration value="Рефрижератор"/>
+      <xs:enumeration value="Салон красоты"/>
+      <xs:enumeration value="Сауна"/>
+      <xs:enumeration value="Склад"/>
+      <xs:enumeration value="Спорткомплекс"/>
+      <xs:enumeration value="Столовая"/>
+      <xs:enumeration value="Территория"/>
+      <xs:enumeration value="Торговый киоск"/>
+      <xs:enumeration value="Торговое место"/>
+      <xs:enumeration value="Торговый центр"/>
+      <xs:enumeration value="Тупик"/>
+      <xs:enumeration value="Турбаза"/>
+      <xs:enumeration value="Участок"/>
+      <xs:enumeration value="Фермерское хозяйство"/>
+      <xs:enumeration value="Цех"/>
+      <xs:enumeration value="Цоколь"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="commercialpropertytypes">
+    <xs:sequence>
+      <xs:element name="propertytype" type="commercialpropertytype" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="trailermodeltype">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="&quot;Купава&quot;"/>
+      <xs:enumeration value="Скиф М1"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="trailertype">
+    <xs:all>
+      <xs:element name="model" type="trailermodeltype" minOccurs="1" maxOccurs="1"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="unparsedtype">
+    <xs:sequence>
+      <xs:element name="phrase" type="xs:string" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="domesticpropertytolettype">
+    <xs:all>
+      <xs:element name="location" type="locationtype" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="propertytype" type="domesticpropertytype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="constructiontype" type="constructiontypetype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="pricing" type="pricingtype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="period" type="leaseperiodtype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="rooms" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="sqm" type="sqmtype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="totalsqm" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="livingsqm" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="kitchensqm" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="floor" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="floors" type="floorstype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="stories" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="acreage" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="lots" type="lotstype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="balcony" type="xs:boolean" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="landline" type="xs:boolean" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="internet" type="xs:boolean" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="garage" type="garagetype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="agency" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="unparsed" type="unparsedtype" minOccurs="0" maxOccurs="1"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="domesticpropertyleasetype">
+    <xs:all>
+      <xs:element name="locations" type="locationstype" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="propertytype" type="domesticpropertytype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="propertytypes" type="domesticpropertytypes" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="pricing" type="pricingtype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="period" type="leaseperiodtype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="floor" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="stories" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="balcony" type="xs:boolean" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="landline" type="xs:boolean" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="internet" type="xs:boolean" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="garage" type="garagetype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="unparsed" type="unparsedtype" minOccurs="0" maxOccurs="1"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="domesticpropertysaletype">
+    <xs:all>
+      <xs:element name="location" type="locationtype" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="propertytype" type="domesticpropertytype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="propertytypes" type="domesticpropertytypes" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="constructiontype" type="constructiontypetype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="pricing" type="pricingtype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="income" type="incometype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="rooms" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="sqm" type="sqmtype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="totalsqm" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="livingsqm" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="kitchensqm" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="floor" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="floors" type="floorstype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="stories" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="acreage" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="blocks" type="acreagetype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="lots" type="lotstype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="buildingsize" type="buildingsizetype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="balcony" type="xs:boolean" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="landline" type="xs:boolean" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="internet" type="xs:boolean" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="lift" type="xs:boolean" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="garage" type="garagetype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="sauna" type="saunatype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="mortgageready" type="xs:boolean" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="agency" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="unparsed" type="unparsedtype" minOccurs="0" maxOccurs="1"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="domesticpropertybuytype">
+    <xs:all>
+      <xs:element name="locations" type="locationstype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="propertytype" type="domesticpropertytype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="propertytypes" type="domesticpropertytypes" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="constructiontype" type="constructiontypetype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="pricing" type="pricingtype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="sqm" type="sqmtype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="totalsqm" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="livingsqm" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="kitchensqm" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="floor" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="floors" type="floorstype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="acreage" type="acreagetype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="balcony" type="xs:boolean" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="garage" type="garagetype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="mortgageready" type="xs:boolean" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="agency" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="unparsed" type="unparsedtype" minOccurs="0" maxOccurs="1"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="commercialpropertytolettype">
+    <xs:all>
+      <xs:element name="location" type="locationtype" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="propertytype" type="commercialpropertytype" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="constructiontype" type="constructiontypetype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="pricing" type="pricingtype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="totalsqm" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="sqm" type="sqmtype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="floor" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="floors" type="floorstype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="stories" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="acreage" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="lots" type="lotstype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="landline" type="xs:boolean" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="internet" type="xs:boolean" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="garage" type="garagetype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="agency" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="unparsed" type="unparsedtype" minOccurs="0" maxOccurs="1"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="commercialpropertyleasetype">
+    <xs:all>
+      <xs:element name="locations" type="locationstype" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="propertytype" type="commercialpropertytype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="propertytypes" type="commercialpropertytypes" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="pricing" type="pricingtype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="period" type="leaseperiodtype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="totalsqm" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="sqm" type="sqmtype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="agency" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="unparsed" type="unparsedtype" minOccurs="0" maxOccurs="1"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="commercialpropertysaletype">
+    <xs:all>
+      <xs:element name="location" type="locationtype" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="propertytype" type="commercialpropertytype" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="constructiontype" type="constructiontypetype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="pricing" type="pricingtype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="income" type="incometype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="totalsqm" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="livingsqm" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="kitchensqm" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="sqm" type="sqmtype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="floor" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="floors" type="floorstype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="stories" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="acreage" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="lots" type="lotstype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="balcony" type="xs:boolean" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="buildingsize" type="buildingsizetype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="condition" type="commercialpropertyconditiontype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="garage" type="garagetype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="landline" type="xs:boolean" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="internet" type="xs:boolean" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="mortgageready" type="xs:boolean" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="agency" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="unparsed" type="unparsedtype" minOccurs="0" maxOccurs="1"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="commercialpropertybuytype">
+    <xs:all>
+      <xs:element name="locations" type="locationstype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="propertytype" type="commercialpropertytype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="propertytypes" type="commercialpropertytypes" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="pricing" type="pricingtype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="sqm" type="sqmtype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="totalsqm" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="floor" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="garage" type="garagetype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="agency" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="unparsed" type="unparsedtype" minOccurs="0" maxOccurs="1"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="garagetolettype">
+    <xs:all>
+      <xs:element name="location" type="locationtype" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="garage" type="garagetype" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="constructiontype" type="constructiontypetype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="pricing" type="pricingtype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="totalsqm" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="buildingsize" type="buildingsizetype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="unparsed" type="unparsedtype" minOccurs="0" maxOccurs="1"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="garageleasetype">
+    <xs:all>
+      <xs:element name="locations" type="locationstype" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="garage" type="garagetype" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="pricing" type="pricingtype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="unparsed" type="unparsedtype" minOccurs="0" maxOccurs="1"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="garagesaletype">
+    <xs:all>
+      <xs:element name="location" type="locationtype" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="garage" type="garagetype" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="pricing" type="pricingtype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="totalsqm" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="lots" type="lotstype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="buildingsize" type="buildingsizetype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="constructiontype" type="constructiontypetype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="agency" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="unparsed" type="unparsedtype" minOccurs="0" maxOccurs="1"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="garagebuytype">
+    <xs:all>
+      <xs:element name="locations" type="locationstype" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="garage" type="garagetype" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="pricing" type="pricingtype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="unparsed" type="unparsedtype" minOccurs="0" maxOccurs="1"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="disposedomesticpropertytype">
+    <xs:sequence>
+      <xs:element name="disposecash" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="disposeproperty" type="domesticpropertysaletype" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="disposecommercial" type="commercialpropertysaletype" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="disposegarage" type="garagesaletype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="disposemotor" type="motorsaletype" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="acquiredomesticpropertytype">
+    <xs:sequence>
+      <xs:element name="acquirebusiness" type="businessbuytype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="acquireproperty" type="domesticpropertybuytype" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="acquiregarage" type="garagebuytype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="acquiremotor" type="motorbuytype" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="domesticpropertyswaptype">
+    <xs:all>
+      <xs:element name="dispose" type="disposedomesticpropertytype" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="acquire" type="acquiredomesticpropertytype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="agency" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="unparsed" type="unparsedtype" minOccurs="0" maxOccurs="1"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="disposecommercialpropertytype">
+    <xs:choice>
+      <xs:element name="disposeproperty" type="commercialpropertysaletype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="disposegarage" type="garagesaletype" minOccurs="0" maxOccurs="1"/>
+    </xs:choice>
+  </xs:complexType>
+
+  <xs:complexType name="acquirecommercialpropertytype">
+    <xs:choice>
+      <xs:element name="acquireproperty" type="commercialpropertybuytype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="acquiremotor" type="motorbuytype" minOccurs="0" maxOccurs="1"/>
+    </xs:choice>
+  </xs:complexType>
+
+  <xs:complexType name="commercialpropertyswaptype">
+    <xs:all>
+      <xs:element name="dispose" type="disposecommercialpropertytype" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="acquire" type="acquirecommercialpropertytype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="unparsed" type="unparsedtype" minOccurs="0" maxOccurs="1"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="shorttermaccomodationtype">
+    <xs:all>
+      <xs:element name="propertytype" type="domesticpropertytype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="propertytypes" type="domesticpropertytypes" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="locations" type="locationstype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="pricing" type="pricingtype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="garage" type="garagetype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="sauna" type="saunatype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="constructiontype" type="constructiontypetype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="balcony" type="xs:boolean" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="landline" type="xs:boolean" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="internet" type="xs:boolean" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="agency" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="unparsed" type="unparsedtype" minOccurs="0" maxOccurs="1"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:simpleType name="drivetraintype">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="4WD"/>
+      <xs:enumeration value="Передний"/>
+      <xs:enumeration value="Задний"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="transmissiontype">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Мануальная"/>
+      <xs:enumeration value="Автоматическая"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="yearstype">
+    <xs:all>
+      <xs:element name="from" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="to" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="motorsaletype">
+    <xs:all>
+      <xs:element name="location" type="locationtype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="make" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="model" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="year" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="displacement" type="xs:decimal" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="color" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="odometer" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="drivetrain" type="drivetraintype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="transmission" type="transmissiontype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="trailer" type="trailertype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="pricing" type="pricingtype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="unparsed" type="unparsedtype" minOccurs="0" maxOccurs="1"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="motorbuytype">
+    <xs:all>
+      <xs:element name="make" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="model" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="year" type="xs:integer" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="years" type="yearstype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="unparsed" type="unparsedtype" minOccurs="0" maxOccurs="1"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="motorswaptype">
+    <xs:all>
+      <xs:element name="unparsed" type="unparsedtype" minOccurs="0" maxOccurs="1"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="motorservicetype">
+    <xs:all>
+      <xs:element name="unparsed" type="unparsedtype" minOccurs="0" maxOccurs="1"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="servicestype">
+    <xs:all>
+      <xs:element name="realestate" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="propertytype" type="domesticpropertytype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="location" type="locationtype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="pricing" type="pricingtype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="agency" type="xs:string" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="unparsed" type="unparsedtype" minOccurs="0" maxOccurs="1"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="domesticsaletype">
+    <xs:all>
+      <xs:element name="pricing" type="pricingtype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="unparsed" type="unparsedtype" minOccurs="0" maxOccurs="1"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="domesticbuytype">
+    <xs:all>
+      <xs:element name="pricing" type="pricingtype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="unparsed" type="unparsedtype" minOccurs="0" maxOccurs="1"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="commercialsaletype">
+    <xs:all>
+      <xs:element name="pricing" type="pricingtype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="unparsed" type="unparsedtype" minOccurs="0" maxOccurs="1"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="commercialbuytype">
+    <xs:all>
+      <xs:element name="unparsed" type="unparsedtype" minOccurs="0" maxOccurs="1"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="businessbuytype">
+    <xs:all>
+      <xs:element name="unparsed" type="unparsedtype" minOccurs="0" maxOccurs="1"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="clothingsaletype">
+    <xs:all>
+      <xs:element name="unparsed" type="unparsedtype" minOccurs="0" maxOccurs="1"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="needservicetype">
+    <xs:all>
+      <xs:element name="unparsed" type="unparsedtype" minOccurs="0" maxOccurs="1"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="jobtype">
+    <xs:all>
+      <xs:element name="unparsed" type="unparsedtype" minOccurs="0" maxOccurs="1"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="forhiretype">
+    <xs:all>
+      <xs:element name="pricing" type="pricingtype" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="unparsed" type="unparsedtype" minOccurs="0" maxOccurs="1"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="messagetype">
+    <xs:all>
+      <xs:element name="unparsed" type="unparsedtype" minOccurs="0" maxOccurs="1"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="datingtype">
+    <xs:all>
+      <xs:element name="unparsed" type="unparsedtype" minOccurs="0" maxOccurs="1"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:complexType name="ignoretype">
+    <xs:all>
+      <xs:element name="unparsed" type="unparsedtype" minOccurs="0" maxOccurs="1"/>
+    </xs:all>
+  </xs:complexType>
+
+  <xs:group name="adtype">
+    <xs:sequence>
+      <xs:element name="contact" type="contacttype" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="suggestedtopic" type="topictype" minOccurs="0" maxOccurs="1"/>
+      <xs:choice>
+        <xs:element name="domesticpropertytolet" type="domesticpropertytolettype"/>
+        <xs:element name="domesticpropertylease" type="domesticpropertyleasetype"/>
+        <xs:element name="domesticpropertysale" type="domesticpropertysaletype"/>
+        <xs:element name="domesticpropertybuy" type="domesticpropertybuytype"/>
+        <xs:element name="commercialpropertytolet" type="commercialpropertytolettype"/>
+        <xs:element name="commercialpropertylease" type="commercialpropertyleasetype"/>
+        <xs:element name="commercialpropertysale" type="commercialpropertysaletype"/>
+        <xs:element name="commercialpropertybuy" type="commercialpropertybuytype"/>
+        <xs:element name="garagetolet" type="garagetolettype"/>
+        <xs:element name="garagelease" type="garageleasetype"/>
+        <xs:element name="garagesale" type="garagesaletype"/>
+        <xs:element name="garagebuy" type="garagebuytype"/>
+        <xs:element name="domesticpropertyswap" type="domesticpropertyswaptype"/>
+        <xs:element name="commercialpropertyswap" type="commercialpropertyswaptype"/>
+        <xs:element name="shorttermaccomodation" type="shorttermaccomodationtype"/>
+        <xs:element name="motorrent" type="xs:string"/>
+        <xs:element name="motorsale" type="motorsaletype"/>
+        <xs:element name="motorbuy" type="motorbuytype"/>
+        <xs:element name="motorswap" type="motorswaptype"/>
+        <xs:element name="motorservice" type="motorservicetype"/>
+        <xs:element name="domesticsale" type="domesticsaletype"/>
+        <xs:element name="domesticbuy" type="domesticbuytype"/>
+        <xs:element name="domesticswap" type="xs:string"/>
+        <xs:element name="commercialsale" type="commercialsaletype"/>
+        <xs:element name="commercialbuy" type="commercialbuytype"/>
+        <xs:element name="commercialswap" type="xs:string"/>
+        <xs:element name="clothingsale" type="clothingsaletype"/>
+        <xs:element name="clothingbuy" type="xs:string"/>
+        <xs:element name="clothingswap" type="xs:string"/>
+        <xs:element name="kidssale" type="xs:string"/>
+        <xs:element name="kidsbuy" type="xs:string"/>
+        <xs:element name="kidsswap" type="xs:string"/>
+        <xs:element name="hobbysale" type="xs:string"/>
+        <xs:element name="hobbybuy" type="xs:string"/>
+        <xs:element name="hobbyswap" type="xs:string"/>
+        <xs:element name="services" type="servicestype"/>
+        <xs:element name="needservice" type="needservicetype"/>
+        <xs:element name="job" type="jobtype"/>
+        <xs:element name="forhire" type="forhiretype"/>
+        <xs:element name="message" type="messagetype"/>
+        <xs:element name="dating" type="datingtype"/>
+      </xs:choice>
+      <xs:element name="image" type="xs:base64Binary" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:group>
+
+  <xs:element name="advertisement">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="topic" type="topictype" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="original" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="expanded" type="xs:string" minOccurs="1" maxOccurs="1"/>
+        <xs:choice>
+          <xs:group ref="adtype"/>
+          <xs:element name="ignore" type="ignoretype"/>
+        </xs:choice>
+      </xs:sequence>
+      <xs:attribute name="id" type="md5hashtype" use="required"/>
+      <xs:attribute name="datetime" type="xs:dateTime" use="required"/>
+      <xs:attribute name="updateof" type="md5hashtype" use="optional"/>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:element name="location" type="locationtype"/>
+
+</xs:schema>

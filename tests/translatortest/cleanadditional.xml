@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rootelement>
+    <translateme xml:lang="en">Figure 1</translateme>
+    <translateme xml:lang="ru">Фигура раз</translateme>
+    <translatemetoo languageID="en">Figure 2</translatemetoo>
+    <translatemetoo languageID="ru">Фигура 2</translatemetoo>
+</rootelement>

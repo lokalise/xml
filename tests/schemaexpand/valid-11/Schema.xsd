@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:group name="SecondAutobiographyType">
+    <xs:sequence>
+      <xs:element name="SecondAutobiographyProperty" type="xs:string" minOccurs="1" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:group>
+
+  <xs:group name="FirstAutobiographyType">
+    <xs:sequence>
+      <xs:element name="FirstAutobiographyProperty" type="xs:string" minOccurs="1" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:group>
+
+  <xs:complexType name="AutobiographyType">
+    <xs:choice>
+      <xs:group ref="FirstAutobiographyType"/>
+      <xs:group ref="SecondAutobiographyType"/>
+    </xs:choice>
+  </xs:complexType>
+
+  <xs:group name="SecondNovelType">
+    <xs:sequence>
+      <xs:element name="SecondNovelProperty" type="xs:string" minOccurs="1" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:group>
+
+  <xs:group name="FirstNovelType">
+    <xs:sequence>
+      <xs:element name="FirstNovelProperty" type="xs:string" minOccurs="1" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:group>
+
+  <xs:complexType name="NovelType">
+    <xs:choice>
+      <xs:group ref="FirstNovelType"/>
+      <xs:group ref="SecondNovelType"/>
+    </xs:choice>
+  </xs:complexType>
+
+  <xs:complexType name="PrintedBookType">
+    <xs:choice>
+      <xs:element name="Novel" type="NovelType" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="Autobiography" type="AutobiographyType" minOccurs="0" maxOccurs="1"/>
+    </xs:choice>
+  </xs:complexType>
+
+  <xs:group name="FirstPapirusBasedType">
+    <xs:sequence>
+      <xs:element name="FirstPapirusBasedProperty" type="xs:string" minOccurs="1" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:group>
+
+  <xs:group name="FirstPaperBasedType">
+    <xs:sequence>
+      <xs:element name="FirstPaperBasedProperty" type="xs:string" minOccurs="1" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:group>
+
+  <xs:complexType name="PapirusBasedType">
+    <xs:choice>
+      <xs:group ref="FirstPapirusBasedType"/>
+    </xs:choice>
+  </xs:complexType>
+
+  <xs:complexType name="PaperBasedType">
+    <xs:choice>
+      <xs:group ref="FirstPaperBasedType"/>
+    </xs:choice>
+  </xs:complexType>
+
+  <xs:complexType name="ManuscriptType">
+    <xs:choice>
+      <xs:element name="PapirusBased" type="PapirusBasedType" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="PaperBased" type="PaperBasedType" minOccurs="0" maxOccurs="1"/>
+    </xs:choice>
+  </xs:complexType>
+
+  <xs:element name="Catalog">
+    <xs:complexType>
+      <xs:choice>
+        <xs:element name="PrintedBook" type="PrintedBookType" minOccurs="0" maxOccurs="1"/>
+        <xs:element name="Manuscript" type="ManuscriptType" minOccurs="0" maxOccurs="1"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

@@ -1,0 +1,14 @@
+{
+	"name": {
+		"values": ["Rajesh"]
+	},
+	"city": {
+		"values": ["Calcutta"]
+	},
+	"shiporder": {
+		"attributes": [{
+			"name": "orderid",
+			"values": ["0123456789"]
+		}]
+	}
+}

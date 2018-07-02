@@ -1,0 +1,83 @@
+{
+	"Type": [{
+		"name": "Pendant\/Type",
+		"values": ["individual-pendants"],
+		"attributes": [],
+		"nametrace": "\/Product\/Jewelry\/Fashion\/Pendant\/Type"
+	},
+	{
+		"name": "Pendant\/Metal\/Type",
+		"values": ["Sterling-silver"],
+		"nametrace": "\/Product\/Jewelry\/Fashion\/Pendant\/Metal\/Type",
+		"attributes": []
+	}],
+	"Stamp": [{
+		"name": "Pendant\/Metal\/Stamp",
+		"values": ["925-sterling"],
+		"attributes": [],
+		"nametrace": "\/Product\/Jewelry\/Fashion\/Pendant\/Metal\/Stamp"
+	}],
+	"GemType": [{
+		"name": "Pendant\/Stone\/GemType",
+		"values": ["jade"],
+		"attributes": [],
+		"nametrace": "\/Product\/Jewelry\/Fashion\/Pendant\/Stone\/GemType"
+	}],
+	"Color": [{
+		"name": "Pendant\/Stone\/Color",
+		"values": ["green"],
+		"attributes": [],
+		"nametrace": "\/Product\/Jewelry\/Fashion\/Pendant\/Stone\/Color"
+	}],
+	"Shape": [{
+		"name": "Pendant\/Stone\/Shape",
+		"values": ["oval-shape"],
+		"attributes": [],
+		"nametrace": "\/Product\/Jewelry\/Fashion\/Pendant\/Stone\/Shape"
+	}],
+	"TargetAudience": [{
+		"name": "Pendant\/TargetAudience",
+		"values": ["girls",
+		"women"],
+		"attributes": [],
+		"nametrace": "\/Product\/Jewelry\/Fashion\/Pendant\/TargetAudience"
+	}],
+	"GemSet": [{
+		"name": "Pendant\/GemSet",
+		"values": ["true"],
+		"attributes": [],
+		"nametrace": "\/Product\/Jewelry\/Fashion\/Pendant\/GemSet"
+	}],
+	"DominantColor": [{
+		"name": "Pendant\/DominantColor",
+		"values": ["green"],
+		"attributes": [],
+		"nametrace": "\/Product\/Jewelry\/Fashion\/Pendant\/DominantColor"
+	}],
+	"PrimaryImage": [{
+		"name": "Pendant\/PrimaryImage",
+		"values": ["ZGZzZGZzYWRmc2FkZg=="],
+		"attributes": {
+			"mimeCode": ["image\/jpeg"]
+		},
+		"nametrace": "\/Product\/Jewelry\/Fashion\/Pendant\/PrimaryImage"
+	}],
+	"ProductSeries": [{
+		"name": "ProductSeries",
+		"values": ["Contemporary"],
+		"attributes": [],
+		"nametrace": "\/Product\/ProductSeries"
+	}],
+	"SeriesDescription": [{
+		"name": "SeriesDescription",
+		"values": ["Sleek, modern style defines these elegant Jade pendants featuring a choice of both black and green stone. Simple tear-drops, crosses, ovals, discs and hearts create sophisticated jewellery pieces to be worn for any occasion."],
+		"attributes": [],
+		"nametrace": "\/Product\/SeriesDescription"
+	}],
+	"ProductFamily": [{
+		"name": "ProductFamily",
+		"values": ["Australian Jade: 19"],
+		"attributes": [],
+		"nametrace": "\/Product\/ProductFamily"
+	}]
+}

@@ -1,0 +1,31 @@
+{
+    "/Literature[1]/AmericanLiterature[1]/Publisher":
+	{
+	    "values": ["Southwind"]
+	},
+    "/Literature[1]/AmericanLiterature[1]":
+	{
+	    "attributes":
+		[
+		    {
+			"name": "century",
+			"values": ["XIX"]
+		    }
+		]
+	},
+    "/Literature[1]/AmericanLiterature[1]/PublishYear":
+	{
+	    "values": ["1990"],
+	    "attributes":
+		[
+		    {
+			"name": "AmongTop100",
+			"values": ["false"]
+		    },
+		    {
+			"name": "ISBN",
+			"values": ["1234"]
+		    }
+		]
+	}
+}

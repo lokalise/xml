@@ -1,0 +1,39 @@
+{
+	"Metal[1]\/Type": {
+		"values": ["FirstType"]
+	},
+	"Metal[2]\/Type": {
+		"values": ["SecondType"]
+	},
+	"Shape\/Type": {
+		"values": ["Cross"]
+	},
+	"Metal[1]\/Stamp": {
+		"values": ["f925"]
+	},
+	"Metal[2]\/Stamp": {
+		"values": ["s925"]
+	},
+	"Metal[1]\/Weight": {
+		"values": ["12"]
+	},
+	"Height": {
+		"values": ["12"],
+		"attributes": [{
+			"name": "unit",
+			"values": ["millimeter"]
+		}]
+	},
+	"Width": {
+		"values": ["16"],
+		"attributes": [{
+			"name": "unit",
+			"values": ["meter"]
+		}]
+	},
+	"SubjectContent": {
+		"values": ["Flags",
+		"Religious",
+		"Sports"]
+	}
+}

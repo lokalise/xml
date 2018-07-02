@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<Properties>
+    <AdditionalItemProperty>
+        <Name>Pendant/Necklace/Length@unit</Name>
+        <Value>centimeter</Value>
+    </AdditionalItemProperty>
+    <AdditionalItemProperty>
+        <Name>Pendant/Necklace/Length</Name>
+        <Value>80</Value>
+    </AdditionalItemProperty>
+    <AdditionalItemProperty>
+        <Name>Pendant/Necklace/Type</Name>
+        <Value>pendant-necklaces</Value>
+    </AdditionalItemProperty>
+    <AdditionalItemProperty>
+        <Name>Pendant/Shape/Type</Name>
+        <Value>nonstandard-shape</Value>
+    </AdditionalItemProperty>
+    <AdditionalItemProperty>
+        <Name>Pendant/Necklace/ChainType</Name>
+        <Value>no-chain-type</Value>
+    </AdditionalItemProperty>
+    <AdditionalItemProperty>
+        <Name>Pendant/Necklace/ClaspType</Name>
+        <Value>snap</Value>
+    </AdditionalItemProperty>
+    <AdditionalItemProperty>
+        <Name>Pendant/SubjectContent</Name>
+        <ListValue>Birthday</ListValue>
+        <ListValue>Mothers Day</ListValue>
+    </AdditionalItemProperty>
+    <AdditionalItemProperty>
+        <Name>Pendant/TargetAudience</Name>
+        <Value>women</Value>
+    </AdditionalItemProperty>
+    <AdditionalItemProperty>
+        <Name>Pendant/UsedFor</Name>
+        <ListValue>anniversary</ListValue>
+        <ListValue>birthday</ListValue>
+        <ListValue>christening</ListValue>
+        <ListValue>mothers-day</ListValue>
+    </AdditionalItemProperty>
+    <AdditionalItemProperty>
+        <Name>Pendant/DominantColor</Name>
+        <Value>black</Value>
+    </AdditionalItemProperty>
+    <AdditionalItemProperty>
+        <Name>Pendant/PrimaryImage@mimeCode</Name>
+        <Value>image/jpeg</Value>
+    </AdditionalItemProperty>
+    <AdditionalItemProperty>
+        <Name>Pendant/PrimaryImage</Name>
+        <Value>c3ZzZHZzdmQ=</Value>
+    </AdditionalItemProperty>
+    <AdditionalItemProperty>
+        <Name>Pendant/Image@mimeCode</Name>
+        <Value>image/jpeg</Value>
+    </AdditionalItemProperty>
+    <AdditionalItemProperty>
+        <Name>Pendant/Image</Name>
+        <Value>c3ZzZHZzdmQ=</Value>
+	</AdditionalItemProperty>
+    <AdditionalItemProperty>
+        <Name>ProductSeries</Name>
+        <Value>Baby Friendly</Value>
+    </AdditionalItemProperty>
+    <AdditionalItemProperty>
+        <Name>SeriesDescription</Name>
+        <Value>Inspired by the natural colour of real gemstones, and the desire to safely share a love of jewelry with her young ones, an Australian designer (and mum) carefully created this beautiful set of toxin-free, INPAA safety approved, pendants that can be worn with love, and chewed on by teething babies</Value>
+    </AdditionalItemProperty>
+    <AdditionalItemProperty>
+        <Name>ProductFamily</Name>
+        <Value>Good Mums: ring</Value>
+    </AdditionalItemProperty>
+</Properties>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:dc="http://dublincore.org/schemas/xmls/qdc/2008/02/11/dc.xsd"
+    xmlns:vxe="urn:visualXMLeditor:settings">
+
+    <xs:simpleType name="patternRestrictionType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[^@]+@[^\.]+\..+">
+                <xs:annotation>
+                    <xs:appinfo>
+                        <vxe:settings>
+                            <vxe:invalidInputErrorMessage xml:lang="en">Please, enter valid email address</vxe:invalidInputErrorMessage>
+                        </vxe:settings>
+                    </xs:appinfo>
+                </xs:annotation>
+            </xs:pattern>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="minLengthRestrictionType">
+        <xs:restriction base="xs:string">
+            <xs:minLength value="4">
+                <xs:annotation>
+                    <xs:appinfo>
+                        <vxe:settings>
+                            <vxe:invalidInputErrorMessage xml:lang="en">Please, choose the country</vxe:invalidInputErrorMessage>
+                        </vxe:settings>
+                    </xs:appinfo>
+                </xs:annotation>
+            </xs:minLength>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="maxLengthRestrictionType">
+        <xs:restriction base="xs:string">
+            <xs:maxLength value="8">
+                <xs:annotation>
+                    <xs:appinfo>
+                        <vxe:settings>
+                            <vxe:invalidInputErrorMessage xml:lang="en">Please, choose the country</vxe:invalidInputErrorMessage>
+                        </vxe:settings>
+                    </xs:appinfo>
+                </xs:annotation>
+            </xs:maxLength>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="enumerationRestrictionType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Afghanistan">
+                <xs:annotation>
+                    <xs:documentation>
+                        <dc:title xml:lang="en">Afghanistan</dc:title>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="Togo">
+                <xs:annotation>
+                    <xs:documentation>
+                        <dc:title xml:lang="en">Togo</dc:title>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="Tokelau">
+                <xs:annotation>
+                    <xs:documentation>
+                        <dc:title xml:lang="en">Tokelau</dc:title>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+            <xs:enumeration value="Tonga">
+                <xs:annotation>
+                    <xs:documentation>
+                        <dc:title xml:lang="en">Tonga</dc:title>
+                    </xs:documentation>
+                </xs:annotation>
+            </xs:enumeration>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="minInclusiveRestrictionType">
+        <xs:restriction base="xs:float">
+			<xs:minInclusive value="10">
+                <xs:annotation>
+                    <xs:appinfo>
+                        <vxe:settings>
+                            <vxe:invalidInputErrorMessage xml:lang="en">minInclusive error message</vxe:invalidInputErrorMessage>
+                        </vxe:settings>
+                    </xs:appinfo>
+                </xs:annotation>
+			</xs:minInclusive>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="maxInclusiveRestrictionType">
+        <xs:restriction base="xs:float">
+			<xs:maxInclusive value="120">
+                <xs:annotation>
+                    <xs:appinfo>
+                        <vxe:settings>
+                            <vxe:invalidInputErrorMessage xml:lang="en">maxInclusive error message</vxe:invalidInputErrorMessage>
+                        </vxe:settings>
+                    </xs:appinfo>
+                </xs:annotation>
+			</xs:maxInclusive>
+        </xs:restriction>
+    </xs:simpleType>
+
+	<xs:simpleType name="fractionDigitsRestrictionType">
+        <xs:restriction base="xs:decimal">
+			<xs:fractionDigits value="3">
+                <xs:annotation>
+                    <xs:appinfo>
+                        <vxe:settings>
+                            <vxe:invalidInputErrorMessage xml:lang="en">fractionDigits error message</vxe:invalidInputErrorMessage>
+                        </vxe:settings>
+                    </xs:appinfo>
+                </xs:annotation>
+			</xs:fractionDigits>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="totalDigitsRestrictionType">
+        <xs:restriction base="xs:integer">
+			<xs:totalDigits value="5">
+                <xs:annotation>
+                    <xs:appinfo>
+                        <vxe:settings>
+                            <vxe:invalidInputErrorMessage xml:lang="en">totalDigits error message</vxe:invalidInputErrorMessage>
+                        </vxe:settings>
+                    </xs:appinfo>
+                </xs:annotation>
+			</xs:totalDigits>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:element name="Restrictions">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="patternRestriction" type="patternRestrictionType"/>
+                <xs:element name="minLengthRestriction" type="minLengthRestrictionType"/>
+                <xs:element name="maxLengthRestriction" type="maxLengthRestrictionType"/>
+                <xs:element name="enumerationRestriction" type="enumerationRestrictionType"/>
+				<xs:element name="minInclusiveRestriction" type="minInclusiveRestrictionType"/>
+				<xs:element name="maxInclusiveRestriction" type="maxInclusiveRestrictionType"/>
+				<xs:element name="fractionDigitsRestriction" type="fractionDigitsRestrictionType"/>
+				<xs:element name="totalDigitsRestriction" type="totalDigitsRestrictionType"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

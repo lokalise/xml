@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rootelement>
+	<hierarchyelement>
+		<firstleafelement>firstleafelement 1 Leaf 1</firstleafelement>
+		<firstleafelement>firstleafelement 1 Leaf 2</firstleafelement>
+		<secondleafelement>secondleafelement 1 Leaf 1</secondleafelement>
+	</hierarchyelement>
+	<hierarchyelement>
+		<secondleafelement>hierarchyelement 2 secondleafelement 1 Leaf 1</secondleafelement>
+	</hierarchyelement>
+</rootelement>

@@ -1,0 +1,328 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:simpleType name="WeightType">
+  <xs:restriction base="xs:decimal">
+    <xs:minExclusive value="0"/>
+    <xs:fractionDigits value="3"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="LengthUnitOfMeasure">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="millimeter"/>
+    <xs:enumeration value="centimeter"/>
+    <xs:enumeration value="meter"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="Dimension">
+  <xs:restriction base="xs:decimal">
+    <xs:minExclusive value="0"/>
+    <xs:fractionDigits value="3"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:complexType name="LengthDimension">
+  <xs:simpleContent>
+    <xs:extension base="Dimension">
+      <xs:attribute name="unit" type="LengthUnitOfMeasure" use="required"/>
+    </xs:extension>
+  </xs:simpleContent>
+</xs:complexType>
+
+<xs:complexType name="JewelrySizeType">
+  <xs:sequence>
+    <xs:element name="Height" type="LengthDimension" minOccurs="1" maxOccurs="1"/>
+    <xs:element name="Width" type="LengthDimension" minOccurs="1" maxOccurs="1"/>
+    <xs:element name="Depth" type="LengthDimension" minOccurs="0" maxOccurs="1"/>
+  </xs:sequence>
+</xs:complexType>
+
+<xs:simpleType name="JewelrySubjectContentType">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="Alphabet, Dates &amp; Numbers"/>
+    <xs:enumeration value="Animals"/>
+    <xs:enumeration value="Flags"/>
+    <xs:enumeration value="Floral"/>
+    <xs:enumeration value="Food &amp; Beverages"/>
+    <xs:enumeration value="Hearts"/>
+    <xs:enumeration value="Holidays"/>
+    <xs:enumeration value="Nautical"/>
+    <xs:enumeration value="Religious"/>
+    <xs:enumeration value="Sports"/>
+    <xs:enumeration value="Sun, Moon &amp; Stars"/>
+    <xs:enumeration value="Activities"/>
+    <xs:enumeration value="Airsoft"/>
+    <xs:enumeration value="Angels"/>
+    <xs:enumeration value="Anniversary"/>
+    <xs:enumeration value="Archery"/>
+    <xs:enumeration value="Art"/>
+    <xs:enumeration value="Art Painting"/>
+    <xs:enumeration value="Arts &amp; Crafts Supplies"/>
+    <xs:enumeration value="Baseball"/>
+    <xs:enumeration value="Birthday"/>
+    <xs:enumeration value="Birthstones"/>
+    <xs:enumeration value="Bluebirds"/>
+    <xs:enumeration value="Buddhist Symbols"/>
+    <xs:enumeration value="Cartoon Characters"/>
+    <xs:enumeration value="Cattle"/>
+    <xs:enumeration value="Chinese Zodiac Signs"/>
+    <xs:enumeration value="Christian Crosses"/>
+    <xs:enumeration value="Christmas"/>
+    <xs:enumeration value="Chrysanthemum Flowers"/>
+    <xs:enumeration value="Crosswords"/>
+    <xs:enumeration value="Crowns"/>
+    <xs:enumeration value="Dogs"/>
+    <xs:enumeration value="Earth Based Religious Symbols"/>
+    <xs:enumeration value="Engagement"/>
+    <xs:enumeration value="Fashion"/>
+    <xs:enumeration value="Fathers Day"/>
+    <xs:enumeration value="Four Leaf Clovers"/>
+    <xs:enumeration value="Graduation"/>
+    <xs:enumeration value="High Schools"/>
+    <xs:enumeration value="Holiday"/>
+    <xs:enumeration value="Individual Alphabet Letters"/>
+    <xs:enumeration value="Mothers Day"/>
+    <xs:enumeration value="People"/>
+    <xs:enumeration value="Popular Characters"/>
+    <xs:enumeration value="Popular Symbols"/>
+    <xs:enumeration value="Purple Martins"/>
+    <xs:enumeration value="Religious Symbols"/>
+    <xs:enumeration value="Script &amp; Numeric Symbols"/>
+    <xs:enumeration value="Star of David"/>
+    <xs:enumeration value="States"/>
+    <xs:enumeration value="Thanksgiving"/>
+    <xs:enumeration value="Trumpets"/>
+    <xs:enumeration value="Valentines Day"/>
+    <xs:enumeration value="Vegetables (Produce)"/>
+    <xs:enumeration value="Wedding"/>
+    <xs:enumeration value="Words"/>
+    <xs:enumeration value="Zodiac Signs"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="JewelryTargetAudienceType">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="Baby Boy"/>
+    <xs:enumeration value="Baby Girl"/>
+    <xs:enumeration value="Boy"/>
+    <xs:enumeration value="Girl"/>
+    <xs:enumeration value="Man"/>
+    <xs:enumeration value="Unisex Adult"/>
+    <xs:enumeration value="Unisex Baby"/>
+    <xs:enumeration value="Unisex Child"/>
+    <xs:enumeration value="Wedding Party Member"/>
+    <xs:enumeration value="Bridegroom"/>
+    <xs:enumeration value="Bride"/>
+    <xs:enumeration value="Bridesmaid"/>
+    <xs:enumeration value="Fater of the bride"/>
+    <xs:enumeration value="Flower girl"/>
+    <xs:enumeration value="Groomsan"/>
+    <xs:enumeration value="Mother of the bride"/>
+    <xs:enumeration value="Ring bearer"/>
+    <xs:enumeration value="Woman"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="JewelryUsedForType">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="Business Gift"/>
+    <xs:enumeration value="Anniversary"/>
+    <xs:enumeration value="Baptism"/>
+    <xs:enumeration value="Bar Mitzvah"/>
+    <xs:enumeration value="Bat Mitzvah"/>
+    <xs:enumeration value="Birthday"/>
+    <xs:enumeration value="Christening"/>
+    <xs:enumeration value="Engagement"/>
+    <xs:enumeration value="Graduation"/>
+    <xs:enumeration value="Holiday"/>
+    <xs:enumeration value="Christmas"/>
+    <xs:enumeration value="Fathers Day"/>
+    <xs:enumeration value="Hanukkah"/>
+    <xs:enumeration value="Kwanzaa"/>
+    <xs:enumeration value="Mothers Day"/>
+    <xs:enumeration value="Valentines Day"/>
+    <xs:enumeration value="Wedding"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="MetalType">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="Sterling Silver"/>
+    <xs:enumeration value="14K Gold Plating"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="JewelryMetalStampType">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="925"/>
+    <xs:enumeration value="No stamp"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:complexType name="JewelryMetalType">
+  <xs:sequence>
+    <xs:element name="Type" type="MetalType" minOccurs="1" maxOccurs="1"/>
+    <xs:element name="Stamp" type="JewelryMetalStampType" minOccurs="0" maxOccurs="1"/>
+    <xs:element name="Weight" type="WeightType" minOccurs="0" maxOccurs="1"/>
+  </xs:sequence>
+</xs:complexType>
+
+<xs:simpleType name="ShapeAnimalStringType">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="Animal"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="ShapeAnimalKindType">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="Anteater"/>
+    <xs:enumeration value="Bat"/>
+    <xs:enumeration value="Bear"/>
+    <xs:enumeration value="Bird"/>
+    <xs:enumeration value="Bug"/>
+    <xs:enumeration value="Bumblebee"/>
+    <xs:enumeration value="Butterfly"/>
+    <xs:enumeration value="Cat"/>
+    <xs:enumeration value="Caterpillar"/>
+    <xs:enumeration value="Chameleon"/>
+    <xs:enumeration value="Cheetah"/>
+    <xs:enumeration value="Chicken"/>
+    <xs:enumeration value="Coral"/>
+    <xs:enumeration value="Cow"/>
+    <xs:enumeration value="Crab"/>
+    <xs:enumeration value="Crayfish"/>
+    <xs:enumeration value="Crocodile"/>
+    <xs:enumeration value="Deer"/>
+    <xs:enumeration value="Dog"/>
+    <xs:enumeration value="Dolphin"/>
+    <xs:enumeration value="Donkey"/>
+    <xs:enumeration value="Dragon"/>
+    <xs:enumeration value="Dragonfly"/>
+    <xs:enumeration value="Eagle"/>
+    <xs:enumeration value="Echidna"/>
+    <xs:enumeration value="Elephant"/>
+    <xs:enumeration value="Fish"/>
+    <xs:enumeration value="Fly"/>
+    <xs:enumeration value="Fox"/>
+    <xs:enumeration value="Frog"/>
+    <xs:enumeration value="Giraffe"/>
+    <xs:enumeration value="Goat"/>
+    <xs:enumeration value="Hedgehog"/>
+    <xs:enumeration value="Hippo"/>
+    <xs:enumeration value="Horse"/>
+    <xs:enumeration value="Kangaroo"/>
+    <xs:enumeration value="Koala"/>
+    <xs:enumeration value="Ladybird"/>
+    <xs:enumeration value="Leopard"/>
+    <xs:enumeration value="Lion"/>
+    <xs:enumeration value="Monkey"/>
+    <xs:enumeration value="Moose"/>
+    <xs:enumeration value="Mouse"/>
+    <xs:enumeration value="Orca"/>
+    <xs:enumeration value="Owl"/>
+    <xs:enumeration value="Ox"/>
+    <xs:enumeration value="Panda"/>
+    <xs:enumeration value="Panther"/>
+    <xs:enumeration value="Parrot"/>
+    <xs:enumeration value="Pelican"/>
+    <xs:enumeration value="Penguin"/>
+    <xs:enumeration value="Pig"/>
+    <xs:enumeration value="Platypus"/>
+    <xs:enumeration value="Rabbit"/>
+    <xs:enumeration value="Rhino"/>
+    <xs:enumeration value="Sand Dollar"/>
+    <xs:enumeration value="Scorpion"/>
+    <xs:enumeration value="Seagull"/>
+    <xs:enumeration value="Seahorse"/>
+    <xs:enumeration value="Seashell"/>
+    <xs:enumeration value="Shark"/>
+    <xs:enumeration value="Sheep"/>
+    <xs:enumeration value="Skunk"/>
+    <xs:enumeration value="Snail"/>
+    <xs:enumeration value="Snake"/>
+    <xs:enumeration value="Spider"/>
+    <xs:enumeration value="Squirrel"/>
+    <xs:enumeration value="Starfish"/>
+    <xs:enumeration value="Stingray"/>
+    <xs:enumeration value="Stork"/>
+    <xs:enumeration value="Swan"/>
+    <xs:enumeration value="Tasmanian Devil"/>
+    <xs:enumeration value="Tiger"/>
+    <xs:enumeration value="Turtle"/>
+    <xs:enumeration value="Unicorn"/>
+    <xs:enumeration value="Whale"/>
+    <xs:enumeration value="Wolf"/>
+    <xs:enumeration value="Wombat"/>
+    <xs:enumeration value="Worm"/>
+    <xs:enumeration value="Zebra"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:group name="ShapeAnimalType">
+  <xs:sequence>
+    <xs:element name="Animal" type="ShapeAnimalKindType" minOccurs="1" maxOccurs="1"/>
+    <xs:element name="Type" type="ShapeAnimalStringType" minOccurs="1" maxOccurs="1"/>
+  </xs:sequence>
+</xs:group>
+
+<xs:simpleType name="ShapeCrossStringType">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="Cross"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:group name="ShapeCrossType">
+  <xs:sequence>
+    <xs:element name="Type" type="ShapeCrossStringType" minOccurs="1" maxOccurs="1"/>
+  </xs:sequence>
+</xs:group>
+
+<xs:complexType name="ShapeType">
+  <xs:choice>
+    <xs:group ref="ShapeAnimalType"/>
+    <xs:group ref="ShapeCrossType"/>
+  </xs:choice>
+</xs:complexType>
+
+<xs:complexType name="JewelryFashionCharmType">
+  <xs:sequence>
+    <xs:element name="Metal" type="JewelryMetalType" minOccurs="0" maxOccurs="unbounded"/>
+    <xs:element name="Weight" type="WeightType" minOccurs="0" maxOccurs="1"/>
+    <xs:element name="Size" type="JewelrySizeType" minOccurs="0" maxOccurs="1"/>
+    <xs:element name="Shape" type="ShapeType" minOccurs="0" maxOccurs="unbounded"/>
+    <xs:element name="SubjectContent" type="JewelrySubjectContentType" minOccurs="0" maxOccurs="unbounded"/>
+    <xs:element name="TargetAudience" type="JewelryTargetAudienceType" minOccurs="0" maxOccurs="unbounded"/>
+    <xs:element name="UsedFor" type="JewelryUsedForType" minOccurs="0" maxOccurs="unbounded"/>
+  </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="JewelryFashionType">
+  <xs:choice>
+    <xs:element name="Charm" type="JewelryFashionCharmType" minOccurs="0" maxOccurs="1"/>
+  </xs:choice>
+</xs:complexType>
+
+<xs:complexType name="JewelryType">
+  <xs:choice>
+    <xs:element name="Fashion" type="JewelryFashionType" minOccurs="1" maxOccurs="1"/>
+  </xs:choice>
+</xs:complexType>
+
+<xs:complexType name="TestingChoiceType">
+  <xs:choice>
+    <xs:element name="Testing" type="xs:string" minOccurs="1" maxOccurs="1"/>
+  </xs:choice>
+</xs:complexType>
+
+<xs:element name="Product">
+  <xs:complexType>
+    <xs:choice>
+	  <xs:element name="TestingChoices" type="TestingChoiceType" minOccurs="0" maxOccurs="1"/>
+	  <xs:element name="Jewelry" type="JewelryType" minOccurs="0" maxOccurs="1"/>
+    </xs:choice>
+  </xs:complexType>
+</xs:element>
+
+</xs:schema>

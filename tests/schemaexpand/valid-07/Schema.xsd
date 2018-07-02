@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:group name="BookType">
+    <xs:sequence>
+      <xs:element name="Author" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="Title" type="xs:string" minOccurs="1" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:group>
+
+  <xs:simpleType name="centuryValues">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="XX"/>
+      <xs:enumeration value="XIX"/>
+      <xs:enumeration value="XII"/>
+      <xs:enumeration value="XI"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:group name="PamphletType">
+    <xs:sequence>
+      <xs:element name="Publisher" type="xs:string" minOccurs="1" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:group>
+
+  <xs:complexType name="AmericanLiteratureType">
+    <xs:choice>
+      <xs:group ref="PamphletType"/>
+      <xs:group ref="BookType"/>
+    </xs:choice>
+    <xs:attribute name="century" type="centuryValues"/>
+  </xs:complexType>
+
+  <xs:element name="Store">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="AmericanLiterature" type="AmericanLiteratureType" minOccurs="0" maxOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

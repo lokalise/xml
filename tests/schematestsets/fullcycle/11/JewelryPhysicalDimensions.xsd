@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://dublincore.org/schemas/xmls/qdc/2008/02/11/dc.xsd" xmlns:vxe="urn:visualXMLeditor:settings">
+  <xs:include schemaLocation="Measurements.xsd"/>
+  <xs:complexType name="JewelrySizeType">
+    <xs:sequence>
+      <xs:element name="Height" type="LengthDimension" minOccurs="1" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Height</dc:title>
+            <dc:title xml:lang="ru">Высота</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Width" type="LengthDimension" minOccurs="1" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Width</dc:title>
+            <dc:title xml:lang="ru">Ширина</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Depth" type="LengthDimension" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Depth</dc:title>
+            <dc:title xml:lang="ru">Длина</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:group name="JewelryPhysicalDimensions">
+    <xs:sequence>
+      <xs:element name="Weight" type="WeightType" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Weight</dc:title>
+            <dc:title xml:lang="ru">Вес</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Size" type="JewelrySizeType" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Size</dc:title>
+            <dc:title xml:lang="ru">Размер</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:group>
+</xs:schema>

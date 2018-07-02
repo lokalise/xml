@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:dc="http://dublincore.org/schemas/xmls/qdc/2008/02/11/dc.xsd"
+    xmlns:vxe="urn:visualXMLeditor:settings">
+
+    <xs:element name="ContactForm">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Comment" type="xs:string" minOccurs="0">
+                    <xs:annotation>
+                        <xs:documentation>
+                            <dc:title xml:lang="en">Comment</dc:title>
+                            <dc:title>Default</dc:title>
+                            <dc:title>AnotherDefault</dc:title>
+                            <dc:documentation>Documentation</dc:documentation>
+                        </xs:documentation>
+                        <xs:appinfo>
+                            <vxe:settings>
+                                <vxe:groupWrapperClass>commentForm</vxe:groupWrapperClass>
+                                <vxe:widget>
+                                    <vxe:textarea/>
+                                </vxe:widget>
+                                <vxe:invalidInputErrorMessage xml:lang="en">Please, enter valid comment</vxe:invalidInputErrorMessage>
+                                <vxe:invalidInputErrorMessage xml:lang="ru">Пожалуйста, введите корректный комментарий</vxe:invalidInputErrorMessage>
+                                <vxe:invalidInputErrorMessage xml:lang="zh-CN-x-mt">请输入有效性评论</vxe:invalidInputErrorMessage>
+                                <vxe:invalidInputErrorClass>error</vxe:invalidInputErrorClass>
+                                <vxe:showAddDeleteButtons>false</vxe:showAddDeleteButtons>
+                            </vxe:settings>
+                        </xs:appinfo>
+                    </xs:annotation>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Store>
+  <UpperAmericanLiterature>
+    <AmericanLiterature>
+      <DeeperAmericanLiterature>
+        <AmericanLiteratureFirst>
+          <AmericanLiteratureSecond>
+            <DeeperPublisher>
+              <Publisher>Northwind</Publisher>
+            </DeeperPublisher>
+          </AmericanLiteratureSecond>
+        </AmericanLiteratureFirst>
+      </DeeperAmericanLiterature>
+    </AmericanLiterature>
+  </UpperAmericanLiterature>
+</Store>

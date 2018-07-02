@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:simpleType name="additionalAttributeType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="256"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="additionalAttributeElementType">
+    <xs:restriction base="xs:string">
+      <xs:maxLength value="256"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="PublishYearType">
+    <xs:simpleContent>
+      <xs:extension base="additionalAttributeType">
+        <xs:attribute name="ISBN" type="additionalAttributeElementType"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+
+  <xs:group name="BookType">
+    <xs:sequence>
+      <xs:element name="Author" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="Title" type="xs:string" minOccurs="1" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:group>
+
+  <xs:simpleType name="centuryValues">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="XX"/>
+      <xs:enumeration value="XIX"/>
+      <xs:enumeration value="XII"/>
+      <xs:enumeration value="XI"/>
+      <xs:enumeration value="XIV"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="PublisherType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Northwind"/>
+      <xs:enumeration value="Southwind"/>
+      <xs:enumeration value="Westwind"/>
+      <xs:enumeration value="1Westwind"/>
+      <xs:enumeration value="11Westwind"/>
+      <xs:enumeration value="111Westwind"/>
+      <xs:enumeration value="1111Westwind"/>
+      <xs:enumeration value="222Westwind"/>
+      <xs:enumeration value="6333Westwind"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:group name="PamphletType">
+    <xs:sequence>
+      <xs:element name="Publisher" type="PublisherType" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="PublishYear" type="PublishYearType" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:group>
+
+  <xs:complexType name="AmericanLiteratureType">
+    <xs:choice>
+      <xs:group ref="BookType"/>
+      <xs:group ref="PamphletType"/>
+    </xs:choice>
+    <!-- Testing comment in the Schema -->
+    <xs:attribute name="century" type="centuryValues"/>
+  </xs:complexType>
+
+  <xs:element name="Literature">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="AmericanLiterature" type="AmericanLiteratureType" minOccurs="0" maxOccurs="3"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:simpleType name="PaintingStyleType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Impressionism"/>
+      <xs:enumeration value="Cubism"/>
+      <xs:enumeration value="Abstractionism"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="ArtistType">
+    <xs:sequence>
+      <xs:element name="Name" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="PaintingStyle" type="PaintingStyleType" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="Paintings">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="Artist" type="ArtistType" minOccurs="0" maxOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

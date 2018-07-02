@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://dublincore.org/schemas/xmls/qdc/2008/02/11/dc.xsd" xmlns:vxe="urn:visualXMLeditor:settings">
+  <xs:simpleType name="JewelryPearlTypeType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="akoya-cultured"/>
+      <xs:enumeration value="biwa-cultured"/>
+      <xs:enumeration value="chinese-freshwater-cultured"/>
+      <xs:enumeration value="freshwater-cultured"/>
+      <xs:enumeration value="hybrid-cultured"/>
+      <xs:enumeration value="keshi-cultured"/>
+      <xs:enumeration value="mabe-cultured"/>
+      <xs:enumeration value="majorca-cultured"/>
+      <xs:enumeration value="natural-pearl"/>
+      <xs:enumeration value="simulated-pearl"/>
+      <xs:enumeration value="south-sea-baroque-cultured"/>
+      <xs:enumeration value="south-sea-cultured"/>
+      <xs:enumeration value="tahitian-cultured"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="JewelryPearlMinimumColorType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="black"/>
+      <xs:enumeration value="black-with-green-overtone"/>
+      <xs:enumeration value="black-with-pink-overtone"/>
+      <xs:enumeration value="chocolate"/>
+      <xs:enumeration value="cream"/>
+      <xs:enumeration value="dark-gray"/>
+      <xs:enumeration value="dyed-black"/>
+      <xs:enumeration value="dyed-blue"/>
+      <xs:enumeration value="dyed-golden"/>
+      <xs:enumeration value="dyed-gray"/>
+      <xs:enumeration value="dyed-lavender"/>
+      <xs:enumeration value="dyed-peach"/>
+      <xs:enumeration value="dyed-pink"/>
+      <xs:enumeration value="green"/>
+      <xs:enumeration value="golden"/>
+      <xs:enumeration value="lavender"/>
+      <xs:enumeration value="light-gray"/>
+      <xs:enumeration value="medium-gray"/>
+      <xs:enumeration value="multicolored"/>
+      <xs:enumeration value="peacock"/>
+      <xs:enumeration value="peach"/>
+      <xs:enumeration value="pink"/>
+      <xs:enumeration value="silver-white"/>
+      <xs:enumeration value="white"/>
+      <xs:enumeration value="white-with-pink-overtone"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="JewelryPearlLustreType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="low-luster"/>
+      <xs:enumeration value="medium-luster"/>
+      <xs:enumeration value="high-luster"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="JewelryPearlShapeType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="baroque"/>
+      <xs:enumeration value="button"/>
+      <xs:enumeration value="coin"/>
+      <xs:enumeration value="elongated"/>
+      <xs:enumeration value="irregular"/>
+      <xs:enumeration value="potato"/>
+      <xs:enumeration value="round"/>
+      <xs:enumeration value="semibaroque"/>
+      <xs:enumeration value="semiround"/>
+      <xs:enumeration value="tear-drop"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="JewelryPearlUniformityType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="fair-to-good"/>
+      <xs:enumeration value="good"/>
+      <xs:enumeration value="good-to-very-good"/>
+      <xs:enumeration value="very-good"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="JewelryPearlSurfaceMarkingsAndBlemishesType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="heavily-blemished"/>
+      <xs:enumeration value="moderately-blemished"/>
+      <xs:enumeration value="lightly-blemished"/>
+      <xs:enumeration value="very-lightly-blemished"/>
+      <xs:enumeration value="clean"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="JewelryPearlStringingMethodType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="double-knotted"/>
+      <xs:enumeration value="double-knotted-on-silk"/>
+      <xs:enumeration value="double-knotted-on-silk-with-french-wire"/>
+      <xs:enumeration value="double-knotted-on-wire"/>
+      <xs:enumeration value="single-knotted"/>
+      <xs:enumeration value="unknotted-on-string"/>
+      <xs:enumeration value="unknotted-on-wire"/>
+      <xs:enumeration value="not-strung"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="JewelrySizePerPearlType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="3.0mm"/>
+      <xs:enumeration value="3.0-3.5mm"/>
+      <xs:enumeration value="3.5mm"/>
+      <xs:enumeration value="3.5-4.0mm"/>
+      <xs:enumeration value="4.0mm"/>
+      <xs:enumeration value="4.0-4.5mm"/>
+      <xs:enumeration value="4.5mm"/>
+      <xs:enumeration value="4.5-5.0mm"/>
+      <xs:enumeration value="5.0mm"/>
+      <xs:enumeration value="5.0-5.5mm"/>
+      <xs:enumeration value="5.5mm"/>
+      <xs:enumeration value="5.5-6.0mm"/>
+      <xs:enumeration value="6.0mm"/>
+      <xs:enumeration value="6.0-6.5mm"/>
+      <xs:enumeration value="6.5mm"/>
+      <xs:enumeration value="6.5-7.0mm"/>
+      <xs:enumeration value="7.0mm"/>
+      <xs:enumeration value="7.0-7.5mm"/>
+      <xs:enumeration value="7.5mm"/>
+      <xs:enumeration value="7.5-8.0mm"/>
+      <xs:enumeration value="8.0mm"/>
+      <xs:enumeration value="8.0-8.5mm"/>
+      <xs:enumeration value="8.5mm"/>
+      <xs:enumeration value="8.5-9.0mm"/>
+      <xs:enumeration value="9.0mm"/>
+      <xs:enumeration value="9.0-9.5mm"/>
+      <xs:enumeration value="9.5mm"/>
+      <xs:enumeration value="9.5-10.0mm"/>
+      <xs:enumeration value="10.0mm"/>
+      <xs:enumeration value="10.0-10.5mm"/>
+      <xs:enumeration value="10.5mm"/>
+      <xs:enumeration value="10.5-11.0mm"/>
+      <xs:enumeration value="11.0mm"/>
+      <xs:enumeration value="11.0-11.5mm"/>
+      <xs:enumeration value="11.5mm"/>
+      <xs:enumeration value="11.5-12.0mm"/>
+      <xs:enumeration value="12.0mm"/>
+      <xs:enumeration value="12.0-12.5mm"/>
+      <xs:enumeration value="12.5mm"/>
+      <xs:enumeration value="12.5-13.0mm"/>
+      <xs:enumeration value="13.0mm"/>
+      <xs:enumeration value="13.0-13.5mm"/>
+      <xs:enumeration value="13.5mm"/>
+      <xs:enumeration value="13.5-14.0mm"/>
+      <xs:enumeration value="14.0mm"/>
+      <xs:enumeration value="14.0-14.5mm"/>
+      <xs:enumeration value="14.5mm"/>
+      <xs:enumeration value="14.5-15.0mm"/>
+      <xs:enumeration value="15.0mm"/>
+      <xs:enumeration value="15.0-15.5mm"/>
+      <xs:enumeration value="15.5mm"/>
+      <xs:enumeration value="over-15mm"/>
+      <xs:enumeration value="graduated-size-in-millimeters"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="JewelryPearlType">
+    <xs:sequence>
+      <xs:element name="Type" type="JewelryPearlTypeType" minOccurs="0"/>
+      <xs:element name="MinimumColor" type="JewelryPearlMinimumColorType" minOccurs="0"/>
+      <xs:element name="Lustre" type="JewelryPearlLustreType" minOccurs="0"/>
+      <xs:element name="Shape" type="JewelryPearlShapeType" minOccurs="0"/>
+      <xs:element name="Uniformity" type="JewelryPearlUniformityType" minOccurs="0"/>
+      <xs:element name="SurfaceMarkingsAndBlemishes" type="JewelryPearlSurfaceMarkingsAndBlemishesType" minOccurs="0"/>
+      <xs:element name="NacreThickness" type="xs:string" minOccurs="0"/>
+      <xs:element name="StringingMethod" type="JewelryPearlStringingMethodType" minOccurs="0"/>
+      <xs:element name="SizePerPearl" type="JewelrySizePerPearlType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:group name="JewelryPearls">
+    <xs:sequence>
+      <xs:element name="Pearl" type="JewelryPearlType" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Pearl</dc:title>
+          </xs:documentation>
+          <xs:appinfo>
+            <vxe:settings>
+              <vxe:startFolded>true</vxe:startFolded>
+            </vxe:settings>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:group>
+</xs:schema>

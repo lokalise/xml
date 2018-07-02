@@ -1,0 +1,13 @@
+{
+    "Publisher":
+	{
+	    "values": ["Northwind"],
+	    "attributes":
+		[
+		    {
+			"name": "releaseyear",
+			"values": ["1998"]
+		    }
+		]
+	}
+}

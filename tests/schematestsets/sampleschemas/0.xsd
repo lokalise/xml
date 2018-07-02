@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:simpleType name="WeightType">
+      <xs:restriction base="xs:decimal">
+        <xs:minExclusive value="0"/>
+        <xs:fractionDigits value="3"/>
+      </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="LengthUnitOfMeasure">
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="millimeter"/>
+        <xs:enumeration value="centimeter"/>
+        <xs:enumeration value="meter"/>
+      </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="Dimension">
+      <xs:restriction base="xs:decimal">
+        <xs:minExclusive value="0"/>
+        <xs:fractionDigits value="3"/>
+      </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="LengthDimension">
+      <xs:simpleContent>
+        <xs:extension base="Dimension">
+          <xs:attribute name="unit" type="LengthUnitOfMeasure" use="required"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="JewelrySizeType">
+      <xs:sequence>
+        <xs:element name="Height" type="LengthDimension" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="Width" type="LengthDimension" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="Depth" type="LengthDimension" minOccurs="0" maxOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+
+    <xs:group name="TestGroup">
+        <xs:sequence>
+            <xs:element name="One" type="xs:string"/>
+            <xs:element name="Two" type="xs:string"/>
+        </xs:sequence>
+    </xs:group>
+
+    <xs:complexType name="TestChoiceType">
+        <xs:choice>
+            <xs:element name="ChoiceOne" type="xs:string"/>
+            <xs:element name="ChoiceTwo" type="xs:string"/>
+        </xs:choice>
+    </xs:complexType>
+
+    <xs:complexType name="NewHierarchyLevelType">
+      <xs:choice>
+        <xs:choice>
+            <xs:element name="TestChoice" type="TestChoiceType"/>
+            <xs:group ref="TestGroup"/>
+        </xs:choice>
+        <xs:element name="Size" type="JewelrySizeType" minOccurs="0" maxOccurs="1"/>
+      </xs:choice>
+    </xs:complexType>
+
+    <xs:element name="Product">
+      <xs:complexType>
+        <xs:choice>
+          <xs:element name="NewHierarchyLevel" type="NewHierarchyLevelType" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+</xs:schema>

@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<shiporder orderid="0123456789">
+  <name>Rajesh</name>
+  <city>Calcutta</city>
+</shiporder>

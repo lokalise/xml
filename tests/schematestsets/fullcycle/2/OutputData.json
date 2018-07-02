@@ -1,0 +1,46 @@
+{
+	"ChainType": [{
+		"name": "ChainType",
+		"values": ["no-chain-type"],
+		"attributes": [],
+		"nametrace": "\/Product\/Jewelry\/Fashion\/Pendant\/ChainType"
+	}],
+	"ClaspType": [{
+		"name": "ClaspType",
+		"values": ["snap"],
+		"attributes": [],
+		"nametrace": "\/Product\/Jewelry\/Fashion\/Pendant\/ClaspType"
+	}],
+	"Type": [{
+		"name": "Pendant\/Shape\/Type",
+		"values": ["Ring"],
+		"attributes": [],
+		"nametrace": "\/Product\/Jewelry\/Fashion\/Pendant\/Shape\/Type"
+	}],
+	"SubjectContent": [{
+		"name": "Pendant\/SubjectContent",
+		"values": ["Birthday",
+		"Mothers Day"],
+		"attributes": [],
+		"nametrace": "\/Product\/Jewelry\/Fashion\/Pendant\/SubjectContent"
+	}],
+	"TargetAudience": [{
+		"name": "Pendant\/TargetAudience",
+		"values": ["women"],
+		"attributes": [],
+		"nametrace": "\/Product\/Jewelry\/Fashion\/Pendant\/TargetAudience"
+	}],
+	"UsedFor": [{
+		"name": "Pendant\/UsedFor",
+		"values": ["anniversary",
+		"birthday",
+		"christening",
+		"mothers-day"],
+		"attributes": [],
+		"nametrace": "\/Product\/Jewelry\/Fashion\/Pendant\/UsedFor"
+	}],
+	"PrimaryImage": [{
+		"name": "Pendant\/PrimaryImage",
+		"values": ["c2FjYWNzYWNhc2M="],
+		"attributes": {
+			"mimeCode": ["\"image\/jpeg\""]},"nametrace":"\/Product\/Jewelry\/Fashion\/Pendant\/PrimaryImage"}]}

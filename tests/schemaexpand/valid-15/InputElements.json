@@ -1,0 +1,32 @@
+{
+    "AmericanLiterature[1]/Author":
+	{
+	    "values": ["Fitzgerald"]
+	},
+    "AmericanLiterature[1]/Title":
+	{
+	    "values": ["The Great Gatsby"]
+	},
+    "AmericanLiterature[2]/Publisher":
+	{
+	    "values": ["Northwind"]
+	},
+    "AmericanLiterature[2]/PublishYear":
+	{
+	    "values":["2000"]
+	},
+    "City":
+	{
+	    "values":["Nashville"]
+	},
+    "AmericanLiterature[1]":
+	{
+	    "attributes":
+		[
+		    {
+			"name":"century",
+			"values":["XI"]
+		    }
+		]
+	}
+}

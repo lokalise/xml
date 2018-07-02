@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Product>
+    <NewHierarchyLevel>
+        <Jewelry>
+            <Fashion>
+                <Charm>
+                    <WeightContainerTwo>
+                        <WeightContainerTwoDeeper>
+                            <Weight>149</Weight>
+                        </WeightContainerTwoDeeper>
+                    </WeightContainerTwo>
+                    <testElement xml:lang="en">testvalue</testElement>
+                    <Size>
+                        <Height unit="millimeter">12</Height>
+                        <Width unit="meter">16</Width>
+                    </Size>
+                </Charm>
+            </Fashion>
+        </Jewelry>
+    </NewHierarchyLevel>
+</Product>

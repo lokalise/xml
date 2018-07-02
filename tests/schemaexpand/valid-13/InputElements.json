@@ -1,0 +1,13 @@
+{
+    "Publisher":
+	{
+	    "values": ["Northwind", "SouthWind"],
+	    "attributes":
+		[
+		    {
+			"name": "century",
+			"values": ["XI", "XIX"]
+		    }
+		]
+	}
+}

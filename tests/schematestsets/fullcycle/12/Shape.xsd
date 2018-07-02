@@ -1,0 +1,752 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://dublincore.org/schemas/xmls/qdc/2008/02/11/dc.xsd" xmlns:vxe="urn:visualXMLeditor:settings">
+  <xs:simpleType name="ShapeAnimalStringType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Animal">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Animal</dc:title>
+            <dc:title xml:lang="ru">Животное</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ShapeAnimalKindType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Anteater">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Anteater</dc:title>
+            <dc:title xml:lang="ru">Муравьед</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Bat">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Bat</dc:title>
+            <dc:title xml:lang="ru">Bat</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Bear">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Bear</dc:title>
+            <dc:title xml:lang="ru">Медведь</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Bird">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Bird</dc:title>
+            <dc:title xml:lang="ru">Птица</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Bug">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Bug</dc:title>
+            <dc:title xml:lang="ru">Ошибка</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Bumblebee">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Bumblebee</dc:title>
+            <dc:title xml:lang="ru">Шмель</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Butterfly">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Butterfly</dc:title>
+            <dc:title xml:lang="ru">Бабочка</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Cat">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Cat</dc:title>
+            <dc:title xml:lang="ru">Кошка</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Caterpillar">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Caterpillar</dc:title>
+            <dc:title xml:lang="ru">Гусеница</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Chameleon">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Chameleon</dc:title>
+            <dc:title xml:lang="ru">Хамелеон</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Cheetah">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Cheetah</dc:title>
+            <dc:title xml:lang="ru">Cheetah</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Chicken">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Chicken</dc:title>
+            <dc:title xml:lang="ru">Курица</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Coral">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Coral</dc:title>
+            <dc:title xml:lang="ru">Coral</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Cow">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Cow</dc:title>
+            <dc:title xml:lang="ru">Корова</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Crab">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Crab</dc:title>
+            <dc:title xml:lang="ru">Краб</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Crayfish">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Crayfish</dc:title>
+            <dc:title xml:lang="ru">Раков</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Crocodile">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Crocodile</dc:title>
+            <dc:title xml:lang="ru">Крокодил</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Deer">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Deer</dc:title>
+            <dc:title xml:lang="ru">Олень</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Dog">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Dog</dc:title>
+            <dc:title xml:lang="ru">Собака</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Dolphin">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Dolphin</dc:title>
+            <dc:title xml:lang="ru">Дельфин</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Donkey">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Donkey</dc:title>
+            <dc:title xml:lang="ru">Осел</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Dragon">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Dragon</dc:title>
+            <dc:title xml:lang="ru">Дракон</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Dragonfly">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Dragonfly</dc:title>
+            <dc:title xml:lang="ru">Dragonfly</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Eagle">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Eagle</dc:title>
+            <dc:title xml:lang="ru">Орел</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Echidna">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Echidna</dc:title>
+            <dc:title xml:lang="ru">Ехидна</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Elephant">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Elephant</dc:title>
+            <dc:title xml:lang="ru">Слон</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Fawn">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Fawn</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Fish">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Fish</dc:title>
+            <dc:title xml:lang="ru">Рыбы</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Fly">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Fly</dc:title>
+            <dc:title xml:lang="ru">Fly</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Fox">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Fox</dc:title>
+            <dc:title xml:lang="ru">Fox</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Frog">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Frog</dc:title>
+            <dc:title xml:lang="ru">Лягушка</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Giraffe">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Giraffe</dc:title>
+            <dc:title xml:lang="ru">Жираф</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Goat">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Goat</dc:title>
+            <dc:title xml:lang="ru">Коза</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Hedgehog">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Hedgehog</dc:title>
+            <dc:title xml:lang="ru">Ежик</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Hippo">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Hippo</dc:title>
+            <dc:title xml:lang="ru">Бегемот</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Horse">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Horse</dc:title>
+            <dc:title xml:lang="ru">Лошадь</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Kangaroo">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Kangaroo</dc:title>
+            <dc:title xml:lang="ru">Кенгуру</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Koala">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Koala</dc:title>
+            <dc:title xml:lang="ru">Коала</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Ladybird">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Ladybird</dc:title>
+            <dc:title xml:lang="ru">Божья коровка</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Leopard">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Leopard</dc:title>
+            <dc:title xml:lang="ru">Leopard</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Lion">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Lion</dc:title>
+            <dc:title xml:lang="ru">Лев</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Monkey">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Monkey</dc:title>
+            <dc:title xml:lang="ru">Обезьяна</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Moose">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Moose</dc:title>
+            <dc:title xml:lang="ru">Лось</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Mouse">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Mouse</dc:title>
+            <dc:title xml:lang="ru">Мышь</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Orca">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Orca</dc:title>
+            <dc:title xml:lang="ru">Касатка</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Owl">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Owl</dc:title>
+            <dc:title xml:lang="ru">Сова</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Ox">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Ox</dc:title>
+            <dc:title xml:lang="ru">Бык</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Panda">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Panda</dc:title>
+            <dc:title xml:lang="ru">Панда</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Panther">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Panther</dc:title>
+            <dc:title xml:lang="ru">Пантера</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Parrot">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Parrot</dc:title>
+            <dc:title xml:lang="ru">Попугай</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Pelican">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Pelican</dc:title>
+            <dc:title xml:lang="ru">Пеликан</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Penguin">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Penguin</dc:title>
+            <dc:title xml:lang="ru">Пингвин</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Pig">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Pig</dc:title>
+            <dc:title xml:lang="ru">Свинья</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Platypus">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Platypus</dc:title>
+            <dc:title xml:lang="ru">Утконос</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Rabbit">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Rabbit</dc:title>
+            <dc:title xml:lang="ru">Кролик</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Rhino">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Rhino</dc:title>
+            <dc:title xml:lang="ru">Носорог</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Sand Dollar">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Sand Dollar</dc:title>
+            <dc:title xml:lang="ru">Морской еж</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Scorpion">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Scorpion</dc:title>
+            <dc:title xml:lang="ru">Скорпион</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Seagull">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Seagull</dc:title>
+            <dc:title xml:lang="ru">Чайка</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Seahorse">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Seahorse</dc:title>
+            <dc:title xml:lang="ru">Морской конек</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Seashell">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Seashell</dc:title>
+            <dc:title xml:lang="ru">Морская раковина</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Shark">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Shark</dc:title>
+            <dc:title xml:lang="ru">Акула</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Sheep">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Sheep</dc:title>
+            <dc:title xml:lang="ru">Овец</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Skunk">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Skunk</dc:title>
+            <dc:title xml:lang="ru">Скунс</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Snail">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Snail</dc:title>
+            <dc:title xml:lang="ru">Улитка</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Snake">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Snake</dc:title>
+            <dc:title xml:lang="ru">Змея</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Spider">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Spider</dc:title>
+            <dc:title xml:lang="ru">Паук</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Squirrel">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Squirrel</dc:title>
+            <dc:title xml:lang="ru">Белка</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Starfish">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Starfish</dc:title>
+            <dc:title xml:lang="ru">Морская звезда</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Stingray">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Stingray</dc:title>
+            <dc:title xml:lang="ru">Скат</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Stork">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Stork</dc:title>
+            <dc:title xml:lang="ru">Аист</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Swan">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Swan</dc:title>
+            <dc:title xml:lang="ru">Лебедь</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Tasmanian Devil">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Tasmanian Devil</dc:title>
+            <dc:title xml:lang="ru">Тасманийский Дьявол</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Tiger">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Tiger</dc:title>
+            <dc:title xml:lang="ru">Тигра</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Turtle">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Turtle</dc:title>
+            <dc:title xml:lang="ru">Черепаха</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Unicorn">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Unicorn</dc:title>
+            <dc:title xml:lang="ru">Единорог</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Whale">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Whale</dc:title>
+            <dc:title xml:lang="ru">Кит</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Wolf">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Wolf</dc:title>
+            <dc:title xml:lang="ru">Волк</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Wombat">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Wombat</dc:title>
+            <dc:title xml:lang="ru">Вомбат</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Worm">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Worm</dc:title>
+            <dc:title xml:lang="ru">Червь</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Zebra">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Zebra</dc:title>
+            <dc:title xml:lang="ru">Зебра</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:group name="ShapeAnimalType">
+    <xs:sequence>
+      <xs:element name="Animal" type="ShapeAnimalKindType" minOccurs="1" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Animal</dc:title>
+            <dc:title xml:lang="ru">Тип животного</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Type" type="ShapeAnimalStringType" minOccurs="1" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Type</dc:title>
+            <dc:title xml:lang="ru">Тип</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:group>
+  <xs:simpleType name="ShapeClassType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="crescent"/>
+      <xs:enumeration value="cross-shaped">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Cross</dc:title>
+            <dc:title xml:lang="ru">Крест</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="cylindrical"/>
+      <xs:enumeration value="heart-shaped">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Heart</dc:title>
+            <dc:title xml:lang="ru">Сердце</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="nonstandard-shape"/>
+      <xs:enumeration value="oval"/>
+      <xs:enumeration value="rectangular"/>
+      <xs:enumeration value="round">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Round</dc:title>
+            <dc:title xml:lang="ru">Круглый</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="spherical"/>
+      <xs:enumeration value="square"/>
+      <xs:enumeration value="triangular"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:group name="ShapeTypeGroup">
+    <xs:sequence>
+      <xs:element name="Type" type="ShapeClassType" minOccurs="1" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Type</dc:title>
+            <dc:title xml:lang="ru">Тип</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:group>
+  <xs:complexType name="ShapeType">
+    <xs:choice>
+      <xs:group ref="ShapeAnimalType"/>
+      <xs:group ref="ShapeTypeGroup"/>
+    </xs:choice>
+  </xs:complexType>
+  <xs:group name="Shape">
+    <xs:sequence>
+      <xs:element name="Shape" type="ShapeType" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Shape</dc:title>
+            <dc:title xml:lang="ru">Форма</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:group>
+</xs:schema>

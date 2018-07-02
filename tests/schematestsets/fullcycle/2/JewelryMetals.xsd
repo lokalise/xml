@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://dublincore.org/schemas/xmls/qdc/2008/02/11/dc.xsd" xmlns:vxe="urn:visualXMLeditor:settings">
+  <xs:include schemaLocation="Measurements.xsd"/>
+  <xs:simpleType name="MetalType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Sterling Silver">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Sterling silver</dc:title>
+            <dc:title xml:lang="ru">Стерлинговое серебро</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="14K Gold Plating">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">14K Gold Plating</dc:title>
+            <dc:title xml:lang="ru">Золотое покрытие 585 пробы</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="JewelryMetalStampType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="925"/>
+      <xs:enumeration value="No stamp">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">No stamp</dc:title>
+            <dc:title xml:lang="ru">Без пробы</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="JewelryMetalType">
+    <xs:sequence>
+      <xs:element name="Type" type="MetalType" minOccurs="1" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Metal type</dc:title>
+            <dc:title xml:lang="ru">Разновидность металла</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Stamp" type="JewelryMetalStampType" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Stamp</dc:title>
+            <dc:title xml:lang="ru">Проба</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Weight" type="WeightType" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Weight</dc:title>
+            <dc:title xml:lang="ru">Вес</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:group name="JewelryMetals">
+    <xs:sequence>
+      <xs:element name="Metal" type="JewelryMetalType" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Metal</dc:title>
+            <dc:title xml:lang="ru">Металл</dc:title>
+          </xs:documentation>
+          <xs:appinfo>
+            <vxe:settings>
+              <vxe:startFolded>true</vxe:startFolded>
+            </vxe:settings>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:group>
+</xs:schema>

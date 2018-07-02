@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://dublincore.org/schemas/xmls/qdc/2008/02/11/dc.xsd">
+	 <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.dublincorekvjvuie902ksms.org/schemas/xmls/qdc/INVALIDURL.xsd"/>
+
+	<xs:element name="Catalog">
+        <xs:annotation>
+            <xs:documentation>
+                <test>Catalog test</test>
+            </xs:documentation>
+        </xs:annotation>
+        <xs:complexType>
+			<xs:sequence>
+				<xs:element name="Book" type="xs:string"/>
+				<xs:element name="Painting" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

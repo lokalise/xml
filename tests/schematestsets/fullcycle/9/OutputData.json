@@ -1,0 +1,14 @@
+{
+	"Type": [{
+		"name": "SecondLevelFirstAlternative\/Type",
+		"values": ["aaa"],
+		"attributes": [],
+		"nametrace": "\/Product\/FirstLevel\/SecondLevelFirstAlternative\/Type"
+	},
+	{
+		"name": "FirstLevel\/Type",
+		"values": ["bbb"],
+		"nametrace": "\/Product\/FirstLevel\/Type",
+		"attributes": []
+	}]
+}

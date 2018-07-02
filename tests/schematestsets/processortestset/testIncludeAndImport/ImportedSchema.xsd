@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ext="urn:logics:external" targetNamespace="urn:logics:external">
+
+<xs:complexType name="ImportedElementType">
+	<xs:sequence>
+		<xs:element name="FirstImportedElement" type="xs:boolean"/>
+		<xs:element name="SecondImportedElement" type="xs:integer"/>
+	</xs:sequence>
+</xs:complexType>
+
+</xs:schema>

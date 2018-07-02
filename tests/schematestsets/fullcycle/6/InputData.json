@@ -1,0 +1,28 @@
+{
+	"Charm\/Ending": {
+		"values": ["testEnding1",
+		"testEnding2"],
+		"attributes": [{
+			"name": "testattribute",
+			"values": ["testEnding1attribute",
+			"testEnding2attribute"]
+		}]
+	},
+	"Charm\/LongerEnding": {
+		"values": ["testLongerEnding1"]
+	},
+	"Charm\/Size\/Height": {
+		"values": ["12"],
+		"attributes": [{
+			"name": "unit",
+			"values": ["millimeter"]
+		}]
+	},
+	"Charm\/Size\/Width": {
+		"values": ["16"],
+		"attributes": [{
+			"name": "unit",
+			"values": ["meter"]
+		}]
+	}
+}

@@ -1,0 +1,34 @@
+{
+	"Ending": [{
+		"name": "Charm\/Ending",
+		"values": ["testEnding1",
+		"testEnding2"],
+		"attributes": {
+			"testattribute": ["testEnding1attribute",
+			"testEnding2attribute"]
+		},
+		"nametrace": "\/Product\/Charm\/Ending"
+	}],
+	"LongerEnding": [{
+		"name": "Charm\/LongerEnding",
+		"values": ["testLongerEnding1"],
+		"attributes": [],
+		"nametrace": "\/Product\/Charm\/LongerEnding"
+	}],
+	"Height": [{
+		"name": "Charm\/Size\/Height",
+		"values": ["12"],
+		"attributes": {
+			"unit": ["millimeter"]
+		},
+		"nametrace": "\/Product\/Charm\/Size\/Height"
+	}],
+	"Width": [{
+		"name": "Charm\/Size\/Width",
+		"values": ["16"],
+		"attributes": {
+			"unit": ["meter"]
+		},
+		"nametrace": "\/Product\/Charm\/Size\/Width"
+	}]
+}

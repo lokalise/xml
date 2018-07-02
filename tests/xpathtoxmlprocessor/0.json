@@ -1,0 +1,30 @@
+{
+	"\/drives[1]\/drive[1]\/model": {
+		"values": ["BD(036|072)[A-Z0-9]{5}"],
+		"fullnametrace": "drives[1]\/drive[1]\/model"
+	},
+	"\/drives[1]\/drive[1]\/brand": {
+		"values": ["HP"],
+		"fullnametrace": "drives[1]\/drive[1]\/brand"
+	},
+	"\/drives[1]\/drive[1]\/modelname": {
+		"values": ["10K"],
+		"fullnametrace": "drives[1]\/drive[1]\/modelname"
+	},
+	"\/drives[1]\/drive[1]\/numbers[1]\/number[1]\/description": {
+		"values": ["Serial"],
+		"fullnametrace": "drives[1]\/drive[1]\/numbers[1]\/number[1]\/description"
+	},
+	"\/drives[1]\/drive[1]\/numbers[1]\/number[1]\/regexp": {
+		"values": ["(3[A-Z0-9]{7}|U[A-Z0-9]{11})"],
+		"fullnametrace": "drives[1]\/drive[1]\/numbers[1]\/number[1]\/regexp"
+	},
+	"\/drives[1]\/drive[1]\/numbers[1]\/number[2]\/description": {
+		"values": ["Model"],
+		"fullnametrace": "drives[1]\/drive[1]\/numbers[1]\/number[2]\/description"
+	},
+	"\/drives[1]\/drive[1]\/numbers[1]\/number[2]\/regexp": {
+		"values": ["BD(036|072)[A-Z0-9]{5}"],
+		"fullnametrace": "drives[1]\/drive[1]\/numbers[1]\/number[2]\/regexp"
+	}
+}

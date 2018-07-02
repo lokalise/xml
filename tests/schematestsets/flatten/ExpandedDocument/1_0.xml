@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Store>
+	<NodeOne>
+		<One unit="mm">uno</One>
+	</NodeOne>
+	<NodeTwo>
+		<Two unit="dm">duo</Two>
+	</NodeTwo>
+	<NodeThree>
+		<Three unit="cm">trez</Three>
+	</NodeThree>
+</Store>

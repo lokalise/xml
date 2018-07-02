@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="urn:TranslateServiceWSDL" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap-enc="http://schemas.xmlsoap.org/soap/encoding/" name="TranslateService" targetNamespace="urn:TranslateServiceWSDL">
+  <message name="getLanguageIn">
+    <part name="id" type="xsd:string">
+      <documentation>AuthID to use</documentation>
+    </part>
+    <part name="key" type="xsd:string">
+      <documentation>Rolling key to authenticate</documentation>
+    </part>
+    <part name="phrase" type="xsd:string">
+      <documentation>Phrase</documentation>
+    </part>
+    <part name="possiblelanguage" type="xsd:string">
+      <documentation>Possible language</documentation>
+    </part>
+  </message>
+  <message name="getLanguageOut">
+    <part name="return" type="xsd:string">
+      <documentation>Detected language</documentation>
+    </part>
+  </message>
+  <message name="translateIn">
+    <part name="id" type="xsd:string">
+      <documentation>AuthID to use</documentation>
+    </part>
+    <part name="key" type="xsd:string">
+      <documentation>Rolling key to authenticate</documentation>
+    </part>
+    <part name="sourcelanguage" type="xsd:string">
+      <documentation>Source language</documentation>
+    </part>
+    <part name="destinationlanguage" type="xsd:string">
+      <documentation>Destination language</documentation>
+    </part>
+    <part name="priority" type="xsd:string">
+      <documentation>Priority of translation</documentation>
+    </part>
+    <part name="phrase" type="xsd:string">
+      <documentation>Source phrase</documentation>
+    </part>
+  </message>
+  <message name="translateOut">
+    <part name="return" type="xsd:string">
+      <documentation>Translated phrase</documentation>
+    </part>
+  </message>
+  <message name="commitIn">
+    <part name="client" type="xsd:string">
+      <documentation>Client name</documentation>
+    </part>
+    <part name="priority" type="xsd:string">
+      <documentation>Priority of translation</documentation>
+    </part>
+  </message>
+  <message name="commitOut"/>
+  <portType name="TranslateServicePortType">
+    <operation name="getLanguage">
+      <documentation>Get language</documentation>
+      <input message="tns:getLanguageIn"/>
+      <output message="tns:getLanguageOut"/>
+    </operation>
+    <operation name="translate">
+      <documentation>Translate phrase</documentation>
+      <input message="tns:translateIn"/>
+      <output message="tns:translateOut"/>
+    </operation>
+    <operation name="commit">
+      <documentation>Commit</documentation>
+      <input message="tns:commitIn"/>
+      <output message="tns:commitOut"/>
+    </operation>
+  </portType>
+  <binding name="TranslateServiceBinding" type="tns:TranslateServicePortType">
+    <soap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="getLanguage">
+      <soap:operation soapAction="urn:TranslateServiceWSDL#getLanguage" style="rpc"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:TranslateServiceWSDL"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:TranslateServiceWSDL"/>
+      </output>
+    </operation>
+    <operation name="translate">
+      <soap:operation soapAction="urn:TranslateServiceWSDL#translate" style="rpc"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:TranslateServiceWSDL"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:TranslateServiceWSDL"/>
+      </output>
+    </operation>
+    <operation name="commit">
+      <soap:operation soapAction="urn:TranslateServiceWSDL#commit" style="rpc"/>
+      <input>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:TranslateServiceWSDL"/>
+      </input>
+      <output>
+        <soap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:TranslateServiceWSDL"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="TranslateServiceService">
+    <port name="TranslateServicePort" binding="tns:TranslateServiceBinding">
+      <soap:address location=""/>
+    </port>
+  </service>
+</definitions>

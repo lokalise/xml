@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Store>
+	<NodeOne>
+		<SameNode>
+			<SameNodeAgain>
+				<SameNodeAgainAgain uniqueattribute="testvalue" myattribute="testvalue1">
+					<SameName>uno</SameName>
+				</SameNodeAgainAgain>
+			</SameNodeAgain>
+		</SameNode>
+	</NodeOne>
+	<NodeTwo>
+		<SameNode>
+			<SameNodeAgain>
+				<SameNodeAgainAgain myattribute="testvalue2">
+					<DifferentName>duotest</DifferentName>
+					<SameName>duo</SameName>
+				</SameNodeAgainAgain>
+			</SameNodeAgain>
+		</SameNode>
+	</NodeTwo>
+</Store>

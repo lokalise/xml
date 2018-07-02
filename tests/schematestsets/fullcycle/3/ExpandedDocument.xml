@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Product>
+    <Jewelry>
+		<Fashion>
+			<Charm>
+                <Metal>
+                    <Type>FirstType</Type>
+                    <Stamp>f925</Stamp>
+                    <Weight>12</Weight>
+                </Metal>
+                <Metal>
+                    <Type>SecondType</Type>
+                    <Stamp>s925</Stamp>
+                </Metal>
+                <Size>
+                    <Height unit="millimeter">12</Height>
+                    <Width unit="meter">16</Width>
+                </Size>
+                <Shape>
+                    <Type>Cross</Type>
+                </Shape>
+                <SubjectContent>Flags</SubjectContent>
+                <SubjectContent>Religious</SubjectContent>
+                <SubjectContent>Sports</SubjectContent>
+            </Charm>
+		</Fashion>
+	</Jewelry>
+</Product>

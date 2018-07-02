@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Store>
+	<NodeOne>
+		<SameNode>
+			<SameName>uno</SameName>
+		</SameNode>
+	</NodeOne>
+	<NodeTwo>
+		<SameNode>
+			<SameName>duo</SameName>
+		</SameNode>
+	</NodeTwo>
+</Store>

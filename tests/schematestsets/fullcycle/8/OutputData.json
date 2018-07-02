@@ -1,0 +1,30 @@
+{
+	"Weight": [{
+		"name": "WeightContainerOne\/WeightContainerDeeper[1]\/Weight",
+		"values": ["111"],
+		"attributes": [],
+		"nametrace": "\/Product\/Charm\/WeightContainerOne\/WeightContainerDeeper[1]\/Weight"
+	},
+	{
+		"name": "WeightContainerOne\/WeightContainerDeeper[2]\/Weight",
+		"values": ["222"],
+		"nametrace": "\/Product\/Charm\/WeightContainerOne\/WeightContainerDeeper[2]\/Weight",
+		"attributes": []
+	}],
+	"Height": [{
+		"name": "Height",
+		"values": ["12"],
+		"attributes": {
+			"unit": ["millimeter"]
+		},
+		"nametrace": "\/Product\/Charm\/Size\/Height"
+	}],
+	"Width": [{
+		"name": "Width",
+		"values": ["16"],
+		"attributes": {
+			"unit": ["meter"]
+		},
+		"nametrace": "\/Product\/Charm\/Size\/Width"
+	}]
+}

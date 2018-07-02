@@ -1,0 +1,22 @@
+{
+	"WeightContainerOne\/WeightContainerDeeper[1]\/Weight": {
+		"values": ["111"]
+	},
+	"WeightContainerOne\/WeightContainerDeeper[2]\/Weight": {
+		"values": ["222"]
+	},
+	"Height": {
+		"values": ["12"],
+		"attributes": [{
+			"name": "unit",
+			"values": ["millimeter"]
+		}]
+	},
+	"Width": {
+		"values": ["16"],
+		"attributes": [{
+			"name": "unit",
+			"values": ["meter"]
+		}]
+	}
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="ProductOne">
+      <xs:complexType>
+        <xs:choice>
+          <xs:element name="FirstElementLevel" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+	
+    <xs:element name="ProductTwo">
+      <xs:complexType>
+        <xs:choice>
+          <xs:element name="SecondElementLevel" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+          <xs:element name="SecondElementLevelAlternative" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+</xs:schema>

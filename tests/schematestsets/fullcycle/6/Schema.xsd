@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:simpleType name="LengthUnitOfMeasure">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="millimeter"/>
+    <xs:enumeration value="centimeter"/>
+    <xs:enumeration value="meter"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:complexType name="LengthDimension">
+  <xs:simpleContent>
+    <xs:extension base="xs:integer">
+      <xs:attribute name="unit" type="LengthUnitOfMeasure" use="required"/>
+    </xs:extension>
+  </xs:simpleContent>
+</xs:complexType>
+
+<xs:complexType name="JewelrySizeType">
+  <xs:sequence>
+    <xs:element name="Height" type="LengthDimension"/>
+    <xs:element name="Width" type="LengthDimension"/>
+    <xs:element name="Depth" type="LengthDimension" minOccurs="0"/>
+  </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="EndingType">
+  <xs:simpleContent>
+    <xs:extension base="xs:string">
+      <xs:attribute name="testattribute" type="xs:string" use="required"/>
+    </xs:extension>
+  </xs:simpleContent>
+</xs:complexType>
+
+<xs:complexType name="JewelryFashionCharmType">
+    <xs:sequence>
+      <xs:element name="Ending" type="EndingType" minOccurs="0" maxOccurs="4"/>
+      <xs:element name="LongerEnding" type="xs:string" minOccurs="0" maxOccurs="4"/>
+      <xs:element name="Size" type="JewelrySizeType" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:element name="Product">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="Charm" type="JewelryFashionCharmType" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="NotCharm" type="JewelryFashionCharmType" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="CharmNot" type="JewelryFashionCharmType" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+
+</xs:schema>

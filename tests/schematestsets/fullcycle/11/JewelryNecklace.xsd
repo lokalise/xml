@@ -1,0 +1,707 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://dublincore.org/schemas/xmls/qdc/2008/02/11/dc.xsd" xmlns:vxe="urn:visualXMLeditor:settings">
+  <xs:include schemaLocation="Measurements.xsd"/>
+  <xs:simpleType name="NecklaceTypeType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="chain-necklaces"/>
+      <xs:enumeration value="choker-necklaces"/>
+      <xs:enumeration value="collar-necklaces"/>
+      <xs:enumeration value="pearl-strands"/>
+      <xs:enumeration value="hoker-pearl-strands"/>
+      <xs:enumeration value="matinee-pearl-strands"/>
+      <xs:enumeration value="pera-pearl-strands"/>
+      <xs:enumeration value="princess-pearl-strands"/>
+      <xs:enumeration value="rope-pearl-strands"/>
+      <xs:enumeration value="pendant-necklaces"/>
+      <xs:enumeration value="locket-necklaces"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ChainTypeType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="anchor">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Anchor</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ball">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Ball</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="basket-weave">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Basket weave</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="bead">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Bead</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="belcher">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Belcher</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="beveled-herringbone">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Beveled herringbone</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="bismark">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Bismark</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="boston-link">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Boston link</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="bow-tie-figaro">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Bow tie figaro</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="box">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Box</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="byzantine">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Byzantine</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="cable">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Cable</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="cable-wire">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Cable wire</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="cascade">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Cascade</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="c-chain">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">C chain</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="cobra">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Cobra</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="cord">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Cord</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="curb">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Curb</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="diamond-cut-figaro">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Diamond cut figaro</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="double-cable">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Double cable</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="double-curb">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Double curb</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="draw-flat-cable">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Draw flat cable</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="elongated-cable">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Elongated cable</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="flat-gooseneck">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Flat gooseneck</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="fancy-double-link">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Fancy double link</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="figaro">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Figaro</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="flat-figaro">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Flat figaro</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="franco">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Franco</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="french-rope">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">French rope</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="half-round-gooseneck">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Half round gooseneck</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="heart">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Heart</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="herringbone">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Herringbone</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="hollow-mariner">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Hollow mariner</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="lace">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Lace</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="link">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Link</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="mariner">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Mariner</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="mesh">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Mesh</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="mirror">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Mirror</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="omega">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Omega</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="open-cable">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Open cable</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="oval-curb">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Oval curb</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="parallel-curb">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Parallel curb</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="popcorn">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Popcorn</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="puzzle">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Puzzle</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="raspberry">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Raspberry</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="rolo">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Rolo</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="rope">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Rope</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="round-omega">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Round omega</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="serpentine">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Serpentine</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="side-by-side">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Side by side</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="singapore">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Singapore</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="snake">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Snake</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="stocking-mesh">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Stocking mesh</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="strand">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Strand</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="tornado">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Tornado</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="track">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Track</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="triple-rope">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Triple rope</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="twister-rope">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Twister rope</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="twister-serpentine">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Twister serpentine</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="wheat">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Wheat</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="wire-cable">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Wire cable</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="other-chain-type">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Other</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="no-chain-type">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">No chain</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="ClaspTypeType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="box-with-tongue-and-safety">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Box with tongue and safety</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="box-with-tongue">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Box with tongue</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="buckles">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Buckles</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="double-locking-fold-over">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Double locking fold over</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="double-safety">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Double safety</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="easy-hook">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Easy hook</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="fancy">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Fancy</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="fold-over">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Fold over</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="hidden-safety-clasp">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Hidden safety clasp</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="invisible-double-locking">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Invisible double locking</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="leather-deployment-buckles">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Leather deployment buckles</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="lobster-claw">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Lobster claw</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="multistrand-box">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Multistrand box</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="pearl">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Pearl</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="pin-stem-with-safety">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Pin stem with safety</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="post-and-nut">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Post and nut</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="push-button">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Push button</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="screw-barrel">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Screw barrel</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="screw-barrel-with-safety">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Screw barrel with safety</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="single-locking-fold-over">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Single locking fold over</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="single-strand-fishhook">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Signle strand fishhook</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="snap">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Snap</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="spring-ring">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Spring ring</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="spring-rings-with-terminals">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Spring rings with terminals</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="toggle">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Toggle</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="other-clasp-type">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Other</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="no-clasp-type">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">No clasp</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="JewelryNecklaceType">
+    <xs:sequence>
+      <xs:element name="Type" type="NecklaceTypeType" minOccurs="1" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Necklace type</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ChainType" type="ChainTypeType" minOccurs="1" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Chain type</dc:title>
+            <dc:title xml:lang="ru">Тип цепочки</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ClaspType" type="ClaspTypeType" minOccurs="1" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Clasp type</dc:title>
+            <dc:title xml:lang="ru">Тип замочка</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Length" type="LengthDimension" minOccurs="1" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Length</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:group name="JewelryNecklace">
+    <xs:sequence>
+      <xs:element name="Necklace" type="JewelryNecklaceType" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Necklace</dc:title>
+          </xs:documentation>
+          <xs:appinfo>
+            <vxe:settings>
+              <vxe:startFolded>true</vxe:startFolded>
+            </vxe:settings>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:group>
+</xs:schema>

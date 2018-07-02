@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<advertisement id="A147B212A57AFBEE81633CB582420138" datetime="2012-01-02T16:59:12">
+  <topic>1-116</topic>
+  <original>Гараж М.Конева рядом с ЖК Эльбрус. Гараж, М. Конева рядом с ЖК "Эльбрус", размер 4*8, высота ворот 2.5 м, в охр. кооп «Иркут», подвал, яма, свет. Торг. . Материал стен: Кирпич. Цена: 315000. Т. 89021743986</original>
+  <expanded>Гараж Маршала Конева рядом с ЖК Эльбрус. Гараж, Маршала Конева рядом с ЖК "Эльбрус", размер 4*8, высота ворот 2.5 м, в охр. кооп «Иркут», подвал, яма, свет. Торг. . Материал стен: Кирпич. Цена: 315000›. Т. 89021743986</expanded>
+  <contact>
+    <phone>89021743986</phone>
+  </contact>
+  <domesticpropertytolet>
+    <location>
+      <town>Иркутск</town>
+      <area>Свердловский район</area>
+      <street>Маршала Конева</street>
+      <radius>0</radius>
+    </location>
+    <garage>
+      <garagetype>Гараж</garagetype>
+    </garage>
+    <unparsed>
+      <phrase>рядом с ЖК Эльбрус</phrase>
+      <phrase>Гараж</phrase>
+      <phrase>рядом с ЖК "Эльбрус"</phrase>
+      <phrase>размер4*8</phrase>
+      <phrase>высотаворот2</phrase>
+      <phrase>5м</phrase>
+      <phrase>вохр</phrase>
+      <phrase>кооп«Иркут»</phrase>
+      <phrase>подвал</phrase>
+      <phrase>яма</phrase>
+      <phrase>свет</phrase>
+      <phrase>Торг</phrase>
+      <phrase>Материалстен: Кирпич</phrase>
+      <phrase>Цена: 315000</phrase>
+    </unparsed>
+  </domesticpropertytolet>
+</advertisement>

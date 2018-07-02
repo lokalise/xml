@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root xmlns:h="http://www.w3.org/TR/html4/" xmlns:f="http://www.w3schools.com/furniture">
+  <h:table>
+    <h:tr>
+      <h:td>Apples</h:td>
+      <h:td xml:lang="en">Bananas</h:td>
+      <h:td xml:lang="mt-x-mt">- Banana</h:td>
+      <h:td xml:lang="ru-x-mt">Бананы</h:td>
+    </h:tr>
+  </h:table>
+  <f:table>
+    <f:name xml:lang="en">African Coffee Table</f:name>
+    <f:name xml:lang="mt-x-mt">Afrikana Kafe Tabella</f:name>
+    <f:name xml:lang="ru-x-mt">Африканский Кофейный Столик</f:name>
+    <f:width>80</f:width>
+    <f:length>120</f:length>
+  </f:table>
+</root>

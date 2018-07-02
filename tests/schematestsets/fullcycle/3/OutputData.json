@@ -1,0 +1,62 @@
+{
+	"Type": [{
+		"name": "Metal[1]\/Type",
+		"values": ["FirstType"],
+		"attributes": [],
+		"nametrace": "\/Product\/Jewelry\/Fashion\/Charm\/Metal[1]\/Type"
+	},
+	{
+		"name": "Metal[2]\/Type",
+		"values": ["SecondType"],
+		"nametrace": "\/Product\/Jewelry\/Fashion\/Charm\/Metal[2]\/Type",
+		"attributes": []
+	},
+	{
+		"name": "Shape\/Type",
+		"values": ["Cross"],
+		"nametrace": "\/Product\/Jewelry\/Fashion\/Charm\/Shape\/Type",
+		"attributes": []
+	}],
+	"Stamp": [{
+		"name": "Metal[1]\/Stamp",
+		"values": ["f925"],
+		"attributes": [],
+		"nametrace": "\/Product\/Jewelry\/Fashion\/Charm\/Metal[1]\/Stamp"
+	},
+	{
+		"name": "Metal[2]\/Stamp",
+		"values": ["s925"],
+		"nametrace": "\/Product\/Jewelry\/Fashion\/Charm\/Metal[2]\/Stamp",
+		"attributes": []
+	}],
+	"Weight": [{
+		"name": "Metal[1]\/Weight",
+		"values": ["12"],
+		"attributes": [],
+		"nametrace": "\/Product\/Jewelry\/Fashion\/Charm\/Metal[1]\/Weight"
+	}],
+	"Height": [{
+		"name": "Height",
+		"values": ["12"],
+		"attributes": {
+			"unit": ["millimeter"]
+		},
+		"nametrace": "\/Product\/Jewelry\/Fashion\/Charm\/Size\/Height"
+	}],
+	"Width": [{
+		"name": "Width",
+		"values": ["16"],
+		"attributes": {
+			"unit": ["meter"]
+		},
+		"nametrace": "\/Product\/Jewelry\/Fashion\/Charm\/Size\/Width"
+	}],
+	"SubjectContent": [{
+		"name": "SubjectContent",
+		"values": ["Flags",
+		"Religious",
+		"Sports"],
+		"attributes": [],
+		"nametrace": "\/Product\/Jewelry\/Fashion\/Charm\/SubjectContent"
+	}]
+}

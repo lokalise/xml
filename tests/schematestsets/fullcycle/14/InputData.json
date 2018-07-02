@@ -1,0 +1,26 @@
+{
+	"WeightContainerTwoDeeper\/Weight": {
+		"values": ["149"]
+	},
+	"Height": {
+		"values": ["12"],
+		"attributes": [{
+			"name": "unit",
+			"values": ["millimeter"]
+		}]
+	},
+	"Width": {
+		"values": ["16"],
+		"attributes": [{
+			"name": "unit",
+			"values": ["meter"]
+		}]
+	},
+	"testElement": {
+		"values": ["testvalue"],
+		"attributes": [{
+			"name": "xml:lang",
+			"values": ["en"]
+		}]
+	}
+}

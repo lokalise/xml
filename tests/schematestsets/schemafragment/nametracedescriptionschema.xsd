@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:dc="http://dublincore.org/schemas/xmls/qdc/2008/02/11/dc.xsd"
+    xmlns:vxe="urn:visualXMLeditor:settings">
+
+	<xs:element name="Root">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="TestElement">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="Dernholm">
+								<xs:annotation>
+									<xs:documentation>
+										<dc:title>Dernholm</dc:title>
+										<dc:description>Capital of Cambria</dc:description>
+									</xs:documentation>
+								</xs:annotation>
+							</xs:enumeration>
+							<xs:enumeration value="Thula">
+								<xs:annotation>
+									<xs:documentation>
+										<dc:title>Thula</dc:title>
+										<dc:description>Lost in the Wastes</dc:description>
+									</xs:documentation>
+								</xs:annotation>
+							</xs:enumeration>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

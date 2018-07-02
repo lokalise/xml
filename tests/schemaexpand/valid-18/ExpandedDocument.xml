@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Paintings>
+  <Artist>
+    <Name>Van Gogh</Name>
+    <PaintingStyle>Impressionism</PaintingStyle>
+    <PaintingStyle>Abstractionism</PaintingStyle>
+  </Artist>
+</Paintings>

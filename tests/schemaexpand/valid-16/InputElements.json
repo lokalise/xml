@@ -1,0 +1,24 @@
+{
+    "/Store/AmericanLiterature/Author":
+	{
+	    "values": ["Fitzgerald"]
+	},
+    "/Store/AmericanLiterature/Title":
+	{
+	    "values": ["The Great Gatsby"]
+	},
+    "City":
+	{
+	    "values": ["Nashville"]
+	},
+    "AmericanLiterature[1]":
+	{
+	    "attributes":
+		[
+		    {
+			"name": "century",
+			"values":["XI"]
+		    }
+		]
+	}
+}

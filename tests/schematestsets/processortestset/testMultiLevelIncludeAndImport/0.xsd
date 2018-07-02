@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ext="urn:logics:external" xmlns:deeper="urn:logics:externaldeeper">
+
+<xs:include schemaLocation="includedfirstlevel.xsd"/>
+<xs:include schemaLocation="includedsecondlevel.xsd"/>
+
+<xs:import schemaLocation="importedsecondlevel.xsd" namespace="urn:logics:externaldeeper"/>
+<xs:import schemaLocation="importedfirstlevel.xsd" namespace="urn:logics:external"/>
+
+<xs:element name="BaseLevel">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="IncludedElement" type="IncludedElementType" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="ImportedElement" type="ext:ImportedElementType" minOccurs="0" maxOccurs="1"/>
+	  <xs:element name="InitialSchemaElement" type="xs:string" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+
+</xs:schema>

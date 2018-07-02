@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://dublincore.org/schemas/xmls/qdc/2008/02/11/dc.xsd" xmlns:vxe="urn:visualXMLeditor:settings">
+  <xs:simpleType name="WeightType">
+    <xs:restriction base="xs:decimal">
+      <xs:minExclusive value="0"/>
+      <xs:fractionDigits value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="LengthUnitOfMeasure">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="millimeter">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">millimeter</dc:title>
+            <dc:title xml:lang="ru">миллиметр</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="centimeter">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">centimeter</dc:title>
+            <dc:title xml:lang="ru">сантиметр</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="meter">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">meter</dc:title>
+            <dc:title xml:lang="ru">метр</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="Dimension">
+    <xs:restriction base="xs:decimal">
+      <xs:minExclusive value="0"/>
+      <xs:fractionDigits value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="LengthDimension">
+    <xs:simpleContent>
+      <xs:extension base="Dimension">
+        <xs:attribute name="unit" type="LengthUnitOfMeasure" use="required">
+          <xs:annotation>
+            <xs:documentation>
+              <dc:title xml:lang="en">Unit</dc:title>
+              <dc:title xml:lang="ru">Единица измерения</dc:title>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="DiameterType">
+    <xs:simpleContent>
+      <xs:extension base="Dimension">
+        <xs:attribute name="unit" type="LengthUnitOfMeasure" use="required">
+          <xs:annotation>
+            <xs:documentation>
+              <dc:title xml:lang="en">Unit</dc:title>
+              <dc:title xml:lang="ru">Единица измерения</dc:title>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+</xs:schema>

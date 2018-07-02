@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:deeper="urn:logics:externaldeeper" targetNamespace="urn:logics:externaldeeper">
+
+<xs:complexType name="SecondImportedElementType">
+	<xs:sequence>
+		<xs:element name="SecondImportedElementLastNode" type="xs:boolean"/>
+	</xs:sequence>
+</xs:complexType>
+
+</xs:schema>

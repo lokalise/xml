@@ -1,0 +1,20 @@
+{
+    "/Paintings[1]":
+	{
+	    "temporary_property": null
+	},
+    "/Paintings[1]/Artist[1]":
+	{
+	    "temporary_property": null
+	},
+    "/Paintings[1]/Artist[1]/Name":
+	{
+	    "temporary_property": null,
+	    "values": ["Van Gogh"]
+	},
+    "/Paintings[1]/Artist[1]/PaintingStyle":
+	{
+	    "temporary_property": null,
+	    "values": ["Impressionism", "Abstractionism"]
+	}
+}

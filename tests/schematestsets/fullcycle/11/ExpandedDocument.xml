@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Product>
+    <Jewelry>
+        <Fashion>
+            <Pendant>
+                <Type>individual-pendants</Type>
+                <Metal>
+                    <Type>Sterling-silver</Type>
+                    <Stamp>925-sterling</Stamp>
+                </Metal>
+                <Stone>
+                    <GemType>jade</GemType>
+                    <Color>green</Color>
+                    <Shape>oval-shape</Shape>
+                </Stone>
+                <TargetAudience>girls</TargetAudience>
+                <TargetAudience>women</TargetAudience>
+                <GemSet>true</GemSet>
+                <DominantColor>green</DominantColor>
+                <PrimaryImage mimeCode="image/jpeg">ZGZzZGZzYWRmc2FkZg==</PrimaryImage>
+            </Pendant>
+        </Fashion>
+    </Jewelry>
+    <ProductSeries>Contemporary</ProductSeries>
+    <SeriesDescription>Sleek, modern style defines these elegant Jade pendants featuring a choice of both black and green stone. Simple tear-drops, crosses, ovals, discs and hearts create sophisticated jewellery pieces to be worn for any occasion.</SeriesDescription>
+    <ProductFamily>Australian Jade: 19</ProductFamily>
+</Product>

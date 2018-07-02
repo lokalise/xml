@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Product>
+    <NewHierarchyLevel>
+        <Size>
+            <Height unit="millimeter">12</Height>
+            <Width unit="meter">16</Width>
+        </Size>
+    </NewHierarchyLevel>
+    <NewHierarchyLevel>
+        <TestChoice>
+            <ChoiceTwo>ChoiceTwoValue</ChoiceTwo>
+        </TestChoice>
+    </NewHierarchyLevel>
+    <NewHierarchyLevel>
+        <One>OneValue</One>
+        <Two>TwoValue</Two>
+    </NewHierarchyLevel>
+</Product>

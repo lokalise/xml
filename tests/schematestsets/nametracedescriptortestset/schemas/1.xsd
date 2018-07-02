@@ -1,0 +1,186 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+<xs:simpleType name="WeightType">
+  <xs:restriction base="xs:decimal">
+    <xs:minExclusive value="0"/>
+    <xs:fractionDigits value="3"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="LengthUnitOfMeasure">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="millimeter"/>
+    <xs:enumeration value="centimeter"/>
+    <xs:enumeration value="meter"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="Dimension">
+  <xs:restriction base="xs:decimal">
+    <xs:minExclusive value="0"/>
+    <xs:fractionDigits value="3"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:complexType name="LengthDimension">
+  <xs:simpleContent>
+    <xs:extension base="Dimension">
+      <xs:attribute name="unit" type="LengthUnitOfMeasure" use="required"/>
+    </xs:extension>
+  </xs:simpleContent>
+</xs:complexType>
+
+<xs:complexType name="JewelrySizeType">
+  <xs:sequence>
+    <xs:element name="Height" type="LengthDimension" minOccurs="1" maxOccurs="1"/>
+    <xs:element name="Width" type="LengthDimension" minOccurs="1" maxOccurs="1"/>
+    <xs:element name="Depth" type="LengthDimension" minOccurs="0" maxOccurs="1"/>
+  </xs:sequence>
+</xs:complexType>
+
+<xs:simpleType name="JewelrySubjectContentType">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="Wedding"/>
+    <xs:enumeration value="Words"/>
+    <xs:enumeration value="Zodiac Signs"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="JewelryTargetAudienceType">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="Baby Boy"/>
+    <xs:enumeration value="Baby Girl"/>
+    <xs:enumeration value="Boy"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="JewelryUsedForType">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="Business Gift"/>
+    <xs:enumeration value="Anniversary"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="MetalType">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="Sterling Silver"/>
+    <xs:enumeration value="14K Gold Plating"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="JewelryMetalStampType">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="925"/>
+    <xs:enumeration value="No stamp"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:complexType name="JewelryMetalType">
+  <xs:sequence>
+    <xs:element name="Type" type="MetalType" minOccurs="1" maxOccurs="1"/>
+    <xs:element name="Stamp" type="JewelryMetalStampType" minOccurs="0" maxOccurs="1"/>
+    <xs:element name="Weight" type="WeightType" minOccurs="0" maxOccurs="1"/>
+  </xs:sequence>
+</xs:complexType>
+
+<xs:simpleType name="ShapeAnimalStringType">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="Animal"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="ShapeAnimalKindType">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="Wombat"/>
+    <xs:enumeration value="Worm"/>
+    <xs:enumeration value="Zebra"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:group name="ShapeAnimalType">
+  <xs:sequence>
+    <xs:element name="Animal" type="ShapeAnimalKindType" minOccurs="1" maxOccurs="1"/>
+    <xs:element name="Type" type="ShapeAnimalStringType" minOccurs="1" maxOccurs="1"/>
+  </xs:sequence>
+</xs:group>
+
+<xs:simpleType name="ShapeCrossStringType">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="Cross"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:group name="ShapeCrossType">
+  <xs:sequence>
+    <xs:element name="Type" type="ShapeCrossStringType" minOccurs="1" maxOccurs="1"/>
+  </xs:sequence>
+</xs:group>
+
+<xs:complexType name="ShapeType">
+  <xs:choice>
+    <xs:group ref="ShapeAnimalType"/>
+    <xs:group ref="ShapeCrossType"/>
+  </xs:choice>
+</xs:complexType>
+
+<xs:complexType name="JewelryFashionCharmType">
+  <xs:sequence>
+    <xs:element name="Metal" type="JewelryMetalType" minOccurs="0" maxOccurs="unbounded"/>
+    <xs:element name="Weight" type="WeightType" minOccurs="0" maxOccurs="1"/>
+    <xs:element name="Size" type="JewelrySizeType" minOccurs="0" maxOccurs="1"/>
+    <xs:element name="Shape" type="ShapeType" minOccurs="0" maxOccurs="unbounded"/>
+    <xs:element name="SubjectContent" type="JewelrySubjectContentType" minOccurs="0" maxOccurs="unbounded"/>
+    <xs:element name="TargetAudience" type="JewelryTargetAudienceType" minOccurs="0" maxOccurs="unbounded"/>
+    <xs:element name="UsedFor" type="JewelryUsedForType" minOccurs="0" maxOccurs="unbounded"/>
+  </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="JewelryFashionType">
+  <xs:choice>
+    <xs:element name="Charm" type="JewelryFashionCharmType" minOccurs="0" maxOccurs="1"/>
+  </xs:choice>
+</xs:complexType>
+
+<xs:complexType name="JewelryType">
+  <xs:choice>
+    <xs:element name="Fashion" type="JewelryFashionType" minOccurs="1" maxOccurs="1"/>
+  </xs:choice>
+</xs:complexType>
+
+<xs:complexType name="TestingChoiceType">
+  <xs:choice>
+    <xs:element name="Testing" type="xs:string" minOccurs="1" maxOccurs="1"/>
+  </xs:choice>
+</xs:complexType>
+
+<xs:simpleType name="anotherSimpleType">
+  <xs:restriction base="xs:string">
+    <xs:enumeration value="one"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="referencedSimpleType">
+  <xs:restriction base="anotherSimpleType">
+    <xs:minLength value="3"/>
+  </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="testSimpleType">
+  <xs:union memberTypes="xs:integer referencedSimpleType"/>
+</xs:simpleType>
+
+<xs:element name="Product">
+  <xs:complexType>
+    <xs:choice>
+	  <xs:choice>
+	    <xs:element name="One" type="testSimpleType"/>
+	    <xs:element name="Two" type="xs:string"/>
+	  </xs:choice>
+	  <xs:element name="TestingChoices" type="TestingChoiceType" minOccurs="0" maxOccurs="1"/>
+	  <xs:element name="Jewelry" type="JewelryType" minOccurs="0" maxOccurs="1"/>
+    </xs:choice>
+  </xs:complexType>
+</xs:element>
+
+</xs:schema>

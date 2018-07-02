@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Product>
+    <Charm>
+        <Ending testattribute="testEnding1attribute">testEnding1</Ending>
+        <Ending testattribute="testEnding2attribute">testEnding2</Ending>
+        <LongerEnding>testLongerEnding1</LongerEnding>
+        <Size>
+            <Height unit="millimeter">12</Height>
+            <Width unit="meter">16</Width>
+        </Size>
+    </Charm>
+</Product>

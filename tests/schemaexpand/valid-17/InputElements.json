@@ -1,0 +1,64 @@
+{
+    "/Product[1]/Jewelry[1]/Fashion[1]/Charm[1]/Size[1]/Height":
+	{
+	    "values": ["12"],
+	    "attributes":
+		[
+		    {
+			"name": "unit",
+			"values": ["meter"]
+		    }
+		]
+	},
+    "/Product[1]/Jewelry[1]/Fashion[1]/Charm[1]/Size[1]/Width":
+	{
+	    "values": ["16"],
+	    "attributes":
+		[
+		    {
+			"name": "unit",
+			"values": ["millimeter"]
+		    }
+		]
+	},
+    "/Product[1]/Jewelry[1]/Fashion[1]/Charm[1]/Shape[1]/Animal":
+	{
+	    "values": ["Zebra"]
+	},
+    "/Product[1]/Jewelry[1]/Fashion[1]/Charm[1]/Shape[1]/Type":
+	{
+	    "values": ["Animal"]
+	},
+    "/Product[1]/Jewelry[1]/Fashion[1]/Charm[1]/SubjectContent":
+	{
+	    "values": ["Animals"]
+	},
+    "/Product[1]/Jewelry[1]/Fashion[1]/Charm[1]/TargetAudience":
+	{
+	    "values": ["Boy", "Girl"]
+	},
+    "/Product[1]/Jewelry[1]/Fashion[1]/Charm[1]/UsedFor":
+	{
+	    "values": ["Anniversary", "Engagement"]
+	},
+    "/Product[1]/Jewelry[1]/Fashion[1]/Charm[1]/Metal[1]/Type":
+	{
+	    "values": ["Sterling Silver"]
+	},
+    "/Product[1]/Jewelry[1]/Fashion[1]/Charm[1]/Metal[1]/Stamp":
+	{
+	    "values": ["925"]
+	},
+    "/Product[1]/Jewelry[1]/Fashion[1]/Charm[1]/Metal[2]/Type":
+	{
+	    "values": ["14K Gold Plating"]
+	},
+    "/Product[1]/Jewelry[1]/Fashion[1]/Charm[1]/Metal[2]/Stamp":
+	{
+	    "values": ["925"]
+	},
+    "/Product[1]/Jewelry[1]/Fashion[1]/Charm[1]/Metal[2]/Weight":
+	{
+	    "values": ["abc"]
+	}
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Product>
+  <Jewelry>
+    <Charm>
+      <Fashion>
+        <Metal>
+          <Type>Sterling Silver</Type>
+          <Stamp>925</Stamp>
+        </Metal>
+        <Size>
+          <Height unit="millimeter">12</Height>
+          <Width unit="millimeter">16</Width>
+        </Size>
+        <Shape>
+          <Type>Cross</Type>
+        </Shape>
+        <SubjectContent>Animals</SubjectContent>
+        <TargetAudience>Boy</TargetAudience>
+        <TargetAudience>Girl</TargetAudience>
+        <TargetAudience>Man</TargetAudience>
+        <TargetAudience>Woman</TargetAudience>
+        <TargetAudience>Unisex Child</TargetAudience>
+        <TargetAudience>Unisex Adult</TargetAudience>
+        <UsedFor>Anniversary</UsedFor>
+        <UsedFor>Birthday</UsedFor>
+        <UsedFor>Christmas</UsedFor>
+        <UsedFor>Mothers Day</UsedFor>
+        <UsedFor>Holiday</UsedFor>
+      </Fashion>
+    </Charm>
+  </Jewelry>
+</Product>

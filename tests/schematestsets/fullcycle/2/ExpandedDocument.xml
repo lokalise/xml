@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Product>
+   <Jewelry>
+      <Fashion>
+         <Pendant>
+            <ChainType>no-chain-type</ChainType>
+            <ClaspType>snap</ClaspType>
+            <Shape>
+               <Type>Ring</Type>
+            </Shape>
+            <SubjectContent>Birthday</SubjectContent>
+            <SubjectContent>Mothers Day</SubjectContent>
+            <TargetAudience>women</TargetAudience>
+            <UsedFor>anniversary</UsedFor>
+            <UsedFor>birthday</UsedFor>
+            <UsedFor>christening</UsedFor>
+            <UsedFor>mothers-day</UsedFor>
+            <PrimaryImage mimeCode="&quot;image/jpeg&quot;">c2FjYWNzYWNhc2M=</PrimaryImage>
+         </Pendant>
+      </Fashion>
+   </Jewelry>
+</Product>

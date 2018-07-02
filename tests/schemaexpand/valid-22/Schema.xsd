@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:complexType name="NecklaceType">
+    <xs:sequence>
+      <xs:element name="Type" type="xs:string" minOccurs="1" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:group name="Necklace">
+    <xs:sequence>
+      <xs:element name="Necklace" type="NecklaceType" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:group>
+
+  <xs:complexType name="ShapeType">
+    <xs:choice>
+      <xs:element name="Form" type="xs:string" minOccurs="0" maxOccurs="1"/>
+    </xs:choice>
+  </xs:complexType>
+
+  <xs:group name="Shape">
+    <xs:sequence>
+      <xs:element name="Shape" type="ShapeType" minOccurs="0" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:group>
+
+  <xs:element name="Store">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:choice>
+          <xs:group ref="Necklace"/>
+        </xs:choice>
+      <xs:group ref="Shape"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

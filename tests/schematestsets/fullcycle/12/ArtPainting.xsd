@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://dublincore.org/schemas/xmls/qdc/2008/02/11/dc.xsd" xmlns:vxe="urn:visualXMLeditor:settings">
+  <xs:simpleType name="ArtWorkType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="limited-edition"/>
+      <xs:enumeration value="original-creation"/>
+      <xs:enumeration value="reproduction"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="FrameType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="framed"/>
+      <xs:enumeration value="unframed"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:group name="ArtPainting">
+    <xs:sequence>
+      <xs:element name="ArtWork" type="ArtWorkType" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Art work type</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Frame" type="FrameType" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Frame type</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:group>
+</xs:schema>

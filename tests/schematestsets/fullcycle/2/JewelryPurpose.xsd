@@ -1,0 +1,787 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://dublincore.org/schemas/xmls/qdc/2008/02/11/dc.xsd" xmlns:vxe="urn:visualXMLeditor:settings">
+  <xs:simpleType name="JewelrySubjectContentType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Alphabet, Dates &amp; Numbers">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Alphabet, Dates &amp; Numbers</dc:title>
+            <dc:title xml:lang="ru">Алфавит, Даты и Числа</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Animals">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Animals</dc:title>
+            <dc:title xml:lang="ru">Животные</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Flags">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Flags</dc:title>
+            <dc:title xml:lang="ru">Флаги</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Floral">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Floral</dc:title>
+            <dc:title xml:lang="ru">Цветочные</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Food &amp; Beverages">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Food &amp; Beverages</dc:title>
+            <dc:title xml:lang="ru">Еда и Напитки</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Hearts">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Hearts</dc:title>
+            <dc:title xml:lang="ru">Сердца</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Holidays">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Holidays</dc:title>
+            <dc:title xml:lang="ru">Праздники</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Nautical">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Nautical</dc:title>
+            <dc:title xml:lang="ru">Морские</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Religious">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Religious</dc:title>
+            <dc:title xml:lang="ru">Религиозные</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Sports">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Sports</dc:title>
+            <dc:title xml:lang="ru">Спорт</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Sun, Moon &amp; Stars">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Sun, Moon &amp; Stars</dc:title>
+            <dc:title xml:lang="ru">Солнце, Луна и Звезды</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Activities">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Activities</dc:title>
+            <dc:title xml:lang="ru">Деятельность</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Airsoft">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Airsoft</dc:title>
+            <dc:title xml:lang="ru">Страйкбол</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Angels">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Angels</dc:title>
+            <dc:title xml:lang="ru">Ангелы</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Anniversary">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Anniversary</dc:title>
+            <dc:title xml:lang="ru">Юбилей</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Archery">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Archery</dc:title>
+            <dc:title xml:lang="ru">Стрельба из лука</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Art">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Art</dc:title>
+            <dc:title xml:lang="ru">Искусство</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Art Painting">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Art Painting</dc:title>
+            <dc:title xml:lang="ru">Художественная Роспись</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Arts &amp; Crafts Supplies">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Arts &amp; Crafts Supplies</dc:title>
+            <dc:title xml:lang="ru">Искусства и Средства для Творчества</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Baseball">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Baseball</dc:title>
+            <dc:title xml:lang="ru">Бейсбол</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Birthday">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Birthday</dc:title>
+            <dc:title xml:lang="ru">День рождения</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Birthstones">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Birthstones</dc:title>
+            <dc:title xml:lang="ru">Камни на рождение ребенка</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Bluebirds">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Bluebirds</dc:title>
+            <dc:title xml:lang="ru">Синяя Птица</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Buddhist Symbols">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Buddhist Symbols</dc:title>
+            <dc:title xml:lang="ru">Буддистские Символы</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Cartoon Characters">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Cartoon Characters</dc:title>
+            <dc:title xml:lang="ru">Герои Мультфильмов</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Cattle">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Cattle</dc:title>
+            <dc:title xml:lang="ru">Крупный рогатый скот</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Chinese Zodiac Signs">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Chinese Zodiac Signs</dc:title>
+            <dc:title xml:lang="ru">Китайские Знаки Зодиака</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Christian Crosses">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Christian Crosses</dc:title>
+            <dc:title xml:lang="ru">Христианские Кресты</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Christmas">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Christmas</dc:title>
+            <dc:title xml:lang="ru">Рождество</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Chrysanthemum Flowers">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Chrysanthemum Flowers</dc:title>
+            <dc:title xml:lang="ru">Хризантемы</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Crosswords">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Crosswords</dc:title>
+            <dc:title xml:lang="ru">Кроссворды</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Crowns">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Crowns</dc:title>
+            <dc:title xml:lang="ru">Короны</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Dogs">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Dogs</dc:title>
+            <dc:title xml:lang="ru">Собаки</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Earth Based Religious Symbols">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Earth Based Religious Symbols</dc:title>
+            <dc:title xml:lang="ru">Религиозные Символы на Основе Земли</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Engagement">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Engagement</dc:title>
+            <dc:title xml:lang="ru">Помолвка</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Fashion">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Fashion</dc:title>
+            <dc:title xml:lang="ru">Мода</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Fathers Day">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Fathers Day</dc:title>
+            <dc:title xml:lang="ru">День Отцов</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Four Leaf Clovers">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Four Leaf Clovers</dc:title>
+            <dc:title xml:lang="ru">Четырехлистный Клевер</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Graduation">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Graduation</dc:title>
+            <dc:title xml:lang="ru">Выпускной</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="High Schools">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">High Schools</dc:title>
+            <dc:title xml:lang="ru">Школы</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Holiday">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Holiday</dc:title>
+            <dc:title xml:lang="ru">Праздник</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Individual Alphabet Letters">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Individual Alphabet Letters</dc:title>
+            <dc:title xml:lang="ru">Отдельные Буквы Алфавита</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Mothers Day">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Mothers Day</dc:title>
+            <dc:title xml:lang="ru">День Матери</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="People">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">People</dc:title>
+            <dc:title xml:lang="ru">Люди</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Popular Characters">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Popular Characters</dc:title>
+            <dc:title xml:lang="ru">Популярные Персонажи</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Popular Symbols">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Popular Symbols</dc:title>
+            <dc:title xml:lang="ru">Популярные Символы</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Purple Martins">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Purple Martins</dc:title>
+            <dc:title xml:lang="ru">Фиолетовый Мартинс</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Religious Symbols">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Religious Symbols</dc:title>
+            <dc:title xml:lang="ru">Религиозные Символы</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Script &amp; Numeric Symbols">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Script &amp; Numeric Symbols</dc:title>
+            <dc:title xml:lang="ru">Пьесы и числовые символы </dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Star of David">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Star of David</dc:title>
+            <dc:title xml:lang="ru">Звезда Давида</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="States">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">States</dc:title>
+            <dc:title xml:lang="ru">Штаты</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Thanksgiving">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Thanksgiving</dc:title>
+            <dc:title xml:lang="ru">День благодарения</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Trumpets">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Trumpets</dc:title>
+            <dc:title xml:lang="ru">Трубы</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Valentines Day">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Valentines Day</dc:title>
+            <dc:title xml:lang="ru">День Святого Валентина</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Vegetables (Produce)">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Vegetables (Produce)</dc:title>
+            <dc:title xml:lang="ru">Овощи (Производство)</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Wedding">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Wedding</dc:title>
+            <dc:title xml:lang="ru">Свадьба</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Words">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Words</dc:title>
+            <dc:title xml:lang="ru">Слова</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="Zodiac Signs">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Zodiac Signs</dc:title>
+            <dc:title xml:lang="ru">Знаки Зодиака</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="JewelryTargetAudienceType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="baby-boys">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Baby Boy</dc:title>
+            <dc:title xml:lang="ru">Малыш мальчик</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="baby-girls">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Baby Girl</dc:title>
+            <dc:title xml:lang="ru">Малыш девочка</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="boys">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Boy</dc:title>
+            <dc:title xml:lang="ru">Мальчик</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="girls">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Girl</dc:title>
+            <dc:title xml:lang="ru">Девочка</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="men">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Man</dc:title>
+            <dc:title xml:lang="ru">Мужчина</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="unisex-adult">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Unisex Adult</dc:title>
+            <dc:title xml:lang="ru">Унисекс взрослый</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="unisex-baby">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Unisex Baby</dc:title>
+            <dc:title xml:lang="ru">Унисекс младенческий</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="unisex-children">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Unisex Child</dc:title>
+            <dc:title xml:lang="ru">Унисекс детский</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="wedding-party-members">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Wedding Party Member</dc:title>
+            <dc:title xml:lang="ru">Гость свадебного праздника</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="bridegrooms">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Bridegroom</dc:title>
+            <dc:title xml:lang="ru">Жених</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="brides">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Bride</dc:title>
+            <dc:title xml:lang="ru">Невеста</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="bridesmaids">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Bridesmaid</dc:title>
+            <dc:title xml:lang="ru">Подружка невесты</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="fathers-of-the-bride">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Father of the bride</dc:title>
+            <dc:title xml:lang="ru">Отец невесты</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="flower-girls">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Flower girl</dc:title>
+            <dc:title xml:lang="ru">Цветочница</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="groomsmen">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Groomsan</dc:title>
+            <dc:title xml:lang="ru">Свидетель</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="mothers-of-the-bride">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Mother of the bride</dc:title>
+            <dc:title xml:lang="ru">Мать невесты</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ring-bearers">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Ring bearer</dc:title>
+            <dc:title xml:lang="ru">Носитель кольца</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="women">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Woman</dc:title>
+            <dc:title xml:lang="ru">Женщина</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="JewelryUsedForType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="business-gifts">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Business Gift</dc:title>
+            <dc:title xml:lang="ru">Бизнес-Подарок</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="anniversary">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Anniversary</dc:title>
+            <dc:title xml:lang="ru">Юбилей</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="baptism">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Baptism</dc:title>
+            <dc:title xml:lang="ru">Крещение</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="bar-mitzvah">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Bar Mitzvah</dc:title>
+            <dc:title xml:lang="ru">Бар-Мицва</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="bat-mitzvah">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Bat Mitzvah</dc:title>
+            <dc:title xml:lang="ru">Бат Мицва</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="birthday">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Birthday</dc:title>
+            <dc:title xml:lang="ru">День рождения</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="christening">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Christening</dc:title>
+            <dc:title xml:lang="ru">Крещение</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="engagement">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Engagement</dc:title>
+            <dc:title xml:lang="ru">Помолвка</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="graduation">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Graduation</dc:title>
+            <dc:title xml:lang="ru">Выпускной</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="holiday">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Holiday</dc:title>
+            <dc:title xml:lang="ru">Праздник</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="christmas">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Christmas</dc:title>
+            <dc:title xml:lang="ru">Рождество</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="fathers-day">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Fathers Day</dc:title>
+            <dc:title xml:lang="ru">День Отцов</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="hanukkah">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Hanukkah</dc:title>
+            <dc:title xml:lang="ru">Ханука</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="kwanzaa">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Kwanzaa</dc:title>
+            <dc:title xml:lang="ru">Кванза</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="mothers-day">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Mothers Day</dc:title>
+            <dc:title xml:lang="ru">День Матери</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="valentines-day">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Valentines Day</dc:title>
+            <dc:title xml:lang="ru">День Святого Валентина</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="wedding">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Wedding</dc:title>
+            <dc:title xml:lang="ru">Свадьба</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:group name="JewelryPurpose">
+    <xs:sequence>
+      <xs:element name="SubjectContent" type="JewelrySubjectContentType" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Subject</dc:title>
+            <dc:title xml:lang="ru">Тематика</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="TargetAudience" type="JewelryTargetAudienceType" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Target audience</dc:title>
+            <dc:title xml:lang="ru">Целевая аудитория</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="UsedFor" type="JewelryUsedForType" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Used for</dc:title>
+            <dc:title xml:lang="ru">Предназначение</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:group>
+</xs:schema>

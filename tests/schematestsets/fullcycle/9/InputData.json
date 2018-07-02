@@ -1,0 +1,8 @@
+{
+	"SecondLevelFirstAlternative\/Type": {
+		"values": ["aaa"]
+	},
+	"FirstLevel\/Type": {
+		"values": ["bbb"]
+	}
+}

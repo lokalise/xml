@@ -1,0 +1,28 @@
+{
+	"ChainType": {
+		"values": ["no-chain-type"]
+	},
+	"ClaspType": {
+		"values": ["snap"]
+	},
+	"Pendant\/Shape\/Type": {
+		"values": ["Ring"]
+	},
+	"Pendant\/SubjectContent": {
+		"values": ["Birthday",
+		"Mothers Day"]
+	},
+	"Pendant\/TargetAudience": {
+		"values": ["women"]
+	},
+	"Pendant\/UsedFor": {
+		"values": ["anniversary",
+		"birthday",
+		"christening",
+		"mothers-day"]
+	},
+	"Pendant\/PrimaryImage": {
+		"values": ["c2FjYWNzYWNhc2M="],
+		"attributes": [{
+			"name": "mimeCode",
+			"values": ["\"image\/jpeg\""]}]}}

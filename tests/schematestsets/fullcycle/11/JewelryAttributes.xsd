@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://dublincore.org/schemas/xmls/qdc/2008/02/11/dc.xsd" xmlns:vxe="urn:visualXMLeditor:settings">
+  <xs:simpleType name="JewelryEngravedType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="engraved"/>
+      <xs:enumeration value="hand-engraved"/>
+      <xs:enumeration value="machine-engraved"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="JewelryToneType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="three-tone"/>
+      <xs:enumeration value="two-tone"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="JewelryStyleType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="antique-reproduction-style"/>
+      <xs:enumeration value="celtic-designs"/>
+      <xs:enumeration value="claddagh-style"/>
+      <xs:enumeration value="cluster-style"/>
+      <xs:enumeration value="dangling-style"/>
+      <xs:enumeration value="etruscan-style"/>
+      <xs:enumeration value="graduated-style"/>
+      <xs:enumeration value="mosaic-style"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="JewelryFinishType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="antiqued-finish"/>
+      <xs:enumeration value="brushed-satin"/>
+      <xs:enumeration value="combination-finish"/>
+      <xs:enumeration value="florentine-finish"/>
+      <xs:enumeration value="hammer-finish"/>
+      <xs:enumeration value="matte-finish"/>
+      <xs:enumeration value="polished-brass"/>
+      <xs:enumeration value="polished-chrome"/>
+      <xs:enumeration value="polished-finish"/>
+      <xs:enumeration value="sandblast-finish"/>
+      <xs:enumeration value="stipple-finish"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="JewelryRegionalStyleType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="african-style"/>
+      <xs:enumeration value="egyptian-style"/>
+      <xs:enumeration value="asian-style"/>
+      <xs:enumeration value="indian-style"/>
+      <xs:enumeration value="european-style"/>
+      <xs:enumeration value="native-american-style"/>
+      <xs:enumeration value="southwestern-style"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:group name="JewelryAttributes">
+    <xs:sequence>
+      <xs:element name="Hypoallergenic" type="xs:boolean" minOccurs="0"/>
+      <xs:element name="Beaded" type="xs:boolean" minOccurs="0"/>
+      <xs:element name="ColorChanging" type="xs:boolean" minOccurs="0"/>
+      <xs:element name="DiamondAccented" type="xs:boolean" minOccurs="0"/>
+      <xs:element name="Engraved" type="JewelryEngravedType" minOccurs="0"/>
+      <xs:element name="GemSet" type="xs:boolean" minOccurs="0"/>
+      <xs:element name="MedicalIdentification" type="xs:boolean" minOccurs="0"/>
+      <xs:element name="Tone" type="JewelryToneType" minOccurs="0"/>
+      <xs:element name="Style" type="JewelryStyleType" minOccurs="0"/>
+      <xs:element name="Finish" type="JewelryFinishType" minOccurs="0"/>
+      <xs:element name="OutletJewelry" type="xs:boolean" minOccurs="0"/>
+      <xs:element name="RegionalStyle" type="JewelryRegionalStyleType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:group>
+</xs:schema>

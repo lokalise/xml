@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:ext="urn:logics:external" xmlns:deeper="urn:logics:externaldeeper" targetNamespace="urn:logics:external">
+
+<xs:import schemaLocation="importedsecondlevel.xsd" namespace="urn:logics:externaldeeper"/>
+
+<xs:complexType name="ImportedElementType">
+	<xs:sequence>
+		<xs:element name="FirstImportedElement" type="xs:boolean"/>
+		<xs:element name="SecondImportedElement" type="deeper:SecondImportedElementType"/>
+	</xs:sequence>
+</xs:complexType>
+
+</xs:schema>

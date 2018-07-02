@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Product>
+    <Jewelry>
+        <Fashion>
+            <Pendant>
+                <Necklace>
+                    <Length unit="centimeter">80</Length>
+                    <Type>pendant-necklaces</Type>
+                    <ChainType>no-chain-type</ChainType>
+                    <ClaspType>snap</ClaspType>
+                </Necklace>
+                <Shape>
+                    <Type>nonstandard-shape</Type>
+                </Shape>
+                <SubjectContent>Birthday</SubjectContent>
+                <SubjectContent>Mothers Day</SubjectContent>
+                <TargetAudience>women</TargetAudience>
+                <UsedFor>anniversary</UsedFor>
+                <UsedFor>birthday</UsedFor>
+                <UsedFor>christening</UsedFor>
+                <UsedFor>mothers-day</UsedFor>
+                <DominantColor>black</DominantColor>
+                <PrimaryImage mimeCode="image/jpeg">c3ZzZHZzdmQ=</PrimaryImage>
+				<Image mimeCode="image/jpeg">c3ZzZHZzdmQ=</Image>
+			</Pendant>
+        </Fashion>
+    </Jewelry>
+    <ProductSeries>Baby Friendly</ProductSeries>
+    <SeriesDescription>Inspired by the natural colour of real gemstones, and the desire to safely share a love of jewelry with her young ones, an Australian designer (and mum) carefully created this beautiful set of toxin-free, INPAA safety approved, pendants that can be worn with love, and chewed on by teething babies</SeriesDescription>
+    <ProductFamily>Good Mums: ring</ProductFamily>
+</Product>

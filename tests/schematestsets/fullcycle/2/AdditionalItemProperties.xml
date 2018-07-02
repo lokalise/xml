@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<Properties>
+    <AdditionalItemProperty>
+        <Name>ChainType</Name>
+        <Value>no-chain-type</Value>
+    </AdditionalItemProperty>
+    <AdditionalItemProperty>
+        <Name>ClaspType</Name>
+        <Value>snap</Value>
+    </AdditionalItemProperty>
+    <AdditionalItemProperty>
+        <Name>Pendant/Shape/Type</Name>
+        <Value>Ring</Value>
+    </AdditionalItemProperty>
+    <AdditionalItemProperty>
+        <Name>Pendant/SubjectContent</Name>
+        <ListValue>Birthday</ListValue>
+        <ListValue>Mothers Day</ListValue>
+    </AdditionalItemProperty>
+    <AdditionalItemProperty>
+        <Name>Pendant/TargetAudience</Name>
+        <Value>women</Value>
+    </AdditionalItemProperty>
+    <AdditionalItemProperty>
+        <Name>Pendant/UsedFor</Name>
+        <ListValue>anniversary</ListValue>
+        <ListValue>birthday</ListValue>
+        <ListValue>christening</ListValue>
+        <ListValue>mothers-day</ListValue>
+    </AdditionalItemProperty>
+    <AdditionalItemProperty>
+        <Name>Pendant/PrimaryImage@mimeCode</Name>
+        <Value>"image/jpeg"</Value>
+    </AdditionalItemProperty>
+    <AdditionalItemProperty>
+        <Name>Pendant/PrimaryImage</Name>
+        <Value>c2FjYWNzYWNhc2M=</Value>
+    </AdditionalItemProperty>
+</Properties>

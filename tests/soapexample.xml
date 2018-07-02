@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<S:Envelope xmlns:S="http://www.w3.org/2003/05/soap-envelope" xmlns:wsa="http://www.w3.org/2004/12/addressing">
+	<S:Header/>
+	<S:Body>
+	<GetStockPrice>
+		<StockName>IBM</StockName>
+	</GetStockPrice>
+	</S:Body>
+</S:Envelope>

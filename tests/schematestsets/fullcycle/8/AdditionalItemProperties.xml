@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<Properties>
+    <AdditionalItemProperty>
+        <Name>WeightContainerOne/WeightContainerDeeper[1]/Weight</Name>
+        <Value>111</Value>
+    </AdditionalItemProperty>
+    <AdditionalItemProperty>
+        <Name>WeightContainerOne/WeightContainerDeeper[2]/Weight</Name>
+        <Value>222</Value>
+    </AdditionalItemProperty>
+    <AdditionalItemProperty>
+        <Name>Height@unit</Name>
+        <Value>millimeter</Value>
+    </AdditionalItemProperty>
+    <AdditionalItemProperty>
+        <Name>Height</Name>
+        <Value>12</Value>
+    </AdditionalItemProperty>
+    <AdditionalItemProperty>
+        <Name>Width@unit</Name>
+        <Value>meter</Value>
+    </AdditionalItemProperty>
+    <AdditionalItemProperty>
+        <Name>Width</Name>
+        <Value>16</Value>
+    </AdditionalItemProperty>
+</Properties>

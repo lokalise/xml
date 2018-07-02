@@ -1,0 +1,459 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://dublincore.org/schemas/xmls/qdc/2008/02/11/dc.xsd" xmlns:vxe="urn:visualXMLeditor:settings">
+  <xs:simpleType name="ColorType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="red">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Red</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="green">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Green</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="blue">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Blue</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="orange">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Orange</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="yellow">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Yellow</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="black">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Black</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="white">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">White</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="brown">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Brown</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="purple">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Purple</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="burgundy">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Burgundy</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="antiquewhite">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Antique white</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="aqua">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Aqua</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="aquamarine">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Aquamarine</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="beige">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Beige</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="berry">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Berry</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="blueviolet">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Blue violet</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="cadetblue">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Cadet blue</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="chocolate">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Chocolate</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="clear">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Clear</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="dandelion">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Dandelion</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="darkblue">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Dark blue</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="darkgray">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Dark gray</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="darkgreen">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Dark green</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="darkred">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Dark red</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="darkslategray">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Dark slate gray</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="fuchsia">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Fuchsia</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="gold">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Gold</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="gray">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Gray</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="greenyellow">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Green yellow</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="indigo">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Indigo</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ivory">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Ivory</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="khaki">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Khaki</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="kiwi">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Kiwi</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="lavender">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Lavender</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="lightblue">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Light blue</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="lightgreen">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Light green</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="lightgrey">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Light grey</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="lightpink">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Light pink</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="limegreen">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Lime green</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="magenta">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Magenta</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="maroon">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Maroon</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="midnightblue">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Midnight blue</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="navy">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Navy</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="olive">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Olive</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="olivedrab">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Olive drab</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="pink">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Pink</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="powderblue">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Powder blue</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="royalblue">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Royal blue</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="salmon">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Salmon</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="sandybrown">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Sandy brown</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="silver">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Silver</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="tan">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Tan</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="turquoise">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Turquoise</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="violet">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Violet</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="wheat">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Wheat</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="whitesmoke">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">White smoke</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="ice">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Ice</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="graphitegray">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Graphite gray</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="chrome">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Chrome</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="stainlesssteel">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Stainless steel</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="teal">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Teal</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="yellowgreen">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Yellow green</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="transparent">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Transparent</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:group name="DominantColor">
+    <xs:sequence>
+      <xs:element name="DominantColor" type="ColorType" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en-US">Dominant color</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:group>
+</xs:schema>

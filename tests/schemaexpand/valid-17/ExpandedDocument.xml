@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Product>
+  <Jewelry>
+    <Fashion>
+      <Charm>
+        <Metal>
+          <Type>Sterling Silver</Type>
+          <Stamp>925</Stamp>
+        </Metal>
+        <Metal>
+          <Type>14K Gold Plating</Type>
+          <Stamp>925</Stamp>
+          <Weight>abc</Weight>
+        </Metal>
+        <Size>
+          <Height unit="meter">12</Height>
+          <Width unit="millimeter">16</Width>
+        </Size>
+        <Shape>
+          <Animal>Zebra</Animal>
+          <Type>Animal</Type>
+        </Shape>
+        <SubjectContent>Animals</SubjectContent>
+        <TargetAudience>Boy</TargetAudience>
+        <TargetAudience>Girl</TargetAudience>
+        <UsedFor>Anniversary</UsedFor>
+        <UsedFor>Engagement</UsedFor>
+      </Charm>
+    </Fashion>
+  </Jewelry>
+</Product>

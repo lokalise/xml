@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://dublincore.org/schemas/xmls/qdc/2008/02/11/dc.xsd" xmlns:vxe="urn:visualXMLeditor:settings">
+  <xs:include schemaLocation="Measurements.xsd"/>
+  <xs:simpleType name="JewelryGemType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="agate"/>
+      <xs:enumeration value="alexandrite"/>
+      <xs:enumeration value="almandite-garnet"/>
+      <xs:enumeration value="amazonite"/>
+      <xs:enumeration value="amblygonite"/>
+      <xs:enumeration value="amethyst"/>
+      <xs:enumeration value="ametrine"/>
+      <xs:enumeration value="ammolite"/>
+      <xs:enumeration value="andalusite"/>
+      <xs:enumeration value="andradite-garnet"/>
+      <xs:enumeration value="apatite"/>
+      <xs:enumeration value="aquamarine"/>
+      <xs:enumeration value="aventurine"/>
+      <xs:enumeration value="azurite"/>
+      <xs:enumeration value="beryl"/>
+      <xs:enumeration value="black-diamond"/>
+      <xs:enumeration value="black-opal"/>
+      <xs:enumeration value="bloodstone"/>
+      <xs:enumeration value="blue-chalcedony"/>
+      <xs:enumeration value="blue-diamond"/>
+      <xs:enumeration value="blue-sapphire"/>
+      <xs:enumeration value="blue-topaz"/>
+      <xs:enumeration value="blue-zircon"/>
+      <xs:enumeration value="boulder-opal"/>
+      <xs:enumeration value="brazanite"/>
+      <xs:enumeration value="brown-diamond"/>
+      <xs:enumeration value="carnelian"/>
+      <xs:enumeration value="cats-eye"/>
+      <xs:enumeration value="chalcedony"/>
+      <xs:enumeration value="champagne-diamond"/>
+      <xs:enumeration value="chrome-diopside"/>
+      <xs:enumeration value="chrysoberyl"/>
+      <xs:enumeration value="chrysoprase"/>
+      <xs:enumeration value="cinnabar"/>
+      <xs:enumeration value="citrine"/>
+      <xs:enumeration value="copper-sunstone"/>
+      <xs:enumeration value="created-alexandrite"/>
+      <xs:enumeration value="created-emerald"/>
+      <xs:enumeration value="created-opal"/>
+      <xs:enumeration value="created-ruby"/>
+      <xs:enumeration value="created-sapphire"/>
+      <xs:enumeration value="crysocolla"/>
+      <xs:enumeration value="cubic-zirconia"/>
+      <xs:enumeration value="danburite"/>
+      <xs:enumeration value="demantoid-garnet"/>
+      <xs:enumeration value="diamond"/>
+      <xs:enumeration value="diaspore"/>
+      <xs:enumeration value="diopside"/>
+      <xs:enumeration value="drusy-quartz"/>
+      <xs:enumeration value="emerald"/>
+      <xs:enumeration value="fire-citrine"/>
+      <xs:enumeration value="fire-opal"/>
+      <xs:enumeration value="fluorite"/>
+      <xs:enumeration value="garnet"/>
+      <xs:enumeration value="golden-topaz"/>
+      <xs:enumeration value="goshenite"/>
+      <xs:enumeration value="green-chalcedony"/>
+      <xs:enumeration value="green-garnet"/>
+      <xs:enumeration value="green-quartz"/>
+      <xs:enumeration value="green-sapphire"/>
+      <xs:enumeration value="green-tourmaline"/>
+      <xs:enumeration value="grossular-garnet"/>
+      <xs:enumeration value="hauyne"/>
+      <xs:enumeration value="heliodor"/>
+      <xs:enumeration value="hessonite"/>
+      <xs:enumeration value="hiddenite"/>
+      <xs:enumeration value="howlite"/>
+      <xs:enumeration value="imperial-topaz"/>
+      <xs:enumeration value="indicolite"/>
+      <xs:enumeration value="indicolite-tourmaline"/>
+      <xs:enumeration value="iolite"/>
+      <xs:enumeration value="iron-pyrite"/>
+      <xs:enumeration value="jade"/>
+      <xs:enumeration value="jasper"/>
+      <xs:enumeration value="jet"/>
+      <xs:enumeration value="kunzite"/>
+      <xs:enumeration value="kyanite"/>
+      <xs:enumeration value="labradorite"/>
+      <xs:enumeration value="lapis-lazuli"/>
+      <xs:enumeration value="lavender-chalcedony"/>
+      <xs:enumeration value="lemon-quartz"/>
+      <xs:enumeration value="london-blue-topaz"/>
+      <xs:enumeration value="madeira-citrine"/>
+      <xs:enumeration value="malachite"/>
+      <xs:enumeration value="mandarin-garnet"/>
+      <xs:enumeration value="marcasite"/>
+      <xs:enumeration value="medusa-quartz"/>
+      <xs:enumeration value="mint-tourmaline"/>
+      <xs:enumeration value="moissanite"/>
+      <xs:enumeration value="moldovite"/>
+      <xs:enumeration value="moonstone"/>
+      <xs:enumeration value="morganite"/>
+      <xs:enumeration value="multi"/>
+      <xs:enumeration value="mystic-topaz"/>
+      <xs:enumeration value="onyx"/>
+      <xs:enumeration value="opal"/>
+      <xs:enumeration value="orange-chalcedony"/>
+      <xs:enumeration value="ouro-verde-quartz"/>
+      <xs:enumeration value="padparadscha"/>
+      <xs:enumeration value="paraiba-topaz"/>
+      <xs:enumeration value="paraiba-tourmaline"/>
+      <xs:enumeration value="peridot"/>
+      <xs:enumeration value="petalite"/>
+      <xs:enumeration value="pezzottaite"/>
+      <xs:enumeration value="pink-chalcedony"/>
+      <xs:enumeration value="pink-diamond"/>
+      <xs:enumeration value="pink-quartz"/>
+      <xs:enumeration value="pink-sapphire"/>
+      <xs:enumeration value="pink-topaz"/>
+      <xs:enumeration value="pink-tourmaline"/>
+      <xs:enumeration value="prasiolite-quartz"/>
+      <xs:enumeration value="prehnite"/>
+      <xs:enumeration value="purple-spinel"/>
+      <xs:enumeration value="pyrope-garnet"/>
+      <xs:enumeration value="quartz"/>
+      <xs:enumeration value="red-diamond"/>
+      <xs:enumeration value="rhodochrosite"/>
+      <xs:enumeration value="rhodolite-garnet"/>
+      <xs:enumeration value="rose-quartz"/>
+      <xs:enumeration value="rubellite-tourmaline"/>
+      <xs:enumeration value="ruby"/>
+      <xs:enumeration value="rutilated-quartz"/>
+      <xs:enumeration value="sapphire"/>
+      <xs:enumeration value="sardonyx"/>
+      <xs:enumeration value="scapolite"/>
+      <xs:enumeration value="serpentine"/>
+      <xs:enumeration value="shanseres"/>
+      <xs:enumeration value="smoky-quartz"/>
+      <xs:enumeration value="smoky-topaz"/>
+      <xs:enumeration value="sodalite"/>
+      <xs:enumeration value="spessartite-garnet"/>
+      <xs:enumeration value="sphalerite"/>
+      <xs:enumeration value="sphene"/>
+      <xs:enumeration value="spinel"/>
+      <xs:enumeration value="star-sapphire"/>
+      <xs:enumeration value="strontium-titanate"/>
+      <xs:enumeration value="sunstone-feldspar"/>
+      <xs:enumeration value="swiss-blue-topaz"/>
+      <xs:enumeration value="tanzanite"/>
+      <xs:enumeration value="tashmarine-diopside"/>
+      <xs:enumeration value="tiger-eye"/>
+      <xs:enumeration value="topaz"/>
+      <xs:enumeration value="tourmaline"/>
+      <xs:enumeration value="tsavorite"/>
+      <xs:enumeration value="turquoise"/>
+      <xs:enumeration value="watermelon-tourmaline"/>
+      <xs:enumeration value="white-diamond"/>
+      <xs:enumeration value="white-topaz"/>
+      <xs:enumeration value="yellow-diamond"/>
+      <xs:enumeration value="yellow-scapolite"/>
+      <xs:enumeration value="yellow-topaz"/>
+      <xs:enumeration value="yttrium-aluminium-garnet"/>
+      <xs:enumeration value="zandrite"/>
+      <xs:enumeration value="zircon-gemstone"/>
+      <xs:enumeration value="zoisite"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="JewelryStoneCutType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ideal-cut"/>
+      <xs:enumeration value="very-good-cut"/>
+      <xs:enumeration value="good-cut"/>
+      <xs:enumeration value="fair-cut"/>
+      <xs:enumeration value="poor-cut"/>
+      <xs:enumeration value="mixed-cut"/>
+      <xs:enumeration value="checkerboard-cut"/>
+      <xs:enumeration value="fantasy-cut"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="JewelryStoneColorType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="D-F"/>
+      <xs:enumeration value="D-E"/>
+      <xs:enumeration value="E-F"/>
+      <xs:enumeration value="F-G"/>
+      <xs:enumeration value="G-H"/>
+      <xs:enumeration value="H-I"/>
+      <xs:enumeration value="I-J"/>
+      <xs:enumeration value="J-K"/>
+      <xs:enumeration value="K-L"/>
+      <xs:enumeration value="L-M"/>
+      <xs:enumeration value="black"/>
+      <xs:enumeration value="blue"/>
+      <xs:enumeration value="blue-green"/>
+      <xs:enumeration value="blue-violet"/>
+      <xs:enumeration value="brown"/>
+      <xs:enumeration value="color-changing"/>
+      <xs:enumeration value="colorless"/>
+      <xs:enumeration value="faint-color"/>
+      <xs:enumeration value="fancy-color"/>
+      <xs:enumeration value="green"/>
+      <xs:enumeration value="green-blue"/>
+      <xs:enumeration value="green-yellow"/>
+      <xs:enumeration value="multiple-colors"/>
+      <xs:enumeration value="near-colorless"/>
+      <xs:enumeration value="orange"/>
+      <xs:enumeration value="orange-red"/>
+      <xs:enumeration value="orange-yellow"/>
+      <xs:enumeration value="pink"/>
+      <xs:enumeration value="red"/>
+      <xs:enumeration value="red-orange"/>
+      <xs:enumeration value="red-violet"/>
+      <xs:enumeration value="violet"/>
+      <xs:enumeration value="violet-blue"/>
+      <xs:enumeration value="violet-red"/>
+      <xs:enumeration value="white"/>
+      <xs:enumeration value="yellow"/>
+      <xs:enumeration value="yellow-green"/>
+      <xs:enumeration value="yellow-orange"/>
+      <xs:enumeration value="other-color"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="JewelryStoneClarityType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="FL"/>
+      <xs:enumeration value="VVS1-VVS2"/>
+      <xs:enumeration value="VVS2-VS1"/>
+      <xs:enumeration value="VS1-VS2"/>
+      <xs:enumeration value="VS2-SI1"/>
+      <xs:enumeration value="SI1-SI2"/>
+      <xs:enumeration value="SI2-I1"/>
+      <xs:enumeration value="I1-I2"/>
+      <xs:enumeration value="I2-I3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="JewelryStoneShapeType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="asscher-shape"/>
+      <xs:enumeration value="baguette-shape"/>
+      <xs:enumeration value="bullet-shape"/>
+      <xs:enumeration value="cushion-cut"/>
+      <xs:enumeration value="emerald-shape"/>
+      <xs:enumeration value="half-moon-shape"/>
+      <xs:enumeration value="heart-shape"/>
+      <xs:enumeration value="marquise-shape"/>
+      <xs:enumeration value="oval-shape"/>
+      <xs:enumeration value="pear-shape"/>
+      <xs:enumeration value="princess-shape"/>
+      <xs:enumeration value="radiant-shape"/>
+      <xs:enumeration value="rectangular-shape"/>
+      <xs:enumeration value="round-brilliant-shape"/>
+      <xs:enumeration value="round-shape"/>
+      <xs:enumeration value="special-cut-shape"/>
+      <xs:enumeration value="square-shape"/>
+      <xs:enumeration value="trapezoid-shape"/>
+      <xs:enumeration value="triangle-shape"/>
+      <xs:enumeration value="irregular-shape"/>
+      <xs:enumeration value="nugget-shape"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="JewelryStoneCreationMethodType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="natural"/>
+      <xs:enumeration value="synthetic"/>
+      <xs:enumeration value="simulated"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="JewelryStoneTreatmentMethodType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Heat-treated"/>
+      <xs:enumeration value="Dyed"/>
+      <xs:enumeration value="Coated"/>
+      <xs:enumeration value="Impregnated"/>
+      <xs:enumeration value="Reconstituted"/>
+      <xs:enumeration value="Oiled"/>
+      <xs:enumeration value="Irradiated"/>
+      <xs:enumeration value="Bleached"/>
+      <xs:enumeration value="Filled"/>
+      <xs:enumeration value="Lasered"/>
+      <xs:enumeration value="Not-treated"/>
+      <xs:enumeration value="Not-known"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="JewelryStoneInscriptionType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="no"/>
+      <xs:enumeration value="stone"/>
+      <xs:enumeration value="setting"/>
+      <xs:enumeration value="stone-and-setting"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="JewelryStoneType">
+    <xs:sequence>
+      <xs:element name="GemType" type="JewelryGemType" minOccurs="0"/>
+      <xs:element name="Cut" type="JewelryStoneCutType" minOccurs="0"/>
+      <xs:element name="Color" type="JewelryStoneColorType" minOccurs="0"/>
+      <xs:element name="Clarity" type="JewelryStoneClarityType" minOccurs="0"/>
+      <xs:element name="Shape" type="JewelryStoneShapeType" minOccurs="0"/>
+      <xs:element name="CreationMethod" type="JewelryStoneCreationMethodType" minOccurs="0"/>
+      <xs:element name="TreatmentMethod" type="JewelryStoneTreatmentMethodType" minOccurs="0"/>
+      <xs:element name="Height" type="LengthDimension" minOccurs="0"/>
+      <xs:element name="Length" type="LengthDimension" minOccurs="0"/>
+      <xs:element name="Width" type="LengthDimension" minOccurs="0"/>
+      <xs:element name="Weight" type="WeightType" minOccurs="0"/>
+      <xs:element name="LabCreated" type="xs:boolean" minOccurs="0"/>
+      <xs:element name="Inscription" type="JewelryStoneInscriptionType" minOccurs="0"/>
+      <xs:element name="DepthPercentage" type="xs:float" minOccurs="0"/>
+      <xs:element name="TablePercentage" type="xs:float" minOccurs="0"/>
+      <xs:element name="Symmetry" type="xs:string" minOccurs="0"/>
+      <xs:element name="Polish" type="xs:string" minOccurs="0"/>
+      <xs:element name="Girdle" type="xs:string" minOccurs="0"/>
+      <xs:element name="Culet" type="xs:string" minOccurs="0"/>
+      <xs:element name="Fluorescence" type="xs:string" minOccurs="0"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:group name="JewelryStones">
+    <xs:sequence>
+      <xs:element name="Stone" type="JewelryStoneType" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Stone</dc:title>
+          </xs:documentation>
+          <xs:appinfo>
+            <vxe:settings>
+              <vxe:startFolded>true</vxe:startFolded>
+            </vxe:settings>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:group>
+</xs:schema>

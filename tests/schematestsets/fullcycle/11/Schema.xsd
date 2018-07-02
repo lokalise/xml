@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://dublincore.org/schemas/xmls/qdc/2008/02/11/dc.xsd" xmlns:vxe="urn:visualXMLeditor:settings">
+  <xs:include schemaLocation="ProductImages.xsd"/>
+  <xs:include schemaLocation="ArtPainting.xsd"/>
+  <xs:include schemaLocation="JewelryPurpose.xsd"/>
+  <xs:include schemaLocation="JewelryAttributes.xsd"/>
+  <xs:include schemaLocation="JewelryPendant.xsd"/>
+  <xs:include schemaLocation="JewelryNecklace.xsd"/>
+  <xs:include schemaLocation="JewelryEarrings.xsd"/>
+  <xs:include schemaLocation="JewelryMaterials.xsd"/>
+  <xs:include schemaLocation="JewelryMetals.xsd"/>
+  <xs:include schemaLocation="JewelryStones.xsd"/>
+  <xs:include schemaLocation="JewelryPearls.xsd"/>
+  <xs:include schemaLocation="JewelryPhysicalDimensions.xsd"/>
+  <xs:include schemaLocation="Shape.xsd"/>
+  <xs:include schemaLocation="DominantColor.xsd"/>
+  <xs:complexType name="JewelryFashionCharmType">
+    <xs:sequence>
+      <xs:group ref="JewelryFashionMetals"/>
+      <xs:group ref="JewelryPhysicalDimensions"/>
+      <xs:group ref="Shape"/>
+      <xs:group ref="JewelryPurpose"/>
+      <xs:group ref="JewelryAttributes"/>
+      <xs:group ref="ProductImages"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="JewelryFashionPendantType">
+    <xs:sequence>
+        <xs:choice>
+          <xs:group ref="JewelryPendant"/>
+          <xs:group ref="JewelryNecklace"/>
+        </xs:choice>
+      <xs:group ref="JewelryMaterials"/>
+      <xs:group ref="JewelryFashionMetals"/>
+      <xs:group ref="JewelryStones"/>
+      <xs:group ref="JewelryPearls"/>
+      <xs:group ref="JewelryPhysicalDimensions"/>
+      <xs:group ref="Shape"/>
+      <xs:group ref="JewelryPurpose"/>
+      <xs:group ref="JewelryAttributes"/>
+      <xs:group ref="DominantColor"/>
+      <xs:group ref="ProductImages"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="JewelryFashionEarringsType">
+    <xs:sequence>
+      <xs:group ref="JewelryEarrings"/>
+      <xs:group ref="JewelryMaterials"/>
+      <xs:group ref="JewelryFashionMetals"/>
+      <xs:group ref="JewelryStones"/>
+      <xs:group ref="JewelryPearls"/>
+      <xs:group ref="JewelryPhysicalDimensions"/>
+      <xs:group ref="Shape"/>
+      <xs:group ref="JewelryPurpose"/>
+      <xs:group ref="JewelryAttributes"/>
+      <xs:group ref="DominantColor"/>
+      <xs:group ref="ProductImages"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="JewelryFashionType">
+    <xs:choice>
+      <xs:element name="Charm" type="JewelryFashionCharmType" minOccurs="1" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Charm</dc:title>
+            <dc:title xml:lang="ru">Чарм</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Pendant" type="JewelryFashionPendantType" minOccurs="1" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Pendant</dc:title>
+            <dc:title xml:lang="ru">Подвеска</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Earrings" type="JewelryFashionEarringsType" minOccurs="1" maxOccurs="1"/>
+    </xs:choice>
+  </xs:complexType>
+  <xs:complexType name="JewelryType">
+    <xs:choice>
+      <xs:element name="Fashion" type="JewelryFashionType" minOccurs="1" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Fashion</dc:title>
+            <dc:title xml:lang="ru">Бижутерия</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:choice>
+  </xs:complexType>
+  <xs:complexType name="ArtPaintingType">
+    <xs:sequence>
+      <xs:group ref="ArtPainting"/>
+      <xs:group ref="DominantColor"/>
+      <xs:group ref="ProductImages"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArtType">
+    <xs:choice>
+      <xs:element name="Painting" type="ArtPaintingType" minOccurs="1" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Painting</dc:title>
+            <dc:title xml:lang="ru">Картина</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:choice>
+  </xs:complexType>
+  <xs:element name="Product">
+    <xs:annotation>
+      <xs:documentation>
+        <dc:title xml:lang="en">Product</dc:title>
+        <dc:title xml:lang="ru">Тип продукта</dc:title>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:choice>
+          <xs:element name="Jewelry" type="JewelryType" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>
+                <dc:title xml:lang="en-US">Jewelry</dc:title>
+                <dc:title xml:lang="en-GB">Jewellery</dc:title>
+                <dc:title xml:lang="en-AU">Jewellery</dc:title>
+                <dc:title xml:lang="ru">Ювелирные изделия</dc:title>
+              </xs:documentation>
+            </xs:annotation>
+          </xs:element>
+          <xs:element name="Art" type="ArtType" minOccurs="1" maxOccurs="1">
+            <xs:annotation>
+              <xs:documentation>
+                <dc:title xml:lang="en-US">Art</dc:title>
+                <dc:title xml:lang="en-GB">Art</dc:title>
+                <dc:title xml:lang="en-AU">Art</dc:title>
+                <dc:title xml:lang="ru">Искусство</dc:title>
+              </xs:documentation>
+            </xs:annotation>
+          </xs:element>
+        </xs:choice>
+        <xs:element name="ProductSeries" type="xs:string" minOccurs="0" maxOccurs="1">
+          <xs:annotation>
+            <xs:documentation>
+              <dc:title xml:lang="en">Product series</dc:title>
+              <dc:title xml:lang="ru">Серия продукта</dc:title>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="SeriesDescription" type="xs:string" minOccurs="0" maxOccurs="1">
+          <xs:annotation>
+            <xs:documentation>
+              <dc:title xml:lang="en">Series description</dc:title>
+              <dc:title xml:lang="ru">Описание серии</dc:title>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+        <xs:element name="ProductFamily" type="xs:string" minOccurs="0" maxOccurs="1">
+          <xs:annotation>
+            <xs:documentation>
+              <dc:title xml:lang="en">Product family</dc:title>
+              <dc:title xml:lang="ru">Семейство продуктов</dc:title>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

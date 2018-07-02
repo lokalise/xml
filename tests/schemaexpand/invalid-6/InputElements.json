@@ -1,0 +1,13 @@
+{
+    "Publisher":
+	{
+	    "values": ["Northwind"],
+	    "attributes":
+		[
+		    {
+			"name": "year",
+			"values": ["2001"]
+		    }
+		]
+	}
+}

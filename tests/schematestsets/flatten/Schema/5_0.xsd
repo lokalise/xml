@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+	<xs:complexType name="SameNodeAgainAgainType">
+		<xs:sequence>
+			<xs:element name="DifferentName" type="xs:string" minOccurs="0"/>
+			<xs:element name="SameName" type="xs:string" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="uniqueattribute" type="xs:string"/>
+		<xs:attribute name="myattribute" type="xs:string"/>
+	</xs:complexType>
+
+	<xs:complexType name="SameNodeAgainType">
+	  <xs:sequence>
+	    <xs:element name="SameNodeAgainAgain" type="SameNodeAgainAgainType"/>
+	  </xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="SameNodeType">
+	  <xs:sequence>
+	    <xs:element name="SameNodeAgain" type="SameNodeAgainType"/>
+	  </xs:sequence>
+	</xs:complexType>
+
+	<xs:complexType name="NodeTwoType">
+	  <xs:sequence>
+	    <xs:element name="SameNode" type="SameNodeType"/>
+	  </xs:sequence>
+	</xs:complexType>
+	
+	<xs:complexType name="NodeOneType">
+	  <xs:sequence>
+	    <xs:element name="SameNode" type="SameNodeType"/>
+	  </xs:sequence>
+	</xs:complexType>
+
+	<xs:element name="Store">
+	  <xs:complexType>
+		<xs:sequence>
+		  <xs:element name="NodeOne" type="NodeOneType" minOccurs="0" maxOccurs="1"/>
+		  <xs:element name="NodeTwo" type="NodeTwoType" minOccurs="0" maxOccurs="1"/>
+		</xs:sequence>
+	  </xs:complexType>
+	</xs:element>
+
+</xs:schema>

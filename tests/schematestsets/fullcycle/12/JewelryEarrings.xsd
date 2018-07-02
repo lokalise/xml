@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://dublincore.org/schemas/xmls/qdc/2008/02/11/dc.xsd" xmlns:vxe="urn:visualXMLeditor:settings">
+  <xs:include schemaLocation="Measurements.xsd"/>
+  <xs:simpleType name="EarringsType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="ball-earrings"/>
+      <xs:enumeration value="button-earrings"/>
+      <xs:enumeration value="dangle-earrings"/>
+      <xs:enumeration value="drop-earrings"/>
+      <xs:enumeration value="ear-cuffs"/>
+      <xs:enumeration value="ear-pins"/>
+      <xs:enumeration value="ear-wraps"/>
+      <xs:enumeration value="earring-sets"/>
+      <xs:enumeration value="half-ball-earrings"/>
+      <xs:enumeration value="hoop-earrings"/>
+      <xs:enumeration value="stud-earrings"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="BackFindingType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="clip-on"/>
+      <xs:enumeration value="ear-wire"/>
+      <xs:enumeration value="fishhook"/>
+      <xs:enumeration value="hinge-with-notched-post"/>
+      <xs:enumeration value="la-pousette-posts-and-clutches"/>
+      <xs:enumeration value="lever-back"/>
+      <xs:enumeration value="omega-back"/>
+      <xs:enumeration value="post-with-french-clip"/>
+      <xs:enumeration value="post-with-friction-back"/>
+      <xs:enumeration value="post-with-snap-down"/>
+      <xs:enumeration value="screw-back"/>
+      <xs:enumeration value="shepherds-hook"/>
+      <xs:enumeration value="french-wire"/>
+      <xs:enumeration value="euro-wire"/>
+      <xs:enumeration value="clutchless"/>
+      <xs:enumeration value="click-top"/>
+      <xs:enumeration value="endless"/>
+      <xs:enumeration value="hidden-snap-posts"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:group name="JewelryEarrings">
+    <xs:sequence>
+      <xs:element name="Type" type="EarringsType" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="BackFinding" type="BackFindingType" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="Diameter" type="DiameterType" minOccurs="0"/>
+    </xs:sequence>
+  </xs:group>
+</xs:schema>

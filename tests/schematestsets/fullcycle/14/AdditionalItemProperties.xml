@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<Properties>
+    <AdditionalItemProperty>
+        <Name>WeightContainerTwoDeeper/Weight</Name>
+        <Value>149</Value>
+    </AdditionalItemProperty>
+    <AdditionalItemProperty>
+        <Name>Height@unit</Name>
+        <Value>millimeter</Value>
+    </AdditionalItemProperty>
+    <AdditionalItemProperty>
+        <Name>Height</Name>
+        <Value>12</Value>
+    </AdditionalItemProperty>
+    <AdditionalItemProperty>
+        <Name>Width@unit</Name>
+        <Value>meter</Value>
+    </AdditionalItemProperty>
+    <AdditionalItemProperty>
+        <Name>Width</Name>
+        <Value>16</Value>
+    </AdditionalItemProperty>
+    <AdditionalItemProperty>
+        <Name>testElement</Name>
+        <Value>testvalue</Value>
+        <ValueQualifier>xml:lang="en"</ValueQualifier>
+    </AdditionalItemProperty>
+</Properties>

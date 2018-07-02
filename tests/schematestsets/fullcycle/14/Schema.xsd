@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xml="http://www.w3.org/XML/1998/namespace">
+    <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"></xs:import>
+
+    <xs:simpleType name="WeightType">
+      <xs:restriction base="xs:decimal">
+        <xs:minExclusive value="0"/>
+        <xs:fractionDigits value="3"/>
+      </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="LengthUnitOfMeasure">
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="millimeter"/>
+        <xs:enumeration value="centimeter"/>
+        <xs:enumeration value="meter"/>
+      </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="Dimension">
+      <xs:restriction base="xs:decimal">
+        <xs:minExclusive value="0"/>
+        <xs:fractionDigits value="3"/>
+      </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="LengthDimension">
+      <xs:simpleContent>
+        <xs:extension base="Dimension">
+          <xs:attribute name="unit" type="LengthUnitOfMeasure" use="required"/>
+        </xs:extension>
+      </xs:simpleContent>
+    </xs:complexType>
+
+    <xs:complexType name="JewelrySizeType">
+      <xs:sequence>
+        <xs:element name="Height" type="LengthDimension" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="Width" type="LengthDimension" minOccurs="1" maxOccurs="1"/>
+        <xs:element name="Depth" type="LengthDimension" minOccurs="0" maxOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="MetalType">
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="Sterling Silver"/>
+        <xs:enumeration value="14K Gold Plating"/>
+      </xs:restriction>
+    </xs:simpleType>
+
+    <xs:simpleType name="JewelryMetalStampType">
+      <xs:restriction base="xs:string">
+        <xs:enumeration value="925"/>
+        <xs:enumeration value="No stamp"/>
+      </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="WeightContainerOneType">
+      <xs:sequence>
+        <xs:element name="Weight" type="WeightType"/>
+      </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="WeightContainerTwoType">
+      <xs:sequence>
+        <xs:element name="WeightContainerTwoDeeper">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="Weight" type="WeightType"/>
+                </xs:sequence>
+            </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="JewelryFashionCharmType">
+      <xs:sequence>
+        <xs:element name="WeightContainerOne" type="WeightContainerOneType" minOccurs="0" maxOccurs="1"/>
+        <xs:element name="WeightContainerTwo" type="WeightContainerTwoType" minOccurs="0" maxOccurs="1"/>
+        <xs:element name="testElement" minOccurs="0" maxOccurs="unbounded">
+            <xs:complexType>
+                <xs:simpleContent>
+                    <xs:extension base="xs:string">
+                        <xs:attribute ref="xml:lang"/>
+                    </xs:extension>
+                </xs:simpleContent>
+            </xs:complexType>
+        </xs:element>
+        <xs:element name="Size" type="JewelrySizeType" minOccurs="0" maxOccurs="1"/>
+      </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="JewelryFashionType">
+      <xs:choice>
+        <xs:element name="Charm" type="JewelryFashionCharmType" minOccurs="0" maxOccurs="1"/>
+      </xs:choice>
+    </xs:complexType>
+
+    <xs:complexType name="JewelryType">
+      <xs:choice>
+        <xs:element name="Fashion" type="JewelryFashionType" minOccurs="0" maxOccurs="1"/>
+      </xs:choice>
+    </xs:complexType>
+
+    <xs:complexType name="NewHierarchyLevelType">
+      <xs:choice>
+        <xs:element name="Jewelry" type="JewelryType" minOccurs="0" maxOccurs="1"/>
+      </xs:choice>
+    </xs:complexType>
+
+    <xs:element name="Product">
+      <xs:complexType>
+        <xs:choice>
+          <xs:element name="NewHierarchyLevel" type="NewHierarchyLevelType" minOccurs="0" maxOccurs="1"/>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+</xs:schema>

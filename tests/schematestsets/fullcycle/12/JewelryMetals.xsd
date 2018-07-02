@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:dc="http://dublincore.org/schemas/xmls/qdc/2008/02/11/dc.xsd" xmlns:vxe="urn:visualXMLeditor:settings">
+  <xs:include schemaLocation="Measurements.xsd"/>
+  <xs:simpleType name="FineMetalType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="bonded-gold-and-silver"/>
+      <xs:enumeration value="gold-filled"/>
+      <xs:enumeration value="Palladium"/>
+      <xs:enumeration value="Platinum"/>
+      <xs:enumeration value="Platinum-and-sterling-silver"/>
+      <xs:enumeration value="Platinum-and-white-gold"/>
+      <xs:enumeration value="Platinum-and-yellow-gold"/>
+      <xs:enumeration value="platinum-plated-silver"/>
+      <xs:enumeration value="rhodium-plated-gold-and-silver"/>
+      <xs:enumeration value="rhodium-plated-silver"/>
+      <xs:enumeration value="rhodium-plated-white-gold"/>
+      <xs:enumeration value="rhodium-plated-yellow-gold"/>
+      <xs:enumeration value="Rose-and-white-gold"/>
+      <xs:enumeration value="Rose-and-yellow-gold"/>
+      <xs:enumeration value="Rose-gold"/>
+      <xs:enumeration value="Rose-gold-and-sterling-silver"/>
+      <xs:enumeration value="rose-gold-plated-silver"/>
+      <xs:enumeration value="Sterling-silver"/>
+      <xs:enumeration value="Tri-color-gold"/>
+      <xs:enumeration value="Two-tone-silver-and-gold-plated"/>
+      <xs:enumeration value="Vermeil"/>
+      <xs:enumeration value="White-and-yellow-gold"/>
+      <xs:enumeration value="White-gold"/>
+      <xs:enumeration value="White-gold-and-sterling-silver"/>
+      <xs:enumeration value="White-gold-plated-silver"/>
+      <xs:enumeration value="Yellow-gold"/>
+      <xs:enumeration value="Yellow-gold-and-sterling-silver"/>
+      <xs:enumeration value="Yellow-gold-plated-silver"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="JewelryFineMetalStampType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="10k"/>
+      <xs:enumeration value="14k"/>
+      <xs:enumeration value="18k"/>
+      <xs:enumeration value="20k"/>
+      <xs:enumeration value="22k"/>
+      <xs:enumeration value="24k"/>
+      <xs:enumeration value="plat-900"/>
+      <xs:enumeration value="plat-950"/>
+      <xs:enumeration value="925-sterling"/>
+      <xs:enumeration value="925-sterling-and-14k"/>
+      <xs:enumeration value="925-sterling-and-18k"/>
+      <xs:enumeration value="925-sterling-and-22k"/>
+      <xs:enumeration value="925-sterling-and-24k"/>
+      <xs:enumeration value="950palladium"/>
+      <xs:enumeration value="950pall"/>
+      <xs:enumeration value="950pd"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="FashionMetalType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Alloy"/>
+      <xs:enumeration value="Base"/>
+      <xs:enumeration value="Brass"/>
+      <xs:enumeration value="Chocolate-gold"/>
+      <xs:enumeration value="Cobalt"/>
+      <xs:enumeration value="Copper"/>
+      <xs:enumeration value="Green-gold"/>
+      <xs:enumeration value="Gold-foiled"/>
+      <xs:enumeration value="Gold-plated-base"/>
+      <xs:enumeration value="Pewter"/>
+      <xs:enumeration value="Platinum-plated"/>
+      <xs:enumeration value="Platinum-plated-silver"/>
+      <xs:enumeration value="Rhodium-plated-base-metal"/>
+      <xs:enumeration value="Rhodium-plated-gold"/>
+      <xs:enumeration value="Rhodium-plated-silver"/>
+      <xs:enumeration value="Rhodium-plated-brass"/>
+      <xs:enumeration value="rose-gold-plated-base"/>
+      <xs:enumeration value="rose-gold-plated-silver"/>
+      <xs:enumeration value="Silver-and-stainless-steel"/>
+      <xs:enumeration value="Silver-plated-base"/>
+      <xs:enumeration value="Stainless-steel"/>
+      <xs:enumeration value="Stainless-steel-and-gold"/>
+      <xs:enumeration value="Sterling-silver"/>
+      <xs:enumeration value="Titanium"/>
+      <xs:enumeration value="Titanium-and-gold"/>
+      <xs:enumeration value="Titanium-and-platinum"/>
+      <xs:enumeration value="Titanium-and-silver"/>
+      <xs:enumeration value="Titanium-and-stainless-steel"/>
+      <xs:enumeration value="Tungsten"/>
+      <xs:enumeration value="Two-tone-silver-and-gold-plated"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="JewelryFashionMetalStampEnumType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="no-metal-stamp"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="JewelryFashionMetalStampType">
+    <xs:union memberTypes="JewelryFineMetalStampType JewelryFashionMetalStampEnumType"/>
+  </xs:simpleType>
+  <xs:complexType name="JewelryFashionMetalType">
+    <xs:sequence>
+      <xs:element name="Type" type="FashionMetalType" minOccurs="1" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Metal type</dc:title>
+            <dc:title xml:lang="ru">Разновидность металла</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Stamp" type="JewelryFashionMetalStampType" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Stamp</dc:title>
+            <dc:title xml:lang="ru">Проба</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="Weight" type="WeightType" minOccurs="0" maxOccurs="1">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Weight</dc:title>
+            <dc:title xml:lang="ru">Вес</dc:title>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:group name="JewelryFashionMetals">
+    <xs:sequence>
+      <xs:element name="Metal" type="JewelryFashionMetalType" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            <dc:title xml:lang="en">Metal</dc:title>
+            <dc:title xml:lang="ru">Металл</dc:title>
+          </xs:documentation>
+          <xs:appinfo>
+            <vxe:settings>
+              <vxe:startFolded>true</vxe:startFolded>
+            </vxe:settings>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:group>
+</xs:schema>

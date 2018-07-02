@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Literature>
+  <AmericanLiterature century="XIX">
+    <Publisher>Southwind</Publisher>
+    <PublishYear AmongTop100="false" ISBN="1234">1990</PublishYear>
+  </AmericanLiterature>
+</Literature>

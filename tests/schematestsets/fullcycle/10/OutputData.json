@@ -1,0 +1,36 @@
+{
+	"Height": [{
+		"name": "NewHierarchyLevel[1]\/Size\/Height",
+		"values": ["12"],
+		"attributes": {
+			"unit": ["millimeter"]
+		},
+		"nametrace": "\/Product\/NewHierarchyLevel[1]\/Size\/Height"
+	}],
+	"Width": [{
+		"name": "NewHierarchyLevel[1]\/Size\/Width",
+		"values": ["16"],
+		"attributes": {
+			"unit": ["meter"]
+		},
+		"nametrace": "\/Product\/NewHierarchyLevel[1]\/Size\/Width"
+	}],
+	"ChoiceTwo": [{
+		"name": "NewHierarchyLevel[2]\/TestChoice\/ChoiceTwo",
+		"values": ["ChoiceTwoValue"],
+		"attributes": [],
+		"nametrace": "\/Product\/NewHierarchyLevel[2]\/TestChoice\/ChoiceTwo"
+	}],
+	"One": [{
+		"name": "NewHierarchyLevel[3]\/One",
+		"values": ["OneValue"],
+		"attributes": [],
+		"nametrace": "\/Product\/NewHierarchyLevel[3]\/One"
+	}],
+	"Two": [{
+		"name": "NewHierarchyLevel[3]\/Two",
+		"values": ["TwoValue"],
+		"attributes": [],
+		"nametrace": "\/Product\/NewHierarchyLevel[3]\/Two"
+	}]
+}

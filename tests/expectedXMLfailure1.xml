@@ -1,0 +1,4 @@
+<?xml version="1.0" ?>
+<dataset>
+    <FailedDocuments failure="Failure" XML="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;test&gt;&lt;element attribute=&quot;attr&quot;&gt;value&lt;/element&gt;&lt;anotherelement&gt;&lt;/anotherelement&gt;&lt;lastelement&gt;element&lt;/lastelement&gt;&lt;/test&gt;"/>
+</dataset>

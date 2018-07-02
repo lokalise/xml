@@ -1,0 +1,96 @@
+{
+	"Length": [{
+		"name": "Pendant\/Necklace\/Length",
+		"values": ["80"],
+		"attributes": {
+			"unit": ["centimeter"]
+		},
+		"nametrace": "\/Product\/Jewelry\/Fashion\/Pendant\/Necklace\/Length"
+	}],
+	"Type": [{
+		"name": "Pendant\/Necklace\/Type",
+		"values": ["pendant-necklaces"],
+		"attributes": [],
+		"nametrace": "\/Product\/Jewelry\/Fashion\/Pendant\/Necklace\/Type"
+	},
+	{
+		"name": "Pendant\/Shape\/Type",
+		"values": ["nonstandard-shape"],
+		"nametrace": "\/Product\/Jewelry\/Fashion\/Pendant\/Shape\/Type",
+		"attributes": []
+	}],
+	"ChainType": [{
+		"name": "Pendant\/Necklace\/ChainType",
+		"values": ["no-chain-type"],
+		"attributes": [],
+		"nametrace": "\/Product\/Jewelry\/Fashion\/Pendant\/Necklace\/ChainType"
+	}],
+	"ClaspType": [{
+		"name": "Pendant\/Necklace\/ClaspType",
+		"values": ["snap"],
+		"attributes": [],
+		"nametrace": "\/Product\/Jewelry\/Fashion\/Pendant\/Necklace\/ClaspType"
+	}],
+	"SubjectContent": [{
+		"name": "Pendant\/SubjectContent",
+		"values": ["Birthday",
+		"Mothers Day"],
+		"attributes": [],
+		"nametrace": "\/Product\/Jewelry\/Fashion\/Pendant\/SubjectContent"
+	}],
+	"TargetAudience": [{
+		"name": "Pendant\/TargetAudience",
+		"values": ["women"],
+		"attributes": [],
+		"nametrace": "\/Product\/Jewelry\/Fashion\/Pendant\/TargetAudience"
+	}],
+	"UsedFor": [{
+		"name": "Pendant\/UsedFor",
+		"values": ["anniversary",
+		"birthday",
+		"christening",
+		"mothers-day"],
+		"attributes": [],
+		"nametrace": "\/Product\/Jewelry\/Fashion\/Pendant\/UsedFor"
+	}],
+	"DominantColor": [{
+		"name": "Pendant\/DominantColor",
+		"values": ["black"],
+		"attributes": [],
+		"nametrace": "\/Product\/Jewelry\/Fashion\/Pendant\/DominantColor"
+	}],
+	"PrimaryImage": [{
+		"name": "Pendant\/PrimaryImage",
+		"values": ["c3ZzZHZzdmQ="],
+		"attributes": {
+			"mimeCode": ["image\/jpeg"]
+		},
+		"nametrace": "\/Product\/Jewelry\/Fashion\/Pendant\/PrimaryImage"
+	}],
+	"Image": [{
+		"name": "Pendant\/Image",
+		"values": ["c3ZzZHZzdmQ="],
+		"attributes": {
+			"mimeCode": ["image\/jpeg"]
+		},
+		"nametrace": "\/Product\/Jewelry\/Fashion\/Pendant\/Image"
+	}],
+	"ProductSeries": [{
+		"name": "ProductSeries",
+		"values": ["Baby Friendly"],
+		"attributes": [],
+		"nametrace": "\/Product\/ProductSeries"
+	}],
+	"SeriesDescription": [{
+		"name": "SeriesDescription",
+		"values": ["Inspired by the natural colour of real gemstones, and the desire to safely share a love of jewelry with her young ones, an Australian designer (and mum) carefully created this beautiful set of toxin-free, INPAA safety approved, pendants that can be worn with love, and chewed on by teething babies"],
+		"attributes": [],
+		"nametrace": "\/Product\/SeriesDescription"
+	}],
+	"ProductFamily": [{
+		"name": "ProductFamily",
+		"values": ["Good Mums: ring"],
+		"attributes": [],
+		"nametrace": "\/Product\/ProductFamily"
+	}]
+}

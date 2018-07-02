@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<Properties>
+    <AdditionalItemProperty>
+        <Name>SecondLevelFirstAlternative/Type</Name>
+        <Value>aaa</Value>
+    </AdditionalItemProperty>
+    <AdditionalItemProperty>
+        <Name>FirstLevel/Type</Name>
+        <Value>bbb</Value>
+    </AdditionalItemProperty>
+</Properties>
